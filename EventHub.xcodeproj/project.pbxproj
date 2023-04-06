@@ -11,6 +11,8 @@
 		926AC96129DEEFB8004FE288 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926AC96029DEEFB8004FE288 /* Assets.xcassets */; };
 		926AC96429DEEFB8004FE288 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926AC96329DEEFB8004FE288 /* Preview Assets.xcassets */; };
 		926AC96C29DEF0CF004FE288 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AC96B29DEF0CF004FE288 /* SplashView.swift */; };
+		926AC96E29DEF2BE004FE288 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AC96D29DEF2BE004FE288 /* SignInView.swift */; };
+		926AC97029DEFEBD004FE288 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AC96F29DEFEBD004FE288 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		926AC96029DEEFB8004FE288 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		926AC96329DEEFB8004FE288 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		926AC96B29DEF0CF004FE288 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		926AC96D29DEF2BE004FE288 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		926AC96F29DEFEBD004FE288 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				926AC95C29DEEFB6004FE288 /* EventHubApp.swift */,
 				926AC96029DEEFB8004FE288 /* Assets.xcassets */,
 				926AC96229DEEFB8004FE288 /* Preview Content */,
+				926AC96D29DEF2BE004FE288 /* SignInView.swift */,
+				926AC96F29DEFEBD004FE288 /* Colors.swift */,
 			);
 			path = EventHub;
 			sourceTree = "<group>";
@@ -145,6 +151,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926AC96E29DEF2BE004FE288 /* SignInView.swift in Sources */,
+				926AC97029DEFEBD004FE288 /* Colors.swift in Sources */,
 				926AC95D29DEEFB6004FE288 /* EventHubApp.swift in Sources */,
 				926AC96C29DEF0CF004FE288 /* SplashView.swift in Sources */,
 			);
