@@ -1,5 +1,5 @@
 //
-//  SignInView.swift
+//  SignUpView.swift
 //  EventHub
 //
 //  Created by Yaroslav Orlov on 06.04.2023.
@@ -7,26 +7,25 @@
 
 import SwiftUI
 
-struct SignInView: View {
+struct SignUpView: View {
+  @State private var fullName: String = ""
   @State private var email: String = ""
   @State private var password: String = ""
-  @State private var isRemember: Bool = false
+  @State private var confirmPassword: String = ""
   
-  var body: some View {
-    ZStack {
-      Colors.lightBlue.opacity(0.2)
-        .ignoresSafeArea()
-      VStack(spacing: 30) {
-        logoContainer
-        textFieldsContainer
-        toggleContainer
-        buttonsContainer
+    var body: some View {
+      ZStack {
+        Colors.lightBlue.opacity(0.2)
+          .ignoresSafeArea()
+        VStack(spacing: 30) {
+          textFieldsContainer
+          buttonsContainer
+        }
       }
     }
-  }
 }
 
-extension SignInView {
+extension SignUpView {
   private var logoContainer: some View {
     VStack(spacing: 7) {
       Image("smallLogo")
@@ -41,8 +40,24 @@ extension SignInView {
   
   private var textFieldsContainer: some View {
     VStack(alignment: .leading, spacing: 20) {
-      Text("Sign in")
+      Text("Sign up")
         .font(.system(size: 24, weight: .medium))
+      
+      TextField("Full name", text: $fullName)
+        .padding(.vertical, 20)
+        .padding(.leading, 50)
+        .frame(width: UIScreen.main.bounds.width - 60, height: 56)
+        .overlay(
+          RoundedRectangle(cornerRadius: 8)
+            .stroke(.gray, lineWidth: 2)
+        )
+        .overlay {
+          HStack {
+            Image("profile")
+              .padding(.leading, 15)
+            Spacer()
+          }
+        }
       
       TextField("abc@email.com", text: $email)
         .padding(.vertical, 20)
@@ -77,23 +92,24 @@ extension SignInView {
               .padding(.trailing, 15)
           }
         }
-    }
-  }
-  
-  private var toggleContainer: some View {
-    HStack {
-      Spacer()
-      Toggle("", isOn: $isRemember).labelsHidden()
-        .tint(Colors.primaryBlue)
-      Text("Remember Me")
-        .font(.system(size: 14, weight: .regular))
-        .padding(.leading, 8)
-      Spacer()
-      Spacer()
-      Spacer()
-      Text("Forgot Password?")
-        .font(.system(size: 14, weight: .regular))
-        .padding(.trailing, 30)
+      
+      TextField("Confirm password", text: $confirmPassword)
+        .padding(.vertical, 20)
+        .padding(.leading, 50)
+        .frame(width: UIScreen.main.bounds.width - 60, height: 56)
+        .overlay(
+          RoundedRectangle(cornerRadius: 8)
+            .stroke(.gray, lineWidth: 2)
+        )
+        .overlay {
+          HStack {
+            Image("lock")
+              .padding(.leading, 15)
+            Spacer()
+            Image(systemName: "eye.slash")
+              .padding(.trailing, 15)
+          }
+        }
     }
   }
   
@@ -143,10 +159,10 @@ extension SignInView {
       .cornerRadius(15)
       
       HStack(spacing: 10) {
-        Text("Don’t have an account?")
+        Text("Already have an account?")
           .font(.system(size: 15, weight: .regular))
         
-        Text("Sign up")
+        Text("Sign in")
           .font(.system(size: 15, weight: .regular))
           .foregroundColor(.blue)
       }
@@ -154,8 +170,8 @@ extension SignInView {
   }
 }
 
-struct SignInView_Previews: PreviewProvider {
-  static var previews: some View {
-    SignInView()
-  }
+struct SignUpView_Previews: PreviewProvider {
+    static var previews: some View {
+        SignUpView()
+    }
 }

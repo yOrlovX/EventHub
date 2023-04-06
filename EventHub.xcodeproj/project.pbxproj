@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		924297F829DF3AD700D8FD21 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924297F729DF3AD700D8FD21 /* SignUpView.swift */; };
+		924297FA29DF3D7E00D8FD21 /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924297F929DF3D7E00D8FD21 /* VerificationView.swift */; };
+		924297FC29DF43E400D8FD21 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924297FB29DF43E400D8FD21 /* ResetPasswordView.swift */; };
 		926AC95D29DEEFB6004FE288 /* EventHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AC95C29DEEFB6004FE288 /* EventHubApp.swift */; };
 		926AC96129DEEFB8004FE288 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926AC96029DEEFB8004FE288 /* Assets.xcassets */; };
 		926AC96429DEEFB8004FE288 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926AC96329DEEFB8004FE288 /* Preview Assets.xcassets */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		924297F729DF3AD700D8FD21 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		924297F929DF3D7E00D8FD21 /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
+		924297FB29DF43E400D8FD21 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		926AC95929DEEFB6004FE288 /* EventHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		926AC95C29DEEFB6004FE288 /* EventHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHubApp.swift; sourceTree = "<group>"; };
 		926AC96029DEEFB8004FE288 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,11 +61,14 @@
 		926AC95B29DEEFB6004FE288 /* EventHub */ = {
 			isa = PBXGroup;
 			children = (
-				926AC96A29DEF08A004FE288 /* Splash */,
 				926AC95C29DEEFB6004FE288 /* EventHubApp.swift */,
+				926AC96A29DEF08A004FE288 /* Splash */,
 				926AC96029DEEFB8004FE288 /* Assets.xcassets */,
 				926AC96229DEEFB8004FE288 /* Preview Content */,
 				926AC96D29DEF2BE004FE288 /* SignInView.swift */,
+				924297F729DF3AD700D8FD21 /* SignUpView.swift */,
+				924297F929DF3D7E00D8FD21 /* VerificationView.swift */,
+				924297FB29DF43E400D8FD21 /* ResetPasswordView.swift */,
 				926AC96F29DEFEBD004FE288 /* Colors.swift */,
 			);
 			path = EventHub;
@@ -152,7 +161,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				926AC96E29DEF2BE004FE288 /* SignInView.swift in Sources */,
+				924297F829DF3AD700D8FD21 /* SignUpView.swift in Sources */,
+				924297FC29DF43E400D8FD21 /* ResetPasswordView.swift in Sources */,
 				926AC97029DEFEBD004FE288 /* Colors.swift in Sources */,
+				924297FA29DF3D7E00D8FD21 /* VerificationView.swift in Sources */,
 				926AC95D29DEEFB6004FE288 /* EventHubApp.swift in Sources */,
 				926AC96C29DEF0CF004FE288 /* SplashView.swift in Sources */,
 			);
