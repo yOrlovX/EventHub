@@ -13,19 +13,15 @@ struct SignInView: View {
   @State private var isRemember: Bool = false
   
   var body: some View {
-    VStack {
-      logoContainer
-      textFieldsContainer
-      toggleContainer
-      Spacer()
-      Button(action: {}) {
-          Text("Sign In")
-            .font(.system(size: 16, weight: .medium))
-            .foregroundColor(.white)
+    ZStack {
+      Colors.lightBlue.opacity(0.2)
+        .ignoresSafeArea()
+      VStack(spacing: 30) {
+        logoContainer
+        textFieldsContainer
+        toggleContainer
+        buttonsContainer
       }
-      .frame(width: 281, height: 58)
-      .background(Colors.primaryBlue)
-      .cornerRadius(15)
     }
   }
 }
@@ -88,6 +84,7 @@ extension SignInView {
     HStack {
       Spacer()
       Toggle("", isOn: $isRemember).labelsHidden()
+        .tint(Colors.primaryBlue)
       Text("Remember Me")
         .font(.system(size: 14, weight: .regular))
         .padding(.leading, 8)
@@ -97,6 +94,62 @@ extension SignInView {
       Text("Forgot Password?")
         .font(.system(size: 14, weight: .regular))
         .padding(.trailing, 30)
+    }
+  }
+  
+  private var buttonsContainer: some View {
+    VStack(spacing: 20) {
+      Button(action: {}) {
+          Text("Sign In")
+            .font(.system(size: 16, weight: .medium))
+            .foregroundColor(.white)
+      }
+      .frame(width: 281, height: 58)
+      .background(Colors.primaryBlue)
+      .cornerRadius(15)
+      
+      Text("OR")
+        .font(.system(size: 16, weight: .medium))
+        .foregroundColor(.gray)
+      
+      Button(action: {}) {
+        HStack {
+          Image("google")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 26, height: 26)
+          Text("Login with Google")
+            .font(.system(size: 16, weight: .regular))
+            .foregroundColor(.black)
+        }
+      }
+      .frame(width: 281, height: 58)
+      .background(.white)
+      .cornerRadius(15)
+      
+      Button(action: {}) {
+        HStack {
+          Image("fb")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 26, height: 26)
+          Text("Login with Facebook")
+            .font(.system(size: 16, weight: .regular))
+            .foregroundColor(.black)
+        }
+      }
+      .frame(width: 281, height: 58)
+      .background(.white)
+      .cornerRadius(15)
+      
+      HStack(spacing: 10) {
+        Text("Already have an account?")
+          .font(.system(size: 15, weight: .regular))
+        
+        Text("Signin")
+          .font(.system(size: 15, weight: .regular))
+          .foregroundColor(.blue)
+      }
     }
   }
 }
