@@ -19,6 +19,8 @@ struct OnboardingView: View {
           secondOnboardingState
         case 3:
           thirdOnboardingState
+        case 4:
+          SignInView()
         default:
           firstOnboardingState
         }

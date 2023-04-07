@@ -13,15 +13,18 @@ struct SignInView: View {
   @State private var isRemember: Bool = false
   
   var body: some View {
-    ZStack {
-      Colors.lightBlue.opacity(0.2)
-        .ignoresSafeArea()
-      VStack(spacing: 30) {
-        logoContainer
-        textFieldsContainer
-        toggleContainer
-        buttonsContainer
+    NavigationView {
+      ZStack {
+        Colors.lightBlue.opacity(0.2)
+          .ignoresSafeArea()
+        VStack(spacing: 30) {
+          logoContainer
+          textFieldsContainer
+          toggleContainer
+          buttonsContainer
+        }
       }
+      .navigationBarHidden(true)
     }
   }
 }
@@ -91,22 +94,24 @@ extension SignInView {
       Spacer()
       Spacer()
       Spacer()
-      Text("Forgot Password?")
-        .font(.system(size: 14, weight: .regular))
-        .padding(.trailing, 30)
+      NavigationLink(destination: ResetPasswordView()) {
+        Text("Forgot Password?")
+          .font(.system(size: 14, weight: .regular))
+          .padding(.trailing, 30)
+      }
     }
   }
   
   private var buttonsContainer: some View {
     VStack(spacing: 20) {
-      Button(action: {}) {
-          Text("Sign In")
-            .font(.system(size: 16, weight: .medium))
-            .foregroundColor(.white)
+      NavigationLink(destination: MainView()) {
+        Text("Sign In")
+          .font(.system(size: 16, weight: .medium))
+          .foregroundColor(.white)
+          .frame(width: 281, height: 58)
+          .background(Colors.primaryBlue)
+          .cornerRadius(15)
       }
-      .frame(width: 281, height: 58)
-      .background(Colors.primaryBlue)
-      .cornerRadius(15)
       
       Text("OR")
         .font(.system(size: 16, weight: .medium))
@@ -146,9 +151,11 @@ extension SignInView {
         Text("Don’t have an account?")
           .font(.system(size: 15, weight: .regular))
         
-        Text("Sign up")
-          .font(.system(size: 15, weight: .regular))
-          .foregroundColor(.blue)
+        NavigationLink(destination: SignUpView()) {
+          Text("Sign up")
+            .font(.system(size: 15, weight: .regular))
+            .foregroundColor(.blue)
+        }
       }
     }
   }

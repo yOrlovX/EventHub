@@ -13,6 +13,8 @@ struct SignUpView: View {
   @State private var password: String = ""
   @State private var confirmPassword: String = ""
   
+  @Environment(\.presentationMode) var presentationMode
+  
     var body: some View {
       ZStack {
         Colors.lightBlue.opacity(0.2)
@@ -22,22 +24,12 @@ struct SignUpView: View {
           buttonsContainer
         }
       }
+      .navigationBarHidden(true)
     }
 }
 
 extension SignUpView {
-  private var logoContainer: some View {
-    VStack(spacing: 7) {
-      Image("smallLogo")
-        .resizable()
-        .scaledToFit()
-        .frame(width: 58, height: 58)
-      
-      Text("EventHub")
-        .font(.system(size: 35, weight: .medium))
-    }
-  }
-  
+ 
   private var textFieldsContainer: some View {
     VStack(alignment: .leading, spacing: 20) {
       Text("Sign up")
@@ -165,6 +157,9 @@ extension SignUpView {
         Text("Sign in")
           .font(.system(size: 15, weight: .regular))
           .foregroundColor(.blue)
+          .onTapGesture {
+            presentationMode.wrappedValue.dismiss()
+          }
       }
     }
   }
