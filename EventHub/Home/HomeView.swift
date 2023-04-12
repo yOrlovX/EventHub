@@ -18,8 +18,9 @@ struct HomeView: View {
         .background(Colors.homeTopbarBg)
         .cornerRadius(33, corners: [.bottomLeft, .bottomRight])
         .edgesIgnoringSafeArea(.top)
+        EventsCategorySegmentView()
+          .offset(y: -85)
         Spacer()
-        
       }
     }
 }
