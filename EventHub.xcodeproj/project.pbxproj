@@ -27,6 +27,9 @@
 		926AC96C29DEF0CF004FE288 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AC96B29DEF0CF004FE288 /* SplashView.swift */; };
 		926AC96E29DEF2BE004FE288 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AC96D29DEF2BE004FE288 /* SignInView.swift */; };
 		926AC97029DEFEBD004FE288 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AC96F29DEFEBD004FE288 /* Colors.swift */; };
+		92CAC6D929E8348C00CEE29E /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CAC6D829E8348C00CEE29E /* EventsViewModel.swift */; };
+		92CAC6DC29E835C600CEE29E /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CAC6DB29E835C600CEE29E /* ResponseModel.swift */; };
+		92CAC6E029E8372300CEE29E /* EventsJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 92CAC6DF29E8372300CEE29E /* EventsJSON.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,9 @@
 		926AC96B29DEF0CF004FE288 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		926AC96D29DEF2BE004FE288 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		926AC96F29DEFEBD004FE288 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		92CAC6D829E8348C00CEE29E /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
+		92CAC6DB29E835C600CEE29E /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		92CAC6DF29E8372300CEE29E /* EventsJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EventsJSON.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,8 @@
 		926AC95B29DEEFB6004FE288 /* EventHub */ = {
 			isa = PBXGroup;
 			children = (
+				92CAC6DA29E8350900CEE29E /* Model */,
+				92CAC6D729E8347800CEE29E /* ViewModel */,
 				920D010629E5B3C600FE464D /* ViewModifiers */,
 				9242980E29DF4EB200D8FD21 /* Onboarding */,
 				926AC95C29DEEFB6004FE288 /* EventHubApp.swift */,
@@ -193,6 +201,23 @@
 				926AC96B29DEF0CF004FE288 /* SplashView.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		92CAC6D729E8347800CEE29E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				92CAC6D829E8348C00CEE29E /* EventsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		92CAC6DA29E8350900CEE29E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92CAC6DB29E835C600CEE29E /* ResponseModel.swift */,
+				92CAC6DF29E8372300CEE29E /* EventsJSON.json */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92CAC6E029E8372300CEE29E /* EventsJSON.json in Resources */,
 				926AC96429DEEFB8004FE288 /* Preview Assets.xcassets in Resources */,
 				926AC96129DEEFB8004FE288 /* Assets.xcassets in Resources */,
 			);
@@ -274,6 +300,7 @@
 				9242980B29DF471100D8FD21 /* ProfileView.swift in Sources */,
 				924297FE29DF463C00D8FD21 /* MainView.swift in Sources */,
 				923663CD29E6EA3C00982BB3 /* EventsCategorySegmentView.swift in Sources */,
+				92CAC6D929E8348C00CEE29E /* EventsViewModel.swift in Sources */,
 				924297F829DF3AD700D8FD21 /* SignUpView.swift in Sources */,
 				924297FC29DF43E400D8FD21 /* ResetPasswordView.swift in Sources */,
 				926AC97029DEFEBD004FE288 /* Colors.swift in Sources */,
@@ -282,6 +309,7 @@
 				926AC95D29DEEFB6004FE288 /* EventHubApp.swift in Sources */,
 				9242981029DF4ECD00D8FD21 /* OnboardingView.swift in Sources */,
 				921692C729E71F6000728AD5 /* UpcomingEventCell.swift in Sources */,
+				92CAC6DC29E835C600CEE29E /* ResponseModel.swift in Sources */,
 				926AC96C29DEF0CF004FE288 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

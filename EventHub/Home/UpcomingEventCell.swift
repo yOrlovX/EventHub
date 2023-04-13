@@ -11,16 +11,25 @@ struct UpcomingEventCell: View {
   let image: String
   let name: String
   let location: String
-  
+    
   var body: some View {
     VStack {
       VStack(spacing: 14) {
-        Image(image)
-          .resizable()
-          .scaledToFit()
-          .frame(maxHeight: 131)
+        AsyncImage(url: URL(string: image)) { image in
+          image
+            .resizable()
+            .scaledToFit()
+            
+        } placeholder: {
+          ProgressView()
+        }
+        .frame(maxWidth: 218, maxHeight: 131)
+
         Text(name)
           .font(.system(size: 18, weight: .medium))
+          .multilineTextAlignment(.center)
+          .fixedSize(horizontal: false, vertical: true)
+          .frame(width: 218)
         Text(location)
           .font(.system(size: 13))
           .foregroundColor(.gray)

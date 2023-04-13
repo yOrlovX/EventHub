@@ -1,0 +1,1974 @@
+{
+    "events": [
+        {
+            "type": "concert",
+            "id": 5919229,
+            "datetime_utc": "2023-04-13T07:30:00",
+            "venue": {
+                "state": "VA",
+                "name_v2": "The Camel",
+                "postal_code": "23220",
+                "name": "The Camel",
+                "links": [],
+                "timezone": "America/New_York",
+                "url": "https://seatgeek.com/venues/the-camel/tickets",
+                "score": 0.34,
+                "location": {
+                    "lat": 37.5545,
+                    "lon": -77.4572
+                },
+                "address": "1621 West Broad Street",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 1,
+                "city": "Richmond",
+                "slug": "the-camel",
+                "extended_address": "Richmond, VA 23220",
+                "id": 11522,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 556,
+                "capacity": 0,
+                "display_location": "Richmond, VA"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "band",
+                    "name": "Stimulator Jones",
+                    "image": "https://seatgeek.com/images/performers-landscape/stimulator-jones-1d7131/781793/huge.jpg",
+                    "id": 781793,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/stimulator-jones-1d7131/781793/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 1
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 2000000,
+                            "name": "concerts",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 1
+                        }
+                    ],
+                    "image_attribution": "SeatGeek - 2022 (2000 X 2000)",
+                    "url": "https://seatgeek.com/stimulator-jones-tickets",
+                    "score": 0.25,
+                    "slug": "stimulator-jones",
+                    "home_venue_id": null,
+                    "short_name": "Stimulator Jones",
+                    "num_upcoming_events": 1,
+                    "colors": null,
+                    "image_license": "SeatGeek - 2022 (2000 X 2000)",
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": ""
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2023-04-13T03:30:00",
+            "time_tbd": true,
+            "short_title": "Stimulator Jones",
+            "visible_until_utc": "2023-04-14T04:00:00",
+            "stats": {
+                "listing_count": null,
+                "average_price": null,
+                "lowest_price_good_deals": null,
+                "lowest_price": null,
+                "highest_price": null,
+                "visible_listing_count": null,
+                "dq_bucket_counts": null,
+                "median_price": null,
+                "lowest_sg_base_price": null,
+                "lowest_sg_base_price_good_deals": null
+            },
+            "taxonomies": [
+                {
+                    "id": 2000000,
+                    "name": "concert",
+                    "parent_id": null,
+                    "rank": 1
+                }
+            ],
+            "url": "https://seatgeek.com/stimulator-jones-tickets/richmond-virginia-the-camel-2023-04-13-3-30-am/concert/5919229",
+            "score": 0.355,
+            "announce_date": "2023-01-19T00:00:00",
+            "created_at": "2023-01-19T16:03:50",
+            "date_tbd": false,
+            "title": "Stimulator Jones",
+            "popularity": 0.691,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "visible_at": "2023-04-13T09:00:16Z",
+            "is_visible_override": "UNSET",
+            "tdc_pvo_id": 0,
+            "tdc_pv_id": 0,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "golf",
+            "id": 5766585,
+            "datetime_utc": "2023-04-13T07:30:00",
+            "venue": {
+                "state": "SC",
+                "name_v2": "Harbour Town Golf Links",
+                "postal_code": "29928",
+                "name": "Harbour Town Golf Links",
+                "links": [],
+                "timezone": "America/New_York",
+                "url": "https://seatgeek.com/venues/harbour-town-golf-links/tickets",
+                "score": 0.27,
+                "location": {
+                    "lat": 32.1355,
+                    "lon": -80.8102
+                },
+                "address": "11 Lighthouse Lane",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 3,
+                "city": "Hilton Head Island",
+                "slug": "harbour-town-golf-links",
+                "extended_address": "Hilton Head Island, SC 29928",
+                "id": 3952,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 507,
+                "capacity": 0,
+                "display_location": "Hilton Head Island, SC"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "golf",
+                    "name": "RBC Heritage",
+                    "image": "https://seatgeek.com/images/performers-landscape/rbc-heritage-ad7bd5/12126/huge.jpg",
+                    "id": 12126,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/rbc-heritage-ad7bd5/12126/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 3
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1070000,
+                            "name": "golf",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 7
+                        }
+                    ],
+                    "image_attribution": "SeatGeek - 2022 (2000 X 2000)",
+                    "url": "https://seatgeek.com/rbc-heritage-tickets",
+                    "score": 0.23,
+                    "slug": "rbc-heritage",
+                    "home_venue_id": null,
+                    "short_name": "RBC Heritage",
+                    "num_upcoming_events": 3,
+                    "colors": null,
+                    "image_license": "SeatGeek - 2022 (2000 X 2000)",
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": ""
+                },
+                {
+                    "type": "golf",
+                    "name": "PGA Tour",
+                    "image": "https://seatgeek.com/images/performers-landscape/pga-tour-aa1f89/10453/huge.jpg",
+                    "id": 10453,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/pga-tour-aa1f89/10453/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 123
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1070000,
+                            "name": "golf",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 7
+                        }
+                    ],
+                    "image_attribution": "SeatGeek - 2022",
+                    "url": "https://seatgeek.com/pga-tour-tickets",
+                    "score": 0.45,
+                    "slug": "pga-tour",
+                    "home_venue_id": null,
+                    "short_name": "PGA Tour",
+                    "num_upcoming_events": 123,
+                    "colors": null,
+                    "image_license": "SeatGeek - 2022",
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": ""
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2023-04-13T03:30:00",
+            "time_tbd": true,
+            "short_title": "RBC Heritage - Thursday",
+            "visible_until_utc": "2023-04-14T04:00:00",
+            "stats": {
+                "listing_count": 27,
+                "average_price": 207,
+                "lowest_price_good_deals": null,
+                "lowest_price": 76,
+                "highest_price": 574,
+                "visible_listing_count": 25,
+                "dq_bucket_counts": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "median_price": 131,
+                "lowest_sg_base_price": 52,
+                "lowest_sg_base_price_good_deals": null
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                },
+                {
+                    "id": 1070000,
+                    "name": "golf",
+                    "parent_id": 1000000,
+                    "rank": 7
+                }
+            ],
+            "url": "https://seatgeek.com/rbc-heritage-thursday-tickets/golf/2023-04-13-3-30-am/5766585",
+            "score": 0,
+            "announce_date": "2022-08-01T00:00:00",
+            "created_at": "2022-08-01T21:34:26",
+            "date_tbd": false,
+            "title": "RBC Heritage - Thursday",
+            "popularity": 0,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "visible_at": "1970-01-01T00:00:00Z",
+            "is_visible_override": "VISIBLE",
+            "tdc_pvo_id": 0,
+            "tdc_pv_id": 0,
+            "general_admission": true,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "minor_league_baseball",
+            "id": 5908629,
+            "datetime_utc": "2023-04-13T10:30:00",
+            "venue": {
+                "state": "CA",
+                "name_v2": "Chukchansi Park",
+                "postal_code": "93721",
+                "name": "Chukchansi Park",
+                "links": [],
+                "timezone": "America/Los_Angeles",
+                "url": "https://seatgeek.com/venues/chukchansi-park/tickets",
+                "score": 0.38,
+                "location": {
+                    "lat": 36.7321,
+                    "lon": -119.79
+                },
+                "address": "1800 Tulare Street",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 66,
+                "city": "Fresno",
+                "slug": "chukchansi-park",
+                "extended_address": "Fresno, CA 93721",
+                "id": 397,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 866,
+                "capacity": 12500,
+                "display_location": "Fresno, CA"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "minor_league_baseball",
+                    "name": "Fresno Grizzlies",
+                    "image": "https://seatgeek.com/images/performers-landscape/fresno-grizzlies-3eeca1/9311/huge.jpg",
+                    "id": 9311,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/fresno-grizzlies-3eeca1/9311/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 124
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1010000,
+                            "name": "baseball",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1010300,
+                            "name": "minor_league_baseball",
+                            "parent_id": 1010000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": null,
+                    "url": "https://seatgeek.com/fresno-grizzlies-tickets",
+                    "score": 0.21,
+                    "slug": "fresno-grizzlies",
+                    "home_venue_id": 397,
+                    "short_name": "Fresno Grizzlies",
+                    "num_upcoming_events": 124,
+                    "colors": null,
+                    "image_license": null,
+                    "popularity": 0,
+                    "home_team": true,
+                    "location": {
+                        "lat": 36.7321,
+                        "lon": -119.79
+                    },
+                    "image_rights_message": ""
+                },
+                {
+                    "type": "minor_league_baseball",
+                    "name": "Stockton Ports",
+                    "image": "https://seatgeek.com/images/performers-landscape/stockton-ports-a2ac20/9422/huge.jpg",
+                    "id": 9422,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/stockton-ports-a2ac20/9422/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 127
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1010000,
+                            "name": "baseball",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1010300,
+                            "name": "minor_league_baseball",
+                            "parent_id": 1010000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": null,
+                    "url": "https://seatgeek.com/stockton-ports-tickets",
+                    "score": 0.22,
+                    "slug": "stockton-ports",
+                    "home_venue_id": 398,
+                    "short_name": "Stockton Ports",
+                    "num_upcoming_events": 127,
+                    "colors": null,
+                    "image_license": null,
+                    "popularity": 0,
+                    "away_team": true,
+                    "location": {
+                        "lat": 37.9561,
+                        "lon": -121.298
+                    },
+                    "image_rights_message": ""
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2023-04-13T03:30:00",
+            "time_tbd": true,
+            "short_title": "Stockton Ports at Fresno Grizzlies",
+            "visible_until_utc": "2023-04-14T07:00:00",
+            "stats": {
+                "listing_count": 14,
+                "average_price": 38,
+                "lowest_price_good_deals": 21,
+                "lowest_price": 21,
+                "highest_price": 66,
+                "visible_listing_count": 14,
+                "dq_bucket_counts": [
+                    1,
+                    4,
+                    2,
+                    5,
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "median_price": 24,
+                "lowest_sg_base_price": 11,
+                "lowest_sg_base_price_good_deals": 11
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                },
+                {
+                    "id": 1010000,
+                    "name": "baseball",
+                    "parent_id": 1000000,
+                    "rank": 0
+                },
+                {
+                    "id": 1010300,
+                    "name": "minor_league_baseball",
+                    "parent_id": 1010000,
+                    "rank": 0
+                }
+            ],
+            "url": "https://seatgeek.com/stockton-ports-at-fresno-grizzlies-tickets/minor-league-baseball/2023-04-13-3-30-am/5908629",
+            "score": 0.279,
+            "announce_date": "2023-01-05T00:00:00",
+            "created_at": "2023-01-05T16:02:31",
+            "date_tbd": false,
+            "title": "Stockton Ports at Fresno Grizzlies",
+            "popularity": 0.671,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "visible_at": "1970-01-01T00:00:00Z",
+            "is_visible_override": "UNSET",
+            "tdc_pvo_id": 0,
+            "tdc_pv_id": 0,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "family",
+            "id": 5851256,
+            "datetime_utc": "2023-04-13T10:30:00",
+            "venue": {
+                "state": "NV",
+                "name_v2": "Le Theatre Des Arts at Paris Las Vegas",
+                "postal_code": "89109",
+                "name": "Le Theatre Des Arts at Paris Las Vegas",
+                "links": [],
+                "timezone": "America/Los_Angeles",
+                "url": "https://seatgeek.com/venues/le-theatre-des-arts-at-paris-las-vegas-2/tickets",
+                "score": 0.47,
+                "location": {
+                    "lat": 36.11,
+                    "lon": -115.171
+                },
+                "address": "3655 Las Vegas Blvd South",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 262,
+                "city": "Las Vegas",
+                "slug": "le-theatre-des-arts-at-paris-las-vegas-2",
+                "extended_address": "Las Vegas, NV 89109",
+                "id": 1610,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 839,
+                "capacity": 0,
+                "display_location": "Las Vegas, NV"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "theater_family",
+                    "name": "Eiffel Tower Experience",
+                    "image": "https://seatgeek.com/images/performers-landscape/eiffel-tower-experience-ce92de/605657/huge.jpg",
+                    "id": 605657,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/eiffel-tower-experience-ce92de/605657/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 262
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 3000000,
+                            "name": "theater",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 8
+                        },
+                        {
+                            "id": 3050000,
+                            "name": "family",
+                            "parent_id": 3000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": "https://www.flickr.com/photos/30478819@N08/33015766008/in/photolist-SiuqYY-2aAJ6nb-27tFEJr-TfEqvU-5aFqe6-2fRfscU-5DcTqo-aeB1dg-bwAYdx-2bPCenq-8ARy1R-bEMH74-8AVpGL-8hqR5S-VdZ7nk-jxcedC-22scg7N-9xTeGb-JpxkhQ-aZSDGK-TeZcdy-UyCnMt-KAvtd8-Zs5p3j-dAxQMP-wWQ9yZ-SVBXhi-U6EHKs-2avypie-27tFDtv-28L2Gyd-27tFTRP-266CDAq-55FPdQ-cQMWE3-cQMWJC-23gcZ9w-eUSFKb-o7da-6iS3sK-bdJx7r-4Li5MP-aFafGG-4Li66X-7JPSpe-4faxNq-bVSDK2-bVSCu4-bVSyga-bVSzfF",
+                    "url": "https://seatgeek.com/eiffel-tower-experience-tickets",
+                    "score": 0.23,
+                    "slug": "eiffel-tower-experience",
+                    "home_venue_id": null,
+                    "short_name": "Eiffel Tower Experience",
+                    "num_upcoming_events": 262,
+                    "colors": null,
+                    "image_license": "https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=rich",
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": "[This image](https://www.flickr.com/photos/30478819@N08/33015766008/in/photolist-SiuqYY-2aAJ6nb-27tFEJr-TfEqvU-5aFqe6-2fRfscU-5DcTqo-aeB1dg-bwAYdx-2bPCenq-8ARy1R-bEMH74-8AVpGL-8hqR5S-VdZ7nk-jxcedC-22scg7N-9xTeGb-JpxkhQ-aZSDGK-TeZcdy-UyCnMt-KAvtd8-Zs5p3j-dAxQMP-wWQ9yZ-SVBXhi-U6EHKs-2avypie-27tFDtv-28L2Gyd-27tFTRP-266CDAq-55FPdQ-cQMWE3-cQMWJC-23gcZ9w-eUSFKb-o7da-6iS3sK-bdJx7r-4Li5MP-aFafGG-4Li66X-7JPSpe-4faxNq-bVSDK2-bVSCu4-bVSyga-bVSzfF) is available through [Creative Commons](https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=rich) on Flickr. Email [images@seatgeek.com](mailto:images@seatgeek.com) with any questions."
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2023-04-13T03:30:00",
+            "time_tbd": true,
+            "short_title": "Eiffel Tower Experience - Las Vegas",
+            "visible_until_utc": "2023-04-14T07:00:00",
+            "stats": {
+                "listing_count": null,
+                "average_price": null,
+                "lowest_price_good_deals": null,
+                "lowest_price": null,
+                "highest_price": null,
+                "visible_listing_count": null,
+                "dq_bucket_counts": null,
+                "median_price": null,
+                "lowest_sg_base_price": null,
+                "lowest_sg_base_price_good_deals": null
+            },
+            "taxonomies": [
+                {
+                    "id": 3000000,
+                    "name": "theater",
+                    "parent_id": null,
+                    "rank": 8
+                },
+                {
+                    "id": 3050000,
+                    "name": "family",
+                    "parent_id": 3000000,
+                    "rank": 0
+                }
+            ],
+            "url": "https://seatgeek.com/eiffel-tower-experience-las-vegas-tickets/family/2023-04-13-3-30-am/5851256",
+            "score": 0.333,
+            "announce_date": "2022-10-23T00:00:00",
+            "created_at": "2022-10-23T16:02:48",
+            "date_tbd": false,
+            "title": "Eiffel Tower Experience - Las Vegas",
+            "popularity": 0.677,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "visible_at": "1970-01-01T00:00:00Z",
+            "is_visible_override": "UNSET",
+            "tdc_pvo_id": 0,
+            "tdc_pv_id": 0,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "music_festival",
+            "id": 5723756,
+            "datetime_utc": "2023-04-13T10:30:00",
+            "venue": {
+                "state": "AZ",
+                "name_v2": "Country Thunder Fairgrounds - Florence",
+                "postal_code": "85232",
+                "name": "Country Thunder Fairgrounds - Florence",
+                "links": [],
+                "timezone": "America/Phoenix",
+                "url": "https://seatgeek.com/venues/country-thunder-fairgrounds-florence/tickets",
+                "score": 0.46,
+                "location": {
+                    "lat": 33.0775,
+                    "lon": -111.342
+                },
+                "address": "130 North Main Street",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 6,
+                "city": "Florence",
+                "slug": "country-thunder-fairgrounds-florence",
+                "extended_address": "Florence, AZ 85232",
+                "id": 1926,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 753,
+                "capacity": 12000,
+                "display_location": "Florence, AZ"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "music_festival",
+                    "name": "Country Thunder",
+                    "image": "https://seatgeek.com/images/performers-landscape/country-thunder-a51b5e/4287/huge.jpg",
+                    "id": 4287,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/country-thunder-a51b5e/4287/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 27
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 2000000,
+                            "name": "concerts",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 1
+                        },
+                        {
+                            "id": 2010000,
+                            "name": "music_festival",
+                            "parent_id": 2000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": "https://www.flickr.com/photos/krists/35835405722/in/photolist-WADPCN-fJnYHF-a8hHtZ-cBWyNY-eh7GgH-h7S8uZ-ehmZw7-cnXQum-88baox-oLa3sd-8evsxc-am7MzW-o8UpDa-8nqqMi-G1yYKP-bZigC7-bZifgh-4xvggZ-atejP3-h7S8t6-degzob-bxeA2b-9qXxSu-db4x9D-eYfBvK-hPVtxz-8iqZhG-fhsoen-b9iFue-bKSWnv-aumXV7-aecJ5j-dv64Xy-oHat9c-8iWUzS-S95Zsz-cVhzkA-cpct8S-26eQRe-e1bvoX-p9rhtj-cQnTgm-m6nFU-bqxPwg-TkVRsf-qhdYRt-5MHj4T-573NSZ-ohUdL8-2UvpXd",
+                    "url": "https://seatgeek.com/country-thunder-tickets",
+                    "score": 0.4,
+                    "slug": "country-thunder",
+                    "home_venue_id": null,
+                    "short_name": "Country Thunder",
+                    "num_upcoming_events": 27,
+                    "colors": null,
+                    "image_license": "https://creativecommons.org/licenses/by/2.0/",
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": "[This image](https://www.flickr.com/photos/krists/35835405722/in/photolist-WADPCN-fJnYHF-a8hHtZ-cBWyNY-eh7GgH-h7S8uZ-ehmZw7-cnXQum-88baox-oLa3sd-8evsxc-am7MzW-o8UpDa-8nqqMi-G1yYKP-bZigC7-bZifgh-4xvggZ-atejP3-h7S8t6-degzob-bxeA2b-9qXxSu-db4x9D-eYfBvK-hPVtxz-8iqZhG-fhsoen-b9iFue-bKSWnv-aumXV7-aecJ5j-dv64Xy-oHat9c-8iWUzS-S95Zsz-cVhzkA-cpct8S-26eQRe-e1bvoX-p9rhtj-cQnTgm-m6nFU-bqxPwg-TkVRsf-qhdYRt-5MHj4T-573NSZ-ohUdL8-2UvpXd) is available through [Creative Commons](https://creativecommons.org/licenses/by/2.0/) (@krists - Flickr). Email [images@seatgeek.com](mailto:images@seatgeek.com) with any questions."
+                },
+                {
+                    "type": "band",
+                    "name": "Luke Bryan",
+                    "image": "https://seatgeek.com/images/performers-landscape/luke-bryan-5f2651/1164/huge.jpg",
+                    "id": 1164,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/luke-bryan-5f2651/1164/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 54
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 2000000,
+                            "name": "concerts",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 1
+                        }
+                    ],
+                    "image_attribution": "SeatGeek - 2022 (Creative Project)",
+                    "url": "https://seatgeek.com/luke-bryan-tickets",
+                    "score": 0.45,
+                    "slug": "luke-bryan",
+                    "home_venue_id": null,
+                    "short_name": "Luke Bryan",
+                    "num_upcoming_events": 54,
+                    "colors": null,
+                    "image_license": "SeatGeek - 2022 (Creative Project)",
+                    "genres": [
+                        {
+                            "id": 450,
+                            "name": "Country",
+                            "slug": "country",
+                            "primary": false,
+                            "images": {
+                                "1200x525": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-33f7af/797285/1200x525.jpg",
+                                "1200x627": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-ecb7cd/797285/1200x627.jpg",
+                                "136x136": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-5e4173/797285/136x136.jpg",
+                                "500_700": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-980de8/797285/500_700.jpg",
+                                "800x320": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-0e29a9/797285/800x320.jpg",
+                                "banner": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-b2a51d/797285/banner.jpg",
+                                "block": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-cd2735/797285/block.jpg",
+                                "criteo_130_160": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-6c4869/797285/criteo_130_160.jpg",
+                                "criteo_170_235": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-9a42b0/797285/criteo_170_235.jpg",
+                                "criteo_205_100": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-c48ddb/797285/criteo_205_100.jpg",
+                                "criteo_400_300": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-9cf993/797285/criteo_400_300.jpg",
+                                "fb_100x72": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-29f47c/797285/fb_100x72.jpg",
+                                "fb_600_315": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-571764/797285/fb_600_315.jpg",
+                                "huge": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-a6d843/797285/huge.jpg",
+                                "ipad_event_modal": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-498dd7/797285/ipad_event_modal.jpg",
+                                "ipad_header": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-7bb559/797285/ipad_header.jpg",
+                                "ipad_mini_explore": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-4157c6/797285/ipad_mini_explore.jpg",
+                                "mongo": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-a4a14d/797285/mongo.jpg",
+                                "square_mid": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-0fee8f/797285/square_mid.jpg",
+                                "triggit_fb_ad": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-6a2431/797285/triggit_fb_ad.jpg"
+                            },
+                            "image": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-a6d843/797285/huge.jpg",
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            }
+                        },
+                        {
+                            "id": 467,
+                            "name": "Folk",
+                            "slug": "folk",
+                            "primary": false,
+                            "images": {
+                                "1200x525": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-6da60d/370135/1200x525.jpg",
+                                "1200x627": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-16f08f/370135/1200x627.jpg",
+                                "136x136": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-14884d/370135/136x136.jpg",
+                                "500_700": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-2c15a8/370135/500_700.jpg",
+                                "800x320": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-5414af/370135/800x320.jpg",
+                                "banner": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-e252f5/370135/banner.jpg",
+                                "block": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-4dcde5/370135/block.jpg",
+                                "criteo_130_160": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-579f3a/370135/criteo_130_160.jpg",
+                                "criteo_170_235": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-d9e67b/370135/criteo_170_235.jpg",
+                                "criteo_205_100": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-1cbde4/370135/criteo_205_100.jpg",
+                                "criteo_400_300": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-cc2b6d/370135/criteo_400_300.jpg",
+                                "fb_100x72": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-07a235/370135/fb_100x72.jpg",
+                                "fb_600_315": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-5f4b5c/370135/fb_600_315.jpg",
+                                "huge": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-b19535/370135/huge.jpg",
+                                "ipad_event_modal": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-91ee7d/370135/ipad_event_modal.jpg",
+                                "ipad_header": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-fba953/370135/ipad_header.jpg",
+                                "ipad_mini_explore": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-84d2a5/370135/ipad_mini_explore.jpg",
+                                "mongo": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-6e1ab3/370135/mongo.jpg",
+                                "square_mid": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-6adbf5/370135/square_mid.jpg",
+                                "triggit_fb_ad": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-006723/370135/triggit_fb_ad.jpg"
+                            },
+                            "image": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-b19535/370135/huge.jpg",
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            }
+                        },
+                        {
+                            "id": 452,
+                            "name": "Pop",
+                            "slug": "pop",
+                            "primary": true,
+                            "images": {
+                                "1200x525": "https://seatgeek.com/images/performers-landscape/the-cure-b26103/1788/1200x525.jpg",
+                                "1200x627": "https://seatgeek.com/images/performers-landscape/the-cure-4622cd/1788/1200x627.jpg",
+                                "136x136": "https://seatgeek.com/images/performers-landscape/the-cure-dad4fc/1788/136x136.jpg",
+                                "500_700": "https://seatgeek.com/images/performers-landscape/the-cure-e31967/1788/500_700.jpg",
+                                "800x320": "https://seatgeek.com/images/performers-landscape/the-cure-269c47/1788/800x320.jpg",
+                                "banner": "https://seatgeek.com/images/performers-landscape/the-cure-0627fc/1788/banner.jpg",
+                                "block": "https://seatgeek.com/images/performers-landscape/the-cure-047e36/1788/block.jpg",
+                                "criteo_130_160": "https://seatgeek.com/images/performers-landscape/the-cure-06a5dd/1788/criteo_130_160.jpg",
+                                "criteo_170_235": "https://seatgeek.com/images/performers-landscape/the-cure-237d87/1788/criteo_170_235.jpg",
+                                "criteo_205_100": "https://seatgeek.com/images/performers-landscape/the-cure-3af31c/1788/criteo_205_100.jpg",
+                                "criteo_400_300": "https://seatgeek.com/images/performers-landscape/the-cure-aabbea/1788/criteo_400_300.jpg",
+                                "fb_100x72": "https://seatgeek.com/images/performers-landscape/the-cure-da92a1/1788/fb_100x72.jpg",
+                                "fb_600_315": "https://seatgeek.com/images/performers-landscape/the-cure-1610a4/1788/fb_600_315.jpg",
+                                "huge": "https://seatgeek.com/images/performers-landscape/the-cure-1dd08c/1788/huge.jpg",
+                                "ipad_event_modal": "https://seatgeek.com/images/performers-landscape/the-cure-e85585/1788/ipad_event_modal.jpg",
+                                "ipad_header": "https://seatgeek.com/images/performers-landscape/the-cure-4aa468/1788/ipad_header.jpg",
+                                "ipad_mini_explore": "https://seatgeek.com/images/performers-landscape/the-cure-d81286/1788/ipad_mini_explore.jpg",
+                                "mongo": "https://seatgeek.com/images/performers-landscape/the-cure-40bd34/1788/mongo.jpg",
+                                "square_mid": "https://seatgeek.com/images/performers-landscape/the-cure-80c914/1788/square_mid.jpg",
+                                "triggit_fb_ad": "https://seatgeek.com/images/performers-landscape/the-cure-7ecd08/1788/triggit_fb_ad.jpg"
+                            },
+                            "image": "https://seatgeek.com/images/performers-landscape/the-cure-1dd08c/1788/huge.jpg",
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            }
+                        }
+                    ],
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": ""
+                },
+                {
+                    "type": "band",
+                    "name": "Dierks Bentley",
+                    "image": "https://seatgeek.com/images/performers-landscape/dierks-bentley-fbc23b/606/huge.jpg",
+                    "id": 606,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/dierks-bentley-fbc23b/606/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 36
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 2000000,
+                            "name": "concerts",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 1
+                        }
+                    ],
+                    "image_attribution": "SeatGeek - 2022 (Creative Project)",
+                    "url": "https://seatgeek.com/dierks-bentley-tickets",
+                    "score": 0.4,
+                    "slug": "dierks-bentley",
+                    "home_venue_id": null,
+                    "short_name": "Dierks Bentley",
+                    "num_upcoming_events": 36,
+                    "colors": null,
+                    "image_license": "SeatGeek - 2022 (Creative Project)",
+                    "genres": [
+                        {
+                            "id": 450,
+                            "name": "Country",
+                            "slug": "country",
+                            "primary": false,
+                            "images": {
+                                "1200x525": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-33f7af/797285/1200x525.jpg",
+                                "1200x627": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-ecb7cd/797285/1200x627.jpg",
+                                "136x136": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-5e4173/797285/136x136.jpg",
+                                "500_700": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-980de8/797285/500_700.jpg",
+                                "800x320": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-0e29a9/797285/800x320.jpg",
+                                "banner": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-b2a51d/797285/banner.jpg",
+                                "block": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-cd2735/797285/block.jpg",
+                                "criteo_130_160": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-6c4869/797285/criteo_130_160.jpg",
+                                "criteo_170_235": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-9a42b0/797285/criteo_170_235.jpg",
+                                "criteo_205_100": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-c48ddb/797285/criteo_205_100.jpg",
+                                "criteo_400_300": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-9cf993/797285/criteo_400_300.jpg",
+                                "fb_100x72": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-29f47c/797285/fb_100x72.jpg",
+                                "fb_600_315": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-571764/797285/fb_600_315.jpg",
+                                "huge": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-a6d843/797285/huge.jpg",
+                                "ipad_event_modal": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-498dd7/797285/ipad_event_modal.jpg",
+                                "ipad_header": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-7bb559/797285/ipad_header.jpg",
+                                "ipad_mini_explore": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-4157c6/797285/ipad_mini_explore.jpg",
+                                "mongo": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-a4a14d/797285/mongo.jpg",
+                                "square_mid": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-0fee8f/797285/square_mid.jpg",
+                                "triggit_fb_ad": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-6a2431/797285/triggit_fb_ad.jpg"
+                            },
+                            "image": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-a6d843/797285/huge.jpg",
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            }
+                        },
+                        {
+                            "id": 467,
+                            "name": "Folk",
+                            "slug": "folk",
+                            "primary": true,
+                            "images": {
+                                "1200x525": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-6da60d/370135/1200x525.jpg",
+                                "1200x627": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-16f08f/370135/1200x627.jpg",
+                                "136x136": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-14884d/370135/136x136.jpg",
+                                "500_700": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-2c15a8/370135/500_700.jpg",
+                                "800x320": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-5414af/370135/800x320.jpg",
+                                "banner": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-e252f5/370135/banner.jpg",
+                                "block": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-4dcde5/370135/block.jpg",
+                                "criteo_130_160": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-579f3a/370135/criteo_130_160.jpg",
+                                "criteo_170_235": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-d9e67b/370135/criteo_170_235.jpg",
+                                "criteo_205_100": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-1cbde4/370135/criteo_205_100.jpg",
+                                "criteo_400_300": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-cc2b6d/370135/criteo_400_300.jpg",
+                                "fb_100x72": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-07a235/370135/fb_100x72.jpg",
+                                "fb_600_315": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-5f4b5c/370135/fb_600_315.jpg",
+                                "huge": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-b19535/370135/huge.jpg",
+                                "ipad_event_modal": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-91ee7d/370135/ipad_event_modal.jpg",
+                                "ipad_header": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-fba953/370135/ipad_header.jpg",
+                                "ipad_mini_explore": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-84d2a5/370135/ipad_mini_explore.jpg",
+                                "mongo": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-6e1ab3/370135/mongo.jpg",
+                                "square_mid": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-6adbf5/370135/square_mid.jpg",
+                                "triggit_fb_ad": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-006723/370135/triggit_fb_ad.jpg"
+                            },
+                            "image": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-b19535/370135/huge.jpg",
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            }
+                        }
+                    ],
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": ""
+                },
+                {
+                    "type": "band",
+                    "name": "Jon Pardi",
+                    "image": "https://seatgeek.com/images/performers-landscape/jon-pardi-3a1bad/21629/huge.jpg",
+                    "id": 21629,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/jon-pardi-3a1bad/21629/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 49
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 2000000,
+                            "name": "concerts",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 1
+                        }
+                    ],
+                    "image_attribution": "SeatGeek - 2022 (Creative Project)",
+                    "url": "https://seatgeek.com/jon-pardi-tickets",
+                    "score": 0.4,
+                    "slug": "jon-pardi",
+                    "home_venue_id": null,
+                    "short_name": "Jon Pardi",
+                    "num_upcoming_events": 49,
+                    "colors": null,
+                    "image_license": "SeatGeek - 2022 (Creative Project)",
+                    "genres": [
+                        {
+                            "id": 450,
+                            "name": "Country",
+                            "slug": "country",
+                            "primary": false,
+                            "images": {
+                                "1200x525": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-33f7af/797285/1200x525.jpg",
+                                "1200x627": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-ecb7cd/797285/1200x627.jpg",
+                                "136x136": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-5e4173/797285/136x136.jpg",
+                                "500_700": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-980de8/797285/500_700.jpg",
+                                "800x320": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-0e29a9/797285/800x320.jpg",
+                                "banner": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-b2a51d/797285/banner.jpg",
+                                "block": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-cd2735/797285/block.jpg",
+                                "criteo_130_160": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-6c4869/797285/criteo_130_160.jpg",
+                                "criteo_170_235": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-9a42b0/797285/criteo_170_235.jpg",
+                                "criteo_205_100": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-c48ddb/797285/criteo_205_100.jpg",
+                                "criteo_400_300": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-9cf993/797285/criteo_400_300.jpg",
+                                "fb_100x72": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-29f47c/797285/fb_100x72.jpg",
+                                "fb_600_315": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-571764/797285/fb_600_315.jpg",
+                                "huge": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-a6d843/797285/huge.jpg",
+                                "ipad_event_modal": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-498dd7/797285/ipad_event_modal.jpg",
+                                "ipad_header": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-7bb559/797285/ipad_header.jpg",
+                                "ipad_mini_explore": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-4157c6/797285/ipad_mini_explore.jpg",
+                                "mongo": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-a4a14d/797285/mongo.jpg",
+                                "square_mid": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-0fee8f/797285/square_mid.jpg",
+                                "triggit_fb_ad": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-6a2431/797285/triggit_fb_ad.jpg"
+                            },
+                            "image": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-a6d843/797285/huge.jpg",
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            }
+                        },
+                        {
+                            "id": 467,
+                            "name": "Folk",
+                            "slug": "folk",
+                            "primary": true,
+                            "images": {
+                                "1200x525": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-6da60d/370135/1200x525.jpg",
+                                "1200x627": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-16f08f/370135/1200x627.jpg",
+                                "136x136": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-14884d/370135/136x136.jpg",
+                                "500_700": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-2c15a8/370135/500_700.jpg",
+                                "800x320": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-5414af/370135/800x320.jpg",
+                                "banner": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-e252f5/370135/banner.jpg",
+                                "block": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-4dcde5/370135/block.jpg",
+                                "criteo_130_160": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-579f3a/370135/criteo_130_160.jpg",
+                                "criteo_170_235": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-d9e67b/370135/criteo_170_235.jpg",
+                                "criteo_205_100": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-1cbde4/370135/criteo_205_100.jpg",
+                                "criteo_400_300": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-cc2b6d/370135/criteo_400_300.jpg",
+                                "fb_100x72": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-07a235/370135/fb_100x72.jpg",
+                                "fb_600_315": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-5f4b5c/370135/fb_600_315.jpg",
+                                "huge": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-b19535/370135/huge.jpg",
+                                "ipad_event_modal": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-91ee7d/370135/ipad_event_modal.jpg",
+                                "ipad_header": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-fba953/370135/ipad_header.jpg",
+                                "ipad_mini_explore": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-84d2a5/370135/ipad_mini_explore.jpg",
+                                "mongo": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-6e1ab3/370135/mongo.jpg",
+                                "square_mid": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-6adbf5/370135/square_mid.jpg",
+                                "triggit_fb_ad": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-006723/370135/triggit_fb_ad.jpg"
+                            },
+                            "image": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-b19535/370135/huge.jpg",
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            }
+                        }
+                    ],
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": ""
+                },
+                {
+                    "type": "band",
+                    "name": "Cody Johnson",
+                    "image": "https://seatgeek.com/images/performers-landscape/cody-johnson-3d1fcb/60868/huge.jpg",
+                    "id": 60868,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/cody-johnson-3d1fcb/60868/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 35
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 2000000,
+                            "name": "concerts",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 1
+                        }
+                    ],
+                    "image_attribution": "SeatGeek - 2022 (Creative Project)",
+                    "url": "https://seatgeek.com/cody-johnson-tickets",
+                    "score": 0.39,
+                    "slug": "cody-johnson",
+                    "home_venue_id": null,
+                    "short_name": "Cody Johnson",
+                    "num_upcoming_events": 35,
+                    "colors": null,
+                    "image_license": "SeatGeek - 2022 (Creative Project)",
+                    "genres": [
+                        {
+                            "id": 450,
+                            "name": "Country",
+                            "slug": "country",
+                            "primary": true,
+                            "images": {
+                                "1200x525": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-33f7af/797285/1200x525.jpg",
+                                "1200x627": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-ecb7cd/797285/1200x627.jpg",
+                                "136x136": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-5e4173/797285/136x136.jpg",
+                                "500_700": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-980de8/797285/500_700.jpg",
+                                "800x320": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-0e29a9/797285/800x320.jpg",
+                                "banner": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-b2a51d/797285/banner.jpg",
+                                "block": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-cd2735/797285/block.jpg",
+                                "criteo_130_160": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-6c4869/797285/criteo_130_160.jpg",
+                                "criteo_170_235": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-9a42b0/797285/criteo_170_235.jpg",
+                                "criteo_205_100": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-c48ddb/797285/criteo_205_100.jpg",
+                                "criteo_400_300": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-9cf993/797285/criteo_400_300.jpg",
+                                "fb_100x72": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-29f47c/797285/fb_100x72.jpg",
+                                "fb_600_315": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-571764/797285/fb_600_315.jpg",
+                                "huge": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-a6d843/797285/huge.jpg",
+                                "ipad_event_modal": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-498dd7/797285/ipad_event_modal.jpg",
+                                "ipad_header": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-7bb559/797285/ipad_header.jpg",
+                                "ipad_mini_explore": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-4157c6/797285/ipad_mini_explore.jpg",
+                                "mongo": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-a4a14d/797285/mongo.jpg",
+                                "square_mid": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-0fee8f/797285/square_mid.jpg",
+                                "triggit_fb_ad": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-6a2431/797285/triggit_fb_ad.jpg"
+                            },
+                            "image": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-a6d843/797285/huge.jpg",
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            }
+                        },
+                        {
+                            "id": 467,
+                            "name": "Folk",
+                            "slug": "folk",
+                            "primary": false,
+                            "images": {
+                                "1200x525": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-6da60d/370135/1200x525.jpg",
+                                "1200x627": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-16f08f/370135/1200x627.jpg",
+                                "136x136": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-14884d/370135/136x136.jpg",
+                                "500_700": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-2c15a8/370135/500_700.jpg",
+                                "800x320": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-5414af/370135/800x320.jpg",
+                                "banner": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-e252f5/370135/banner.jpg",
+                                "block": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-4dcde5/370135/block.jpg",
+                                "criteo_130_160": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-579f3a/370135/criteo_130_160.jpg",
+                                "criteo_170_235": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-d9e67b/370135/criteo_170_235.jpg",
+                                "criteo_205_100": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-1cbde4/370135/criteo_205_100.jpg",
+                                "criteo_400_300": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-cc2b6d/370135/criteo_400_300.jpg",
+                                "fb_100x72": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-07a235/370135/fb_100x72.jpg",
+                                "fb_600_315": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-5f4b5c/370135/fb_600_315.jpg",
+                                "huge": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-b19535/370135/huge.jpg",
+                                "ipad_event_modal": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-91ee7d/370135/ipad_event_modal.jpg",
+                                "ipad_header": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-fba953/370135/ipad_header.jpg",
+                                "ipad_mini_explore": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-84d2a5/370135/ipad_mini_explore.jpg",
+                                "mongo": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-6e1ab3/370135/mongo.jpg",
+                                "square_mid": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-6adbf5/370135/square_mid.jpg",
+                                "triggit_fb_ad": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-006723/370135/triggit_fb_ad.jpg"
+                            },
+                            "image": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-b19535/370135/huge.jpg",
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            }
+                        }
+                    ],
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": ""
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2023-04-13T03:30:00",
+            "time_tbd": true,
+            "short_title": "Country Thunder (4 Day Pass)",
+            "visible_until_utc": "2023-04-14T07:00:00",
+            "stats": {
+                "listing_count": 1,
+                "average_price": 1133,
+                "lowest_price_good_deals": null,
+                "lowest_price": 1133,
+                "highest_price": 1133,
+                "visible_listing_count": 1,
+                "dq_bucket_counts": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "median_price": 1133,
+                "lowest_sg_base_price": 859,
+                "lowest_sg_base_price_good_deals": null
+            },
+            "taxonomies": [
+                {
+                    "id": 2000000,
+                    "name": "concert",
+                    "parent_id": null,
+                    "rank": 1
+                },
+                {
+                    "id": 2010000,
+                    "name": "music_festival",
+                    "parent_id": 2000000,
+                    "rank": 0
+                }
+            ],
+            "url": "https://seatgeek.com/country-thunder-arizona-4-day-pass-with-jon-pardi-luke-bryan-cody-johnson-dierks-bentley-tickets/florence-arizona-country-thunder-fairgrounds-florence-2023-04-13-3-30-am/music-festival/5723756",
+            "score": 0.576,
+            "announce_date": "2022-06-09T00:00:00",
+            "created_at": "2022-06-09T19:15:13",
+            "date_tbd": false,
+            "title": "Country Thunder Arizona - (4 Day Pass) with Jon Pardi, Luke Bryan, Cody Johnson, Dierks Bentley",
+            "popularity": 0.808,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "visible_at": "1970-01-01T00:00:00Z",
+            "is_visible_override": "UNSET",
+            "tdc_pvo_id": 0,
+            "tdc_pv_id": 0,
+            "general_admission": true,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "theater",
+            "id": 5935450,
+            "datetime_utc": "2023-04-13T13:00:00",
+            "venue": {
+                "state": "TX",
+                "name_v2": "NRG Center",
+                "postal_code": "77054",
+                "name": "NRG Center",
+                "links": [],
+                "timezone": "America/Chicago",
+                "url": "https://seatgeek.com/venues/nrg-center/tickets",
+                "score": 0.29,
+                "location": {
+                    "lat": 29.6851,
+                    "lon": -95.4111
+                },
+                "address": "1 Reliant Park",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 3,
+                "city": "Houston",
+                "slug": "nrg-center",
+                "extended_address": "Houston, TX 77054",
+                "id": 15998,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 618,
+                "capacity": 0,
+                "display_location": "Houston, TX"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "theater",
+                    "name": "Mecum Auto Auctions",
+                    "image": "https://seatgeek.com/images/performers-landscape/mecum-auto-auctions-8d6485/85952/huge.jpg",
+                    "id": 85952,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/mecum-auto-auctions-8d6485/85952/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 22
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 3000000,
+                            "name": "theater",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 8
+                        }
+                    ],
+                    "image_attribution": "SeatGeek - 2022 (2000 X 2000)",
+                    "url": "https://seatgeek.com/mecum-auto-auctions-tickets",
+                    "score": 0.23,
+                    "slug": "mecum-auto-auctions",
+                    "home_venue_id": null,
+                    "short_name": "Mecum Auto Auctions",
+                    "num_upcoming_events": 22,
+                    "colors": null,
+                    "image_license": "SeatGeek - 2022 (2000 X 2000)",
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": ""
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2023-04-13T08:00:00",
+            "time_tbd": false,
+            "short_title": "Mecum Auto Auctions - Houston",
+            "visible_until_utc": "2023-04-13T17:00:00",
+            "stats": {
+                "listing_count": 1,
+                "average_price": 61,
+                "lowest_price_good_deals": null,
+                "lowest_price": 61,
+                "highest_price": 61,
+                "visible_listing_count": 1,
+                "dq_bucket_counts": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "median_price": 61,
+                "lowest_sg_base_price": 41,
+                "lowest_sg_base_price_good_deals": null
+            },
+            "taxonomies": [
+                {
+                    "id": 3000000,
+                    "name": "theater",
+                    "parent_id": null,
+                    "rank": 8
+                }
+            ],
+            "url": "https://seatgeek.com/mecum-auto-auctions-houston-tickets/theater/2023-04-13-8-am/5935450",
+            "score": 0.297,
+            "announce_date": "2023-02-06T00:00:00",
+            "created_at": "2023-02-06T12:59:28",
+            "date_tbd": false,
+            "title": "Mecum Auto Auctions - Houston",
+            "popularity": 0.626,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "visible_at": "1970-01-01T00:00:00Z",
+            "is_visible_override": "UNSET",
+            "tdc_pvo_id": 0,
+            "tdc_pv_id": 0,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "hockey",
+            "id": 5961477,
+            "datetime_utc": "2023-04-13T14:00:00",
+            "venue": {
+                "state": "ON",
+                "name_v2": "CAA Centre",
+                "postal_code": "L6W 4T2",
+                "name": "CAA Centre",
+                "links": [],
+                "timezone": "America/Toronto",
+                "url": "https://seatgeek.com/venues/caa-centre/tickets",
+                "score": 0.38,
+                "location": {
+                    "lat": 43.667,
+                    "lon": -79.7088
+                },
+                "address": "7575 Kennedy Road South",
+                "country": "Canada",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 23,
+                "city": "Brampton",
+                "slug": "caa-centre",
+                "extended_address": "Brampton, Canada",
+                "id": 1041,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 0,
+                "capacity": 4774,
+                "display_location": "Brampton, Canada"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "hockey",
+                    "name": "World Womens Championship Hockey",
+                    "image": "https://seatgeek.com/images/performers-landscape/world-womens-championship-hockey-69e186/102062/huge.jpg",
+                    "id": 102062,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/world-womens-championship-hockey-69e186/102062/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 11
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1040000,
+                            "name": "hockey",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": "SeatGeek - 2022",
+                    "url": "https://seatgeek.com/world-womens-championship-hockey-tickets",
+                    "score": 0.25,
+                    "slug": "world-womens-championship-hockey",
+                    "home_venue_id": null,
+                    "short_name": "World Womens Championship Hockey",
+                    "num_upcoming_events": 11,
+                    "colors": null,
+                    "image_license": "SeatGeek - 2022",
+                    "popularity": 0,
+                    "home_team": true,
+                    "location": null,
+                    "image_rights_message": ""
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2023-04-13T10:00:00",
+            "time_tbd": false,
+            "short_title": "IIHF Ice Hockey Womens World Championship - Quarterfinal 1",
+            "visible_until_utc": "2023-04-13T18:00:00",
+            "stats": {
+                "listing_count": 19,
+                "average_price": 87,
+                "lowest_price_good_deals": null,
+                "lowest_price": 61,
+                "highest_price": 128,
+                "visible_listing_count": 17,
+                "dq_bucket_counts": null,
+                "median_price": 89,
+                "lowest_sg_base_price": 42,
+                "lowest_sg_base_price_good_deals": null
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                },
+                {
+                    "id": 1040000,
+                    "name": "hockey",
+                    "parent_id": 1000000,
+                    "rank": 0
+                }
+            ],
+            "url": "https://seatgeek.com/iihf-ice-hockey-womens-world-championship-quarterfinal-1-tickets/hockey/2023-04-13-10-am/5961477",
+            "score": 0.406,
+            "announce_date": "2023-03-03T00:00:00",
+            "created_at": "2023-03-03T19:08:09",
+            "date_tbd": false,
+            "title": "IIHF Ice Hockey Womens World Championship - Quarterfinal 1",
+            "popularity": 0.754,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "visible_at": "1970-01-01T00:00:00Z",
+            "is_visible_override": "UNSET",
+            "tdc_pvo_id": 0,
+            "tdc_pv_id": 0,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "classical",
+            "id": 5824230,
+            "datetime_utc": "2023-04-13T14:30:00",
+            "venue": {
+                "state": "MA",
+                "name_v2": "Boston Symphony Hall",
+                "postal_code": "02115",
+                "name": "Boston Symphony Hall",
+                "links": [],
+                "timezone": "America/New_York",
+                "url": "https://seatgeek.com/venues/boston-symphony-hall/tickets",
+                "score": 0.48,
+                "location": {
+                    "lat": 42.3429,
+                    "lon": -71.0857
+                },
+                "address": "301 Massachusetts Avenue",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 15,
+                "city": "Boston",
+                "slug": "boston-symphony-hall",
+                "extended_address": "Boston, MA 02115",
+                "id": 584,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 506,
+                "capacity": 2625,
+                "display_location": "Boston, MA"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "theater_classical",
+                    "name": "Andris Nelsons",
+                    "image": "https://seatgeek.com/images/performers-landscape/andris-nelsons-d08991/107400/huge.jpg",
+                    "id": 107400,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/andris-nelsons-d08991/107400/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 15
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 3000000,
+                            "name": "theater",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 3010000,
+                            "name": "classical",
+                            "parent_id": 3000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": "Hiroyuki Ito / Hulton Archive / Getty Images",
+                    "url": "https://seatgeek.com/andris-nelsons-tickets",
+                    "score": 0.27,
+                    "slug": "andris-nelsons",
+                    "home_venue_id": null,
+                    "short_name": "Andris Nelsons",
+                    "num_upcoming_events": 15,
+                    "colors": null,
+                    "image_license": "rightsmanaged",
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": "(c) Hiroyuki Ito / Hulton Archive / Getty Images"
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2023-04-13T10:30:00",
+            "time_tbd": false,
+            "short_title": "Andris Nelsons - Boston",
+            "visible_until_utc": "2023-04-13T18:30:00",
+            "stats": {
+                "listing_count": null,
+                "average_price": null,
+                "lowest_price_good_deals": null,
+                "lowest_price": null,
+                "highest_price": null,
+                "visible_listing_count": null,
+                "dq_bucket_counts": null,
+                "median_price": null,
+                "lowest_sg_base_price": null,
+                "lowest_sg_base_price_good_deals": null
+            },
+            "taxonomies": [
+                {
+                    "id": 3000000,
+                    "name": "theater",
+                    "parent_id": null,
+                    "rank": 8
+                },
+                {
+                    "id": 3010000,
+                    "name": "classical",
+                    "parent_id": 3000000,
+                    "rank": 0
+                }
+            ],
+            "url": "https://seatgeek.com/andris-nelsons-boston-tickets/classical/2023-04-13-10-30-am/5824230",
+            "score": 0.353,
+            "announce_date": "2022-09-27T00:00:00",
+            "created_at": "2022-09-27T17:09:46",
+            "date_tbd": false,
+            "title": "Andris Nelsons - Boston",
+            "popularity": 0.694,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "visible_at": "1970-01-01T00:00:00Z",
+            "is_visible_override": "UNSET",
+            "tdc_pvo_id": 0,
+            "tdc_pv_id": 0,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "theater",
+            "id": 5888734,
+            "datetime_utc": "2023-04-13T14:30:00",
+            "venue": {
+                "state": "NJ",
+                "name_v2": "State Theatre New Jersey",
+                "postal_code": "08901",
+                "name": "State Theatre New Jersey",
+                "links": [],
+                "timezone": "America/New_York",
+                "url": "https://seatgeek.com/venues/state-theatre-new-jersey-1/tickets",
+                "score": 0.47,
+                "location": {
+                    "lat": 40.4866,
+                    "lon": -74.4349
+                },
+                "address": "15 Livingston Avenue",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 38,
+                "city": "New Brunswick",
+                "slug": "state-theatre-new-jersey-1",
+                "extended_address": "New Brunswick, NJ 08901",
+                "id": 473,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 501,
+                "capacity": 1847,
+                "display_location": "New Brunswick, NJ"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "theater",
+                    "name": "Diavolo",
+                    "image": "https://seatgeek.com/images/performers-landscape/diavolo-a9a38d/13389/huge.jpg",
+                    "id": 13389,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/diavolo-a9a38d/13389/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 2
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 3000000,
+                            "name": "theater",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": "SeatGeek - 2022 (2000 X 2000)",
+                    "url": "https://seatgeek.com/diavolo-tickets",
+                    "score": 0.28,
+                    "slug": "diavolo",
+                    "home_venue_id": null,
+                    "short_name": "Diavolo",
+                    "num_upcoming_events": 2,
+                    "colors": null,
+                    "image_license": "SeatGeek - 2022 (2000 X 2000)",
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": ""
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2023-04-13T10:30:00",
+            "time_tbd": false,
+            "short_title": "Diavolo - New Brunswick",
+            "visible_until_utc": "2023-04-13T18:30:00",
+            "stats": {
+                "listing_count": null,
+                "average_price": null,
+                "lowest_price_good_deals": null,
+                "lowest_price": null,
+                "highest_price": null,
+                "visible_listing_count": null,
+                "dq_bucket_counts": null,
+                "median_price": null,
+                "lowest_sg_base_price": null,
+                "lowest_sg_base_price_good_deals": null
+            },
+            "taxonomies": [
+                {
+                    "id": 3000000,
+                    "name": "theater",
+                    "parent_id": null,
+                    "rank": 8
+                }
+            ],
+            "url": "https://seatgeek.com/diavolo-new-brunswick-tickets/theater/2023-04-13-10-30-am/5888734",
+            "score": 0.353,
+            "announce_date": "2021-10-19T00:00:00",
+            "created_at": "2022-12-04T16:06:16",
+            "date_tbd": false,
+            "title": "Diavolo - New Brunswick",
+            "popularity": 0.708,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "visible_at": "1970-01-01T00:00:00Z",
+            "is_visible_override": "UNSET",
+            "tdc_pvo_id": 0,
+            "tdc_pv_id": 0,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "classical_orchestral_instrumental",
+            "id": 5784742,
+            "datetime_utc": "2023-04-13T15:00:00",
+            "venue": {
+                "state": "FL",
+                "name_v2": "Duke Energy Center for the Arts - Mahaffey Theater",
+                "postal_code": "33701",
+                "name": "Duke Energy Center for the Arts - Mahaffey Theater",
+                "links": [],
+                "timezone": "America/New_York",
+                "url": "https://seatgeek.com/venues/duke-energy-center-for-the-arts-mahaffey-theater/tickets",
+                "score": 0.45,
+                "location": {
+                    "lat": 27.7672,
+                    "lon": -82.6321
+                },
+                "address": "400 First St. South",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 31,
+                "city": "Saint Petersburg",
+                "slug": "duke-energy-center-for-the-arts-mahaffey-theater",
+                "extended_address": "Saint Petersburg, FL 33701",
+                "id": 1194,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 539,
+                "capacity": 2031,
+                "display_location": "Saint Petersburg, FL"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "theater_classical_orchestral_instrumental",
+                    "name": "The Florida Orchestra",
+                    "image": "https://seatgeek.com/images/performers-landscape/the-florida-orchestra-a01682/7755/huge.jpg",
+                    "id": 7755,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/the-florida-orchestra-a01682/7755/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 13
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 3000000,
+                            "name": "theater",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 8
+                        },
+                        {
+                            "id": 3010000,
+                            "name": "classical",
+                            "parent_id": 3000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 3010300,
+                            "name": "classical_orchestral_instrumental",
+                            "parent_id": 3010000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": "https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=rich",
+                    "url": "https://seatgeek.com/the-florida-orchestra-tickets",
+                    "score": 0.23,
+                    "slug": "the-florida-orchestra",
+                    "home_venue_id": null,
+                    "short_name": "The Florida Orchestra",
+                    "num_upcoming_events": 13,
+                    "colors": null,
+                    "image_license": "https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=rich",
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": "This image is available through [Creative Commons](https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=rich). Email [images@seatgeek.com](mailto:images@seatgeek.com) with any questions."
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2023-04-13T11:00:00",
+            "time_tbd": false,
+            "short_title": "The Florida Orchestra - Saint Petersburg",
+            "visible_until_utc": "2023-04-13T19:00:00",
+            "stats": {
+                "listing_count": 23,
+                "average_price": 125,
+                "lowest_price_good_deals": 65,
+                "lowest_price": 65,
+                "highest_price": 378,
+                "visible_listing_count": 23,
+                "dq_bucket_counts": [
+                    1,
+                    11,
+                    9,
+                    2,
+                    1,
+                    2,
+                    4,
+                    0
+                ],
+                "median_price": 97,
+                "lowest_sg_base_price": 44,
+                "lowest_sg_base_price_good_deals": 44
+            },
+            "taxonomies": [
+                {
+                    "id": 3000000,
+                    "name": "theater",
+                    "parent_id": null,
+                    "rank": 8
+                },
+                {
+                    "id": 3010000,
+                    "name": "classical",
+                    "parent_id": 3000000,
+                    "rank": 0
+                },
+                {
+                    "id": 3010300,
+                    "name": "classical_orchestral_instrumental",
+                    "parent_id": 3010000,
+                    "rank": 0
+                }
+            ],
+            "url": "https://seatgeek.com/the-florida-orchestra-saint-petersburg-tickets/orchestral/2023-04-13-11-am/5784742",
+            "score": 0.31,
+            "announce_date": "2022-08-24T00:00:00",
+            "created_at": "2022-08-24T16:03:38",
+            "date_tbd": false,
+            "title": "The Florida Orchestra - Saint Petersburg",
+            "popularity": 0.679,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "visible_at": "1970-01-01T00:00:00Z",
+            "is_visible_override": "UNSET",
+            "tdc_pvo_id": 0,
+            "tdc_pv_id": 0,
+            "themes": [],
+            "domain_information": []
+        }
+    ],
+    "meta": {
+        "total": 91121,
+        "took": 13,
+        "page": 1,
+        "per_page": 10,
+        "geolocation": null
+    }
+}
