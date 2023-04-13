@@ -27,6 +27,7 @@ struct HomeView: View {
         Spacer()
       }
       .background(Colors.lightBg)
+      .navigationBarHidden(true)
     }
 }
 

@@ -14,6 +14,8 @@ final class EventsViewModel: ObservableObject {
   
   private var cancellables = Set<AnyCancellable>()
   
+  private let clientId = "MzE2MDE2MTF8MTY4MTM5MDE5Ny40OTE4MDIy"
+  private let clientSecret = "2011d84c87c5b8538d8c353c0743f88ec2c479a60c09060ca8d2b3de6d8853f6"
   
   init() {
     getEventsFromLocalJSON()
