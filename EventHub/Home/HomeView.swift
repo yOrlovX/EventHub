@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+  let events = UpcomingEventsData.mockEvents
+  let row = [GridItem(.flexible())]
+  
     var body: some View {
       VStack {
         VStack {
@@ -20,8 +23,18 @@ struct HomeView: View {
         .edgesIgnoringSafeArea(.top)
         EventsCategorySegmentView()
           .offset(y: -85)
+        
+        ScrollView(.horizontal, showsIndicators: false) {
+          LazyHGrid(rows: row) {
+            ForEach(events) { event in
+              UpcomingEventCell(image: event.image, name: event.eventName, location: event.eventLocation)
+            }
+          }
+          .padding(.horizontal)
+        }
         Spacer()
       }
+      .background(.gray)
     }
 }
 
