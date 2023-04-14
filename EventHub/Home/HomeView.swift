@@ -64,7 +64,10 @@ extension HomeView {
       HStack {
         ForEach(eventsViewModel.events, id: \.self) { event in
           let performerImage = event.performers.first?.image ?? ""
-          UpcomingEventCell(image: performerImage, name: event.shortTitle, location: event.venue.address)
+          
+          NavigationLink(destination: EventDetailView()) {
+            UpcomingEventCell(image: performerImage, name: event.shortTitle, location: event.venue.address)
+          }
         }
       }
       .padding(.horizontal)
