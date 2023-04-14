@@ -6,25 +6,24 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 
 struct UpcomingEventCell: View {
   let image: String
   let name: String
   let location: String
-    
+  
   var body: some View {
     VStack {
       VStack(spacing: 14) {
-        AsyncImage(url: URL(string: image)) { image in
+        CachedAsyncImage(url: URL(string: image), urlCache: .imageCache) { image in
           image
             .resizable()
             .scaledToFit()
-            
         } placeholder: {
           ProgressView()
         }
         .frame(maxWidth: 218, maxHeight: 131)
-
         Text(name)
           .font(.system(size: 18, weight: .medium))
           .multilineTextAlignment(.center)
