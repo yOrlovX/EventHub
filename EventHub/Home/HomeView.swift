@@ -24,6 +24,7 @@ struct HomeView: View {
           .offset(y: -85)
         
         upcomingEventsContainer
+        inviteFriendsContainer
         Spacer()
       }
       .background(Colors.lightBg)
@@ -71,6 +72,41 @@ extension HomeView {
         }
       }
       .padding(.horizontal)
+    }
+  }
+  
+  private var inviteFriendsContainer: some View {
+    HStack {
+      Rectangle()
+        .foregroundColor(Colors.turquoiseLight)
+        .frame(width: UIScreen.main.bounds.width - 40, height: 127)
+        .cornerRadius(12)
+        .overlay {
+          HStack {
+            VStack(alignment: .leading, spacing: 12) {
+              Text("Invite your friends")
+                .font(.system(size: 18, weight: .medium))
+              
+              Text("Get $20 for ticket")
+                .font(.system(size: 13))
+                .foregroundColor(.gray)
+              
+              Button(action: {}) {
+                Text("INVITE")
+                  .padding(.horizontal, 15)
+                  .padding(.vertical, 5)
+                  .font(.system(size: 12, weight: .medium))
+                  .foregroundColor(.white)
+                  .background(Colors.turquoise)
+                  .cornerRadius(5)
+              }
+            }
+            .padding()
+            Image("gift")
+              .resizable()
+              .scaledToFit()
+          }
+        }
     }
   }
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 
 struct EventDetailView: View {
   
@@ -18,13 +19,10 @@ struct EventDetailView: View {
             .resizable()
             .scaledToFit()
         }
-        .ignoresSafeArea()
-        Spacer()
-        
+        .ignoresSafeArea(edges: .top)
         VStack(alignment: .leading, spacing: 20) {
           Text("International Band Music Concert")
             .font(.system(size: 35))
-          
           HStack(spacing: 14) {
             Image("eventDate")
               .resizable()
@@ -39,7 +37,6 @@ struct EventDetailView: View {
                 .foregroundColor(.gray)
             }
           }
-          
           HStack(spacing: 14) {
             Image("eventLocation")
               .resizable()
@@ -62,10 +59,9 @@ struct EventDetailView: View {
             Text("Enjoy your favorite dishe and a lovely your friends and family and have a great time. Food from local food trucks will be available for purchase. Read More...")
               .font(.system(size: 16))
           }
-          
         }
         .padding()
-        
+        Spacer()
         Spacer()
       }
     }

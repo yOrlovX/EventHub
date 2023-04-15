@@ -15,4 +15,6 @@ struct Colors {
   static let primaryPurple = Color("primaryPurple")
   static let homeTopbarBg = Color("homeTopbarBg")
   static let lightBg = Color("lightBg")
+  static let turquoise = Color("turquoise")
+  static let turquoiseLight = Color("turquoiseLight")
 }

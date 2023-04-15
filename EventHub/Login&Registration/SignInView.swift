@@ -13,7 +13,7 @@ struct SignInView: View {
   @State private var isRemember: Bool = false
   
   var body: some View {
-    NavigationView {
+//    NavigationView {
       ZStack {
         Colors.lightBlue.opacity(0.2)
           .ignoresSafeArea()
@@ -25,7 +25,7 @@ struct SignInView: View {
         }
       }
       .navigationBarHidden(true)
-    }
+//    }
   }
 }
 
