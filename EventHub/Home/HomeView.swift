@@ -70,8 +70,8 @@ extension HomeView {
             UpcomingEventCell(image: performerImage, name: event.shortTitle, location: event.venue.address)
           }
         }
+        .padding(.horizontal)
       }
-      .padding(.horizontal)
     }
   }
   
