@@ -10,12 +10,13 @@ import CachedAsyncImage
 
 struct EventDetailView: View {
   
-//  let event: Event
+  let event: Event
   
     var body: some View {
       VStack {
         ZStack {
-          Image("eventDetail")
+            let performerImage = event.performers.first?.image ?? ""
+          Image(performerImage)
             .resizable()
             .scaledToFit()
         }
@@ -67,8 +68,8 @@ struct EventDetailView: View {
     }
 }
 
-struct EventDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        EventDetailView()
-    }
-}
+//struct EventDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EventDetailView()
+//    }
+//}

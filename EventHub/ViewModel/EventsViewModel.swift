@@ -30,7 +30,7 @@ final class EventsViewModel: ObservableObject {
       .dataTaskPublisher(for: url)
       .map { $0.data }
       .receive(on: DispatchQueue.main)
-      .decode(type: EventsResponse.self, decoder: JSONDecoder())
+      .decode(type: Events.self, decoder: JSONDecoder())
       .sink { completion in
         switch completion {
         case .finished:
@@ -51,7 +51,7 @@ final class EventsViewModel: ObservableObject {
       .dataTaskPublisher(for: url)
       .map { $0.data }
       .receive(on: DispatchQueue.main)
-      .decode(type: EventsResponse.self, decoder: JSONDecoder())
+      .decode(type: Events.self, decoder: JSONDecoder())
       .sink { completion in
         switch completion {
         case .finished:

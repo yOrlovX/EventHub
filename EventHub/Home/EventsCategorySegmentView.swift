@@ -10,6 +10,7 @@ import SwiftUI
 struct EventsCategorySegmentView: View {
   
   let segmentData = CategoryData.categoryData
+    let event: Event
   
   var body: some View {
       HStack {
@@ -21,7 +22,7 @@ struct EventsCategorySegmentView: View {
             .overlay {
               HStack {
                 Image(datum.image)
-                Text(datum.name)
+                  Text(event.type)
                   .foregroundColor(.white)
               }
             }
@@ -30,11 +31,11 @@ struct EventsCategorySegmentView: View {
   }
 }
 
-struct EventsCategorySegmentView_Previews: PreviewProvider {
-  static var previews: some View {
-    EventsCategorySegmentView()
-  }
-}
+//struct EventsCategorySegmentView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    EventsCategorySegmentView()
+//  }
+//}
 
 struct CategoryData: Identifiable {
   let id = UUID()

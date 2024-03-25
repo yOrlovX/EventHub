@@ -1,28 +1,27 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let eventsResponse = try? JSONDecoder().decode(EventsResponse.self, from: jsonData)
+//   let events = try? JSONDecoder().decode(Events.self, from: jsonData)
 
 import Foundation
 
-// MARK: - EventsResponse
-struct EventsResponse: Codable {
+// MARK: - Events
+struct Events: Codable {
     let events: [Event]
     let meta: Meta
 }
 
 // MARK: - Event
 struct Event: Codable, Hashable {
-  
-  static func == (lhs: Event, rhs: Event) -> Bool {
-    return lhs.id == rhs.id
-  }
-  
-  func hash(into hasher: inout Hasher) {
-    hasher.combine(id)
-  }
-  
-    let type: NameEnum
+    static func == (lhs: Event, rhs: Event) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+            return hasher.combine(id)
+        }
+    
+    let type: String
     let id: Int
     let datetimeUTC: String
     let venue: Venue
@@ -30,28 +29,31 @@ struct Event: Codable, Hashable {
     let performers: [Performer]
     let isOpen: Bool
     let links: [JSONAny]
-    let datetimeLocal: DatetimeLocal
+    let datetimeLocal: String
     let timeTbd: Bool
     let shortTitle, visibleUntilUTC: String
     let stats: EventStats
     let taxonomies: [Taxonomy]
     let url: String
-    let score: Float
-    let announceDate: String
-//    let createdAt: Data
+    let score: Double
+    let announceDate, createdAt: String
     let dateTbd: Bool
     let title: String
     let popularity: Double
     let description: String
     let status: Status
-//    let accessMethod: AccessMethod?
+    let accessMethod: AccessMethod?
     let eventPromotion: JSONNull?
     let announcements: Announcements
     let conditional: Bool
-    let enddatetimeUTC: JSONNull?
-    let visibleAt: String
+    let enddatetimeUTC: String?
+    let visibleAt: String?
     let isVisibleOverride: IsVisibleOverride
     let tdcPvoID, tdcPVID: Int
+    let isVisible: Bool
+    let performerOrder: [PerformerOrder]
+    let integrated: Integrated?
+    let generalAdmission: Bool?
     let themes, domainInformation: [JSONAny]
 
     enum CodingKeys: String, CodingKey {
@@ -68,10 +70,10 @@ struct Event: Codable, Hashable {
         case visibleUntilUTC = "visible_until_utc"
         case stats, taxonomies, url, score
         case announceDate = "announce_date"
-//        case createdAt = "created_at"
+        case createdAt = "created_at"
         case dateTbd = "date_tbd"
         case title, popularity, description, status
-//        case accessMethod = "access_method"
+        case accessMethod = "access_method"
         case eventPromotion = "event_promotion"
         case announcements, conditional
         case enddatetimeUTC = "enddatetime_utc"
@@ -79,6 +81,10 @@ struct Event: Codable, Hashable {
         case isVisibleOverride = "is_visible_override"
         case tdcPvoID = "tdc_pvo_id"
         case tdcPVID = "tdc_pv_id"
+        case isVisible = "is_visible"
+        case performerOrder = "performer_order"
+        case integrated
+        case generalAdmission = "general_admission"
         case themes
         case domainInformation = "domain_information"
     }
@@ -86,8 +92,8 @@ struct Event: Codable, Hashable {
 
 // MARK: - AccessMethod
 struct AccessMethod: Codable {
-    let method: String
-    let createdAt: Date
+    let method: Method
+    let createdAt: String
     let employeeOnly: Bool
 
     enum CodingKeys: String, CodingKey {
@@ -97,38 +103,55 @@ struct AccessMethod: Codable {
     }
 }
 
+enum Method: String, Codable {
+    case none = "NONE"
+    case qrcode = "QRCODE"
+    case secureEntryTm = "SECURE_ENTRY_TM"
+}
+
 // MARK: - Announcements
 struct Announcements: Codable {
 }
 
-enum DatetimeLocal: String, Codable {
-    case the20230516T033000 = "2023-05-16T03:30:00"
+// MARK: - Integrated
+struct Integrated: Codable {
+    let providerName, providerID: String
+
+    enum CodingKeys: String, CodingKey {
+        case providerName = "provider_name"
+        case providerID = "provider_id"
+    }
 }
 
 enum IsVisibleOverride: String, Codable {
     case unset = "UNSET"
+    case visible = "VISIBLE"
+}
+
+// MARK: - PerformerOrder
+struct PerformerOrder: Codable {
+    let id, ordinal: Int
 }
 
 // MARK: - Performer
 struct Performer: Codable {
-    let type: PerformerType
-    let name: String
+    let type, name: String
     let image: String
     let id: Int
     let images: Images
-    let divisions: JSONNull?
+    let divisions: [Division]?
     let hasUpcomingEvents: Bool
     let primary: Bool?
     let stats: PerformerStats
     let taxonomies: [Taxonomy]
-    let imageAttribution: String
+    let imageAttribution: String?
     let url: String
     let score: Double
     let slug: String
     let homeVenueID: Int?
     let shortName: String
     let numUpcomingEvents: Int
-    let colors: JSONNull?
+//    let colors: Colors?
     let imageLicense: String?
     let popularity: Int
     let homeTeam: Bool?
@@ -145,7 +168,7 @@ struct Performer: Codable {
         case homeVenueID = "home_venue_id"
         case shortName = "short_name"
         case numUpcomingEvents = "num_upcoming_events"
-        case colors
+//        case colors
         case imageLicense = "image_license"
         case popularity
         case homeTeam = "home_team"
@@ -153,6 +176,38 @@ struct Performer: Codable {
         case imageRightsMessage = "image_rights_message"
         case awayTeam = "away_team"
     }
+}
+
+// MARK: - Colors
+//struct Colors: Codable {
+//    let all: [String]
+//    let iconic: String
+//    let primary: [String]
+//}
+
+// MARK: - Division
+struct Division: Codable {
+    let taxonomyID: Int
+    let shortName: String?
+    let displayName: String
+    let displayType: DisplayType
+    let divisionLevel: Int
+    let slug: String?
+
+    enum CodingKeys: String, CodingKey {
+        case taxonomyID = "taxonomy_id"
+        case shortName = "short_name"
+        case displayName = "display_name"
+        case displayType = "display_type"
+        case divisionLevel = "division_level"
+        case slug
+    }
+}
+
+enum DisplayType: String, Codable {
+    case conference = "Conference"
+    case division = "Division"
+    case league = "League"
 }
 
 // MARK: - Images
@@ -177,16 +232,18 @@ struct PerformerStats: Codable {
 // MARK: - Taxonomy
 struct Taxonomy: Codable {
     let id: Int
-    let name: NameEnum
+    let name: String
     let parentID: Int?
     let documentSource: DocumentSource?
     let rank: Int
+    let seoEventType: String
 
     enum CodingKeys: String, CodingKey {
         case id, name
         case parentID = "parent_id"
         case documentSource = "document_source"
         case rank
+        case seoEventType = "seo_event_type"
     }
 }
 
@@ -209,33 +266,12 @@ enum SourceType: String, Codable {
     case elastic = "ELASTIC"
 }
 
-enum NameEnum: String, Codable {
-    case baseball = "baseball"
-    case concert = "concert"
-    case concerts = "concerts"
-    case family = "family"
-    case hockey = "hockey"
-    case minorLeagueBaseball = "minor_league_baseball"
-    case minorLeagueHockey = "minor_league_hockey"
-    case sports = "sports"
-    case theater = "theater"
-}
-
-enum PerformerType: String, Codable {
-    case band = "band"
-    case minorLeagueBaseball = "minor_league_baseball"
-    case minorLeagueHockey = "minor_league_hockey"
-    case theaterFamily = "theater_family"
-}
-
 // MARK: - EventStats
 struct EventStats: Codable {
-    let listingCount, averagePrice: Int?
-    let lowestPriceGoodDeals: JSONNull?
-    let lowestPrice, highestPrice, visibleListingCount: Int?
-    let dqBucketCounts: JSONNull?
-    let medianPrice, lowestSgBasePrice: Int?
-    let lowestSgBasePriceGoodDeals: JSONNull?
+    let listingCount, averagePrice, lowestPriceGoodDeals, lowestPrice: Int?
+    let highestPrice, visibleListingCount: Int?
+    let dqBucketCounts: [Int]?
+    let medianPrice, lowestSgBasePrice, lowestSgBasePriceGoodDeals, ticketCount: Int?
 
     enum CodingKeys: String, CodingKey {
         case listingCount = "listing_count"
@@ -248,6 +284,7 @@ struct EventStats: Codable {
         case medianPrice = "median_price"
         case lowestSgBasePrice = "lowest_sg_base_price"
         case lowestSgBasePriceGoodDeals = "lowest_sg_base_price_good_deals"
+        case ticketCount = "ticket_count"
     }
 }
 
@@ -257,11 +294,12 @@ enum Status: String, Codable {
 
 // MARK: - Venue
 struct Venue: Codable {
-    let state, nameV2, postalCode, name: String
+//    let state: State
+    let nameV2, postalCode, name: String
     let links: [JSONAny]
-    let timezone: String
+    let timezone: Timezone
     let url: String
-    let score: Float
+    let score: Double
     let location: Location
     let address: String
     let country: Country
@@ -269,12 +307,12 @@ struct Venue: Codable {
     let numUpcomingEvents: Int
     let city, slug, extendedAddress: String
     let id, popularity: Int
-//    let accessMethod: AccessMethod?
+    let accessMethod: AccessMethod?
     let metroCode, capacity: Int
     let displayLocation: String
 
     enum CodingKeys: String, CodingKey {
-        case state
+//        case state
         case nameV2 = "name_v2"
         case postalCode = "postal_code"
         case name, links, timezone, url, score, location, address, country
@@ -283,7 +321,7 @@ struct Venue: Codable {
         case city, slug
         case extendedAddress = "extended_address"
         case id, popularity
-//        case accessMethod = "access_method"
+        case accessMethod = "access_method"
         case metroCode = "metro_code"
         case capacity
         case displayLocation = "display_location"
@@ -291,8 +329,19 @@ struct Venue: Codable {
 }
 
 enum Country: String, Codable {
-    case canada = "Canada"
     case us = "US"
+}
+
+//enum State: String, Codable {
+//    case fl = "FL"
+//    case mo = "MO"
+//    case nv = "NV"
+//}
+
+enum Timezone: String, Codable {
+    case americaChicago = "America/Chicago"
+    case americaLosAngeles = "America/Los_Angeles"
+    case americaNewYork = "America/New_York"
 }
 
 // MARK: - Meta
@@ -314,10 +363,6 @@ class JSONNull: Codable, Hashable {
     public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
         return true
     }
-  
-    public func hash(into hasher: inout Hasher) {
-          hasher.combine(0)
-      }
 
     public var hashValue: Int {
         return 0
