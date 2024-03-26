@@ -31,7 +31,7 @@ struct ResetPasswordView: View {
               )
               .overlay {
                 HStack {
-                  Image("mail")
+                    SwiftUI.Image("mail")
                     .padding(.leading, 15)
                   Spacer()
                 }

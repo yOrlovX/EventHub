@@ -45,7 +45,7 @@ extension SignUpView {
         )
         .overlay {
           HStack {
-            Image("profile")
+              SwiftUI.Image("profile")
               .padding(.leading, 15)
             Spacer()
           }
@@ -61,7 +61,7 @@ extension SignUpView {
         )
         .overlay {
           HStack {
-            Image("mail")
+              SwiftUI.Image("mail")
               .padding(.leading, 15)
             Spacer()
           }
@@ -77,10 +77,10 @@ extension SignUpView {
         )
         .overlay {
           HStack {
-            Image("lock")
+              SwiftUI.Image("lock")
               .padding(.leading, 15)
             Spacer()
-            Image(systemName: "eye.slash")
+              SwiftUI.Image(systemName: "eye.slash")
               .padding(.trailing, 15)
           }
         }
@@ -95,10 +95,10 @@ extension SignUpView {
         )
         .overlay {
           HStack {
-            Image("lock")
+              SwiftUI.Image("lock")
               .padding(.leading, 15)
             Spacer()
-            Image(systemName: "eye.slash")
+              SwiftUI.Image(systemName: "eye.slash")
               .padding(.trailing, 15)
           }
         }
@@ -122,7 +122,7 @@ extension SignUpView {
       
       Button(action: {}) {
         HStack {
-          Image("google")
+            SwiftUI.Image("google")
             .resizable()
             .scaledToFit()
             .frame(width: 26, height: 26)
@@ -137,7 +137,7 @@ extension SignUpView {
       
       Button(action: {}) {
         HStack {
-          Image("fb")
+            SwiftUI.Image("fb")
             .resizable()
             .scaledToFit()
             .frame(width: 26, height: 26)

@@ -11,6 +11,8 @@
 		920D010529E5AD9A00FE464D /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D010429E5AD9A00FE464D /* SearchBarView.swift */; };
 		920D010829E5B3E800FE464D /* CornerRadiusStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D010729E5B3E800FE464D /* CornerRadiusStyle.swift */; };
 		921692C729E71F6000728AD5 /* UpcomingEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921692C629E71F6000728AD5 /* UpcomingEventCell.swift */; };
+		923473CF2BB1CBC300BC0C95 /* SwiftfulRouting in Frameworks */ = {isa = PBXBuildFile; productRef = 923473CE2BB1CBC300BC0C95 /* SwiftfulRouting */; };
+		923473D22BB1CC1E00BC0C95 /* NavigatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923473D12BB1CC1E00BC0C95 /* NavigatorView.swift */; };
 		923663CD29E6EA3C00982BB3 /* EventsCategorySegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923663CC29E6EA3C00982BB3 /* EventsCategorySegmentView.swift */; };
 		924297F829DF3AD700D8FD21 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924297F729DF3AD700D8FD21 /* SignUpView.swift */; };
 		924297FA29DF3D7E00D8FD21 /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924297F929DF3D7E00D8FD21 /* VerificationView.swift */; };
@@ -28,6 +30,7 @@
 		926AC96C29DEF0CF004FE288 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AC96B29DEF0CF004FE288 /* SplashView.swift */; };
 		926AC96E29DEF2BE004FE288 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AC96D29DEF2BE004FE288 /* SignInView.swift */; };
 		926AC97029DEFEBD004FE288 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AC96F29DEFEBD004FE288 /* Colors.swift */; };
+		926E8CAC2BB2D476000A4E76 /* TicketMasterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926E8CAB2BB2D476000A4E76 /* TicketMasterModel.swift */; };
 		927338E629E98E4200A1072A /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 927338E529E98E4200A1072A /* CachedAsyncImage */; };
 		927338E929E98EC100A1072A /* URLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927338E829E98EC100A1072A /* URLCache.swift */; };
 		92CAC6D929E8348C00CEE29E /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CAC6D829E8348C00CEE29E /* EventsViewModel.swift */; };
@@ -40,6 +43,7 @@
 		920D010429E5AD9A00FE464D /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		920D010729E5B3E800FE464D /* CornerRadiusStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusStyle.swift; sourceTree = "<group>"; };
 		921692C629E71F6000728AD5 /* UpcomingEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingEventCell.swift; sourceTree = "<group>"; };
+		923473D12BB1CC1E00BC0C95 /* NavigatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorView.swift; sourceTree = "<group>"; };
 		923663CC29E6EA3C00982BB3 /* EventsCategorySegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCategorySegmentView.swift; sourceTree = "<group>"; };
 		924297F729DF3AD700D8FD21 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		924297F929DF3D7E00D8FD21 /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 		926AC96B29DEF0CF004FE288 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		926AC96D29DEF2BE004FE288 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		926AC96F29DEFEBD004FE288 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		926E8CAB2BB2D476000A4E76 /* TicketMasterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketMasterModel.swift; sourceTree = "<group>"; };
 		927338E829E98EC100A1072A /* URLCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCache.swift; sourceTree = "<group>"; };
 		92CAC6D829E8348C00CEE29E /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		92CAC6DB29E835C600CEE29E /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
@@ -70,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				927338E629E98E4200A1072A /* CachedAsyncImage in Frameworks */,
+				923473CF2BB1CBC300BC0C95 /* SwiftfulRouting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +88,14 @@
 				920D010729E5B3E800FE464D /* CornerRadiusStyle.swift */,
 			);
 			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		923473D02BB1CC0800BC0C95 /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				923473D12BB1CC1E00BC0C95 /* NavigatorView.swift */,
+			);
+			path = Navigator;
 			sourceTree = "<group>";
 		};
 		924297FF29DF466D00D8FD21 /* Main */ = {
@@ -176,15 +190,16 @@
 			isa = PBXGroup;
 			children = (
 				926AC95C29DEEFB6004FE288 /* EventHubApp.swift */,
+				923473D02BB1CC0800BC0C95 /* Navigator */,
+				926AC96A29DEF08A004FE288 /* Splash */,
+				9242980E29DF4EB200D8FD21 /* Onboarding */,
+				9242980C29DF496A00D8FD21 /* Login&Registration */,
+				924297FF29DF466D00D8FD21 /* Main */,
+				9242980029DF469A00D8FD21 /* Home */,
 				927338E729E98EB400A1072A /* Extensions */,
 				92CAC6DA29E8350900CEE29E /* Model */,
 				92CAC6D729E8347800CEE29E /* ViewModel */,
 				920D010629E5B3C600FE464D /* ViewModifiers */,
-				9242980E29DF4EB200D8FD21 /* Onboarding */,
-				926AC96A29DEF08A004FE288 /* Splash */,
-				9242980C29DF496A00D8FD21 /* Login&Registration */,
-				924297FF29DF466D00D8FD21 /* Main */,
-				9242980029DF469A00D8FD21 /* Home */,
 				9242980329DF46B900D8FD21 /* Events */,
 				9242980629DF46E100D8FD21 /* Map */,
 				9242980929DF46FF00D8FD21 /* Profile */,
@@ -232,6 +247,7 @@
 			children = (
 				92CAC6DB29E835C600CEE29E /* ResponseModel.swift */,
 				92CAC6DF29E8372300CEE29E /* EventsJSON.json */,
+				926E8CAB2BB2D476000A4E76 /* TicketMasterModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -254,6 +270,7 @@
 			name = EventHub;
 			packageProductDependencies = (
 				927338E529E98E4200A1072A /* CachedAsyncImage */,
+				923473CE2BB1CBC300BC0C95 /* SwiftfulRouting */,
 			);
 			productName = EventHub;
 			productReference = 926AC95929DEEFB6004FE288 /* EventHub.app */;
@@ -285,6 +302,7 @@
 			mainGroup = 926AC95029DEEFB6004FE288;
 			packageReferences = (
 				927338E429E98E4200A1072A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				923473CD2BB1CBC300BC0C95 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */,
 			);
 			productRefGroup = 926AC95A29DEEFB6004FE288 /* Products */;
 			projectDirPath = "";
@@ -313,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923473D22BB1CC1E00BC0C95 /* NavigatorView.swift in Sources */,
 				9242980229DF46AA00D8FD21 /* HomeView.swift in Sources */,
 				9242980529DF46D200D8FD21 /* EventsView.swift in Sources */,
 				926AC96E29DEF2BE004FE288 /* SignInView.swift in Sources */,
@@ -331,6 +350,7 @@
 				926AC95D29DEEFB6004FE288 /* EventHubApp.swift in Sources */,
 				9242981029DF4ECD00D8FD21 /* OnboardingView.swift in Sources */,
 				921692C729E71F6000728AD5 /* UpcomingEventCell.swift in Sources */,
+				926E8CAC2BB2D476000A4E76 /* TicketMasterModel.swift in Sources */,
 				92CAC6DC29E835C600CEE29E /* ResponseModel.swift in Sources */,
 				926AC96C29DEF0CF004FE288 /* SplashView.swift in Sources */,
 				927338E929E98EC100A1072A /* URLCache.swift in Sources */,
@@ -537,6 +557,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		923473CD2BB1CBC300BC0C95 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulRouting.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		927338E429E98E4200A1072A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
@@ -548,6 +576,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		923473CE2BB1CBC300BC0C95 /* SwiftfulRouting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 923473CD2BB1CBC300BC0C95 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */;
+			productName = SwiftfulRouting;
+		};
 		927338E529E98E4200A1072A /* CachedAsyncImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 927338E429E98E4200A1072A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;

@@ -12,7 +12,7 @@ struct SearchBarView: View {
   
   var body: some View {
     HStack {
-      Image(systemName: "magnifyingglass")
+        SwiftUI.Image(systemName: "magnifyingglass")
         .resizable()
         .scaledToFit()
         .frame(width: 24, height: 24)
@@ -25,7 +25,7 @@ struct SearchBarView: View {
         .cornerRadius(15)
         .overlay {
           HStack(spacing: 4) {
-            Image(systemName: "list.bullet.circle")
+              SwiftUI.Image(systemName: "list.bullet.circle")
               .resizable()
               .scaledToFit()
               .frame(width: 24, height: 24)

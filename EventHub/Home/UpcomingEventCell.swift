@@ -14,8 +14,8 @@ struct UpcomingEventCell: View {
     var body: some View {
         VStack {
             VStack(spacing: 14) {
-                let performerImage = event.performers.first?.image ?? ""
-                CachedAsyncImage(url: URL(string: performerImage), urlCache: .imageCache) { image in
+                let image = event.images.first?.url ?? ""
+                CachedAsyncImage(url: URL(string: image), urlCache: .imageCache) { image in
                     image
                         .resizable()
                         .scaledToFill()
@@ -25,14 +25,14 @@ struct UpcomingEventCell: View {
                 } placeholder: {
                     ProgressView()
                 }
-                Text(event.title)
+                Text(event.name)
                     .font(.system(size: 18, weight: .medium))
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
                     .frame(width: 218)
-                Text(event.venue.city)
-                    .font(.system(size: 13))
-                    .foregroundColor(.gray)
+//                Text(event.venue.city)
+//                    .font(.system(size: 13))
+//                    .foregroundColor(.gray)
             }
             .padding(10)
         }

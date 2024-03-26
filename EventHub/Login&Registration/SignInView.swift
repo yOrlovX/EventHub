@@ -32,7 +32,7 @@ struct SignInView: View {
 extension SignInView {
   private var logoContainer: some View {
     VStack(spacing: 7) {
-      Image("smallLogo")
+        SwiftUI.Image("smallLogo")
         .resizable()
         .scaledToFit()
         .frame(width: 58, height: 58)
@@ -57,7 +57,7 @@ extension SignInView {
         )
         .overlay {
           HStack {
-            Image("mail")
+              SwiftUI.Image("mail")
               .padding(.leading, 15)
             Spacer()
           }
@@ -73,10 +73,10 @@ extension SignInView {
         )
         .overlay {
           HStack {
-            Image("lock")
+              SwiftUI.Image("lock")
               .padding(.leading, 15)
             Spacer()
-            Image(systemName: "eye.slash")
+              SwiftUI.Image(systemName: "eye.slash")
               .padding(.trailing, 15)
           }
         }
@@ -119,7 +119,7 @@ extension SignInView {
       
       Button(action: {}) {
         HStack {
-          Image("google")
+            SwiftUI.Image("google")
             .resizable()
             .scaledToFit()
             .frame(width: 26, height: 26)
@@ -134,7 +134,7 @@ extension SignInView {
       
       Button(action: {}) {
         HStack {
-          Image("fb")
+            SwiftUI.Image("fb")
             .resizable()
             .scaledToFit()
             .frame(width: 26, height: 26)

@@ -21,9 +21,9 @@ struct EventsCategorySegmentView: View {
             .cornerRadius(10)
             .overlay {
               HStack {
-                Image(datum.image)
-                  Text(event.type)
-                  .foregroundColor(.white)
+                  SwiftUI.Image(datum.image)
+//                  Text(event.type)
+//                  .foregroundColor(.white)
               }
             }
         }

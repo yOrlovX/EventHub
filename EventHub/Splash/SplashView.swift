@@ -24,7 +24,7 @@ extension SplashView {
   
   private var logo: some View {
     ZStack {
-      Image("logo")
+        SwiftUI.Image("logo")
         .resizable()
         .scaledToFit()
       .frame(width: 242, height: 58)

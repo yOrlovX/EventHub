@@ -42,7 +42,7 @@ struct HomeView: View {
 extension HomeView {
     private var locationContainer: some View {
         HStack {
-            Image(systemName: "list.bullet")
+            SwiftUI.Image(systemName: "list.bullet")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 24, height: 24)
@@ -57,7 +57,7 @@ extension HomeView {
                     .foregroundColor(.white)
             }
             Spacer()
-            Image(systemName: "bell.badge.circle.fill")
+            SwiftUI.Image(systemName: "bell.badge.circle.fill")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 36, height: 36)
@@ -67,6 +67,19 @@ extension HomeView {
         .padding(.horizontal, 24)
     }
     
+//    private var upcomingEventsContainer: some View {
+//        ScrollView(.horizontal, showsIndicators: false) {
+//            HStack {
+//                ForEach(eventsViewModel.events, id: \.self) { event in
+//                    NavigationLink(destination: EventDetailView(event: event)) {
+//                        UpcomingEventCell(event: event)
+//                    }
+//                }
+//                .padding(.horizontal)
+//            }
+//        }
+//    }
+
     private var upcomingEventsContainer: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
@@ -107,7 +120,7 @@ extension HomeView {
                             }
                         }
                         .padding()
-                        Image("gift")
+                        SwiftUI.Image("gift")
                             .resizable()
                             .scaledToFit()
                     }
