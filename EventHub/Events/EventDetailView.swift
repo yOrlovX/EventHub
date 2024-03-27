@@ -14,34 +14,20 @@ struct EventDetailView: View {
   
     var body: some View {
       VStack {
-        ZStack {
-//            let performerImage = event.performers.first?.image ?? ""
-//            CachedAsyncImage(url: URL(string: performerImage), urlCache: .imageCache) { image in
-//                image
-//                    .resizable()
-//                    .scaledToFill()
-////                    .frame(maxWidth: 218, maxHeight: 131)
-//                    .cornerRadius(12)
-//                    .padding(10)
-//            } placeholder: {
-//                ProgressView()
-//            }
-            
-            let image = event.images.first?.url ?? ""
+        ZStack {            
+            let image = event.images[2].url
             CachedAsyncImage(url: URL(string: image), urlCache: .imageCache) { image in
                 image
                     .resizable()
                     .scaledToFill()
-//                    .frame(maxWidth: 218, maxHeight: 131)
-                    .cornerRadius(12)
-                    .padding(10)
+                    .frame(maxWidth: .infinity, maxHeight: 244)
             } placeholder: {
                 ProgressView()
             }
         }
         .ignoresSafeArea(edges: .top)
         VStack(alignment: .leading, spacing: 20) {
-          Text("International Band Music Concert")
+            Text(event.name)
             .font(.system(size: 35))
           HStack(spacing: 14) {
               SwiftUI.Image("eventDate")
@@ -49,10 +35,10 @@ struct EventDetailView: View {
               .scaledToFit()
               .frame(width: 48, height: 48)
             VStack(alignment: .leading, spacing: 1) {
-              Text("14 December, 2021")
+                Text(event.dates.start.localDate)
                 .font(.system(size: 16, weight: .medium))
               
-              Text("Tuesday, 4:00PM - 9:00PM")
+                Text(event.dates.start.localTime ?? "")
                 .font(.system(size: 12))
                 .foregroundColor(.gray)
             }
@@ -63,7 +49,7 @@ struct EventDetailView: View {
               .scaledToFit()
               .frame(width: 48, height: 48)
             VStack(alignment: .leading, spacing: 1) {
-              Text("Gala Convention Center")
+                Text(event.embedded.venues.map {$0.name}.joined(separator: ""))
                 .font(.system(size: 16, weight: .medium))
               
               Text("36 Guild Street London, UK ")
@@ -76,7 +62,7 @@ struct EventDetailView: View {
             Text("About Event")
               .font(.system(size: 18, weight: .medium))
             
-            Text("Enjoy your favorite dishe and a lovely your friends and family and have a great time. Food from local food trucks will be available for purchase. Read More...")
+              Text(event.pleaseNote ?? "")
               .font(.system(size: 16))
           }
         }
