@@ -14,12 +14,12 @@ struct UpcomingEventCell: View {
     var body: some View {
         VStack {
             VStack(spacing: 14) {
-                let image = event.images.first?.url ?? ""
+                let image = event.images[2].url 
                 CachedAsyncImage(url: URL(string: image), urlCache: .imageCache) { image in
                     image
                         .resizable()
                         .scaledToFill()
-                        .frame(maxWidth: 218, maxHeight: 131)
+                        .frame(maxWidth: UIScreen.main.bounds.width - 20, maxHeight: 200)
                         .cornerRadius(12)
                         .padding(10)
                 } placeholder: {

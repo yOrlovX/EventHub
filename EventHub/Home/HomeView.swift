@@ -15,29 +15,36 @@ struct HomeView: View {
             VStack {
                 locationContainer
                 SearchBarView()
-                    .padding(.bottom, 46)
+                    .padding(.bottom, 46)   
             }
             .background(Colors.homeTopbarBg)
             .cornerRadius(33, corners: [.bottomLeft, .bottomRight])
             .edgesIgnoringSafeArea(.top)
             
-            HStack {
-                ForEach(eventsViewModel.events, id: \.self) { event in
-                    EventsCategorySegmentView(event: event)
-                        .offset(y: -85)
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 11) {
+                    ForEach(uniqueSegments(from: eventsViewModel.events.flatMap { $0.classifications }), id: \.name) { segment in
+                        Text(segment.name)
+                            .padding(10)
+                            .background(Color.green)
+                            .cornerRadius(20)
+                            .foregroundColor(.white)
+                    }
                 }
+                .padding(.horizontal, 24)
             }
-            
+            .offset(y: -85)
             
             
             upcomingEventsContainer
-            inviteFriendsContainer
-            Spacer()
+                .padding(.top, -70)
+            
         }
         .background(Colors.lightBg)
         .navigationBarHidden(true)
     }
 }
+
 
 extension HomeView {
     private var locationContainer: some View {
@@ -49,9 +56,15 @@ extension HomeView {
                 .foregroundColor(.white)
             Spacer()
             VStack(spacing: 2) {
-                Text("Current Location")
-                    .font(.system(size: 12, weight: .regular))
-                    .foregroundColor(.white)
+                HStack {
+                    Text("Current Location")
+                        .font(.system(size: 12, weight: .regular))
+                        .foregroundColor(.white)
+                    SwiftUI.Image(systemName: "arrowtriangle.down.fill")
+                        .resizable()
+                        .frame(width: 10, height: 5)
+                        .foregroundColor(.white)
+                }
                 Text("New Yourk, USA")
                     .font(.system(size: 13, weight: .medium))
                     .foregroundColor(.white)
@@ -67,22 +80,9 @@ extension HomeView {
         .padding(.horizontal, 24)
     }
     
-//    private var upcomingEventsContainer: some View {
-//        ScrollView(.horizontal, showsIndicators: false) {
-//            HStack {
-//                ForEach(eventsViewModel.events, id: \.self) { event in
-//                    NavigationLink(destination: EventDetailView(event: event)) {
-//                        UpcomingEventCell(event: event)
-//                    }
-//                }
-//                .padding(.horizontal)
-//            }
-//        }
-//    }
-
     private var upcomingEventsContainer: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack {
                 ForEach(eventsViewModel.events, id: \.self) { event in
                     NavigationLink(destination: EventDetailView(event: event)) {
                         UpcomingEventCell(event: event)
@@ -93,39 +93,14 @@ extension HomeView {
         }
     }
     
-    private var inviteFriendsContainer: some View {
-        HStack {
-            Rectangle()
-                .foregroundColor(Colors.turquoiseLight)
-                .frame(width: UIScreen.main.bounds.width - 40, height: 127)
-                .cornerRadius(12)
-                .overlay {
-                    HStack {
-                        VStack(alignment: .leading, spacing: 12) {
-                            Text("Invite your friends")
-                                .font(.system(size: 18, weight: .medium))
-                            
-                            Text("Get $20 for ticket")
-                                .font(.system(size: 13))
-                                .foregroundColor(.gray)
-                            
-                            Button(action: {}) {
-                                Text("INVITE")
-                                    .padding(.horizontal, 15)
-                                    .padding(.vertical, 5)
-                                    .font(.system(size: 12, weight: .medium))
-                                    .foregroundColor(.white)
-                                    .background(Colors.turquoise)
-                                    .cornerRadius(5)
-                            }
-                        }
-                        .padding()
-                        SwiftUI.Image("gift")
-                            .resizable()
-                            .scaledToFit()
-                    }
-                }
+    private func uniqueSegments(from classifications: [Classification]) -> [Genre] {
+        var uniqueSegments: Set<Genre> = []
+        
+        for classification in classifications {
+            uniqueSegments.insert(classification.segment)
         }
+        
+        return Array(uniqueSegments)
     }
 }
 

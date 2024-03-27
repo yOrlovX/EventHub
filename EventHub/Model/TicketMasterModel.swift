@@ -40,26 +40,26 @@ struct Event: Codable, Hashable {
     let url: String
     let locale: Locale
     let images: [Image]
-//    let sales: Sales
-//    let dates: Dates
-//    let classifications: [Classification]
-//    let promoter: Promoter?
-//    let promoters: [Promoter]?
+    //    let sales: Sales
+    //    let dates: Dates
+    let classifications: [Classification]
+    //    let promoter: Promoter?
+    //    let promoters: [Promoter]?
     let info, pleaseNote: String?
-//    let priceRanges: [PriceRange]?
-//    let products: [Product]?
-//    let seatmap: Seatmap
-//    let accessibility: Accessibility?
-//    let ticketLimit: TicketLimit?
-//    let ageRestrictions: AgeRestrictions?
-//    let ticketing: Ticketing
-//    let links: EventLinks
-//    let embedded: EventEmbedded
-//    let outlets: [Outlet]?
-//    let doorsTimes: DoorsTimes?
+    //    let priceRanges: [PriceRange]?
+    //    let products: [Product]?
+    //    let seatmap: Seatmap
+    //    let accessibility: Accessibility?
+    //    let ticketLimit: TicketLimit?
+    //    let ageRestrictions: AgeRestrictions?
+    //    let ticketing: Ticketing
+    //    let links: EventLinks
+    //    let embedded: EventEmbedded
+    //    let outlets: [Outlet]?
+    //    let doorsTimes: DoorsTimes?
     
     enum CodingKeys: String, CodingKey {
-        case name, type, id, test, url, locale, images, info, pleaseNote
+        case name, type, id, test, url, locale, images, info, pleaseNote, classifications
         
     }
 }
@@ -86,7 +86,15 @@ struct Classification: Codable {
 }
 
 // MARK: - Genre
-struct Genre: Codable {
+struct Genre: Codable, Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    static func == (lhs: Genre, rhs: Genre) -> Bool {
+        return lhs.name == rhs.name && lhs.id == rhs.id
+    }
+    
     let id, name: String
 }
 
