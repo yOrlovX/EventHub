@@ -15,7 +15,7 @@ struct HomeView: View {
             VStack {
                 locationContainer
                 SearchBarView()
-                    .padding(.bottom, 46)   
+                    .padding(.bottom, 46)
             }
             .background(Colors.homeTopbarBg)
             .cornerRadius(33, corners: [.bottomLeft, .bottomRight])

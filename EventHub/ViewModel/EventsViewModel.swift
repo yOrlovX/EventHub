@@ -78,7 +78,7 @@ final class EventsViewModel: ObservableObject {
 extension EventsViewModel {
     
     private func getEventsFromTicketMaster() {
-        guard let url = URL(string: "https://app.ticketmaster.com/discovery/v2/events.json?apikey=\(apiKey)") else { return }
+        guard let url = URL(string: "https://app.ticketmaster.com/discovery/v2/events.json?city=boston&apikey=qLltnUhN80jaSPhVddkvvyRu3d9F1fZT") else { return }
         URLSession
             .shared
             .dataTaskPublisher(for: url)
