@@ -41,7 +41,7 @@ struct Event: Codable, Hashable {
     let locale: Locale
     let images: [Image]
     //    let sales: Sales
-        let dates: Dates
+//        let dates: Dates
     let classifications: [Classification]
     //    let promoter: Promoter?
     //    let promoters: [Promoter]?
@@ -54,13 +54,13 @@ struct Event: Codable, Hashable {
     //    let ageRestrictions: AgeRestrictions?
     //    let ticketing: Ticketing
     //    let links: EventLinks
-        let embedded: EventEmbedded
+//        let embedded: EventEmbedded
     //    let outlets: [Outlet]?
     //    let doorsTimes: DoorsTimes?
     
     enum CodingKeys: String, CodingKey {
-        case name, type, id, test, url, locale, images, info, pleaseNote, classifications, dates
-        case embedded = "_embedded"
+        case name, type, id, test, url, locale, images, info, pleaseNote, classifications
+//        case embedded = "_embedded"
         
     }
 }

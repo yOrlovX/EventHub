@@ -14,7 +14,7 @@ struct EventDetailView: View {
   
     var body: some View {
       VStack {
-        ZStack {            
+        ZStack {
             let image = event.images[2].url
             CachedAsyncImage(url: URL(string: image), urlCache: .imageCache) { image in
                 image
@@ -34,28 +34,28 @@ struct EventDetailView: View {
               .resizable()
               .scaledToFit()
               .frame(width: 48, height: 48)
-            VStack(alignment: .leading, spacing: 1) {
-                Text(event.dates.start.localDate)
-                .font(.system(size: 16, weight: .medium))
-              
-                Text(event.dates.start.localTime ?? "")
-                .font(.system(size: 12))
-                .foregroundColor(.gray)
-            }
+//            VStack(alignment: .leading, spacing: 1) {
+//                Text(event.dates.start.localDate)
+//                .font(.system(size: 16, weight: .medium))
+//              
+//                Text(event.dates.start.localTime ?? "")
+//                .font(.system(size: 12))
+//                .foregroundColor(.gray)
+//            }
           }
           HStack(spacing: 14) {
               SwiftUI.Image("eventLocation")
               .resizable()
               .scaledToFit()
               .frame(width: 48, height: 48)
-            VStack(alignment: .leading, spacing: 1) {
-                Text(event.embedded.venues.map {$0.name}.joined(separator: ""))
-                .font(.system(size: 16, weight: .medium))
-              
-              Text("36 Guild Street London, UK ")
-                .font(.system(size: 12))
-                .foregroundColor(.gray)
-            }
+//            VStack(alignment: .leading, spacing: 1) {
+//                Text(event.embedded.venues.map {$0.name}.joined(separator: ""))
+//                .font(.system(size: 16, weight: .medium))
+//
+//              Text("36 Guild Street London, UK ")
+//                .font(.system(size: 12))
+//                .foregroundColor(.gray)
+//            }
           }
           
           VStack(alignment: .leading, spacing: 8) {
