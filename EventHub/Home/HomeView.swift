@@ -10,12 +10,40 @@ import SwiftUI
 struct HomeView: View {
     @StateObject var eventsViewModel = EventsViewModel()
     
+    @Environment(\.router) var router
+    
     var body: some View {
         VStack {
             VStack {
                 locationContainer
-                SearchBarView()
-                    .padding(.bottom, 46)
+                HStack {
+                    SearchBarView()
+                    Button(action: { router.showScreen(.sheet) {_ in
+                        FilterView()
+                    }}) {
+                        Rectangle()
+                          .foregroundColor(Colors.primaryPurple)
+                          .frame(width: 75, height: 32)
+                          .cornerRadius(15)
+                          .overlay {
+                            HStack(spacing: 4) {
+                                SwiftUI.Image(systemName: "list.bullet.circle")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 24, height: 24)
+                                .foregroundColor(.white)
+                              Text("Filters")
+                                .font(.system(size: 12))
+                                .foregroundColor(.white)
+                            }
+                            .padding(4)
+                          }
+                    }
+                    
+                }
+                .padding(.bottom, 46)
+                
+                    
             }
             .background(Colors.homeTopbarBg)
             .cornerRadius(33, corners: [.bottomLeft, .bottomRight])

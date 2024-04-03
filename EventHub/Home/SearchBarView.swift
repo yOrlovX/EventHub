@@ -19,23 +19,6 @@ struct SearchBarView: View {
         .foregroundColor(.white)
       TextField("Search...", text: $searchText)
         .padding()
-      Rectangle()
-        .foregroundColor(Colors.primaryPurple)
-        .frame(width: 75, height: 32)
-        .cornerRadius(15)
-        .overlay {
-          HStack(spacing: 4) {
-              SwiftUI.Image(systemName: "list.bullet.circle")
-              .resizable()
-              .scaledToFit()
-              .frame(width: 24, height: 24)
-              .foregroundColor(.white)
-            Text("Filters")
-              .font(.system(size: 12))
-              .foregroundColor(.white)
-          }
-          .padding(4)
-        }
     }
     .padding(.horizontal, 24)
   }

@@ -11,6 +11,8 @@
 		920D010529E5AD9A00FE464D /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D010429E5AD9A00FE464D /* SearchBarView.swift */; };
 		920D010829E5B3E800FE464D /* CornerRadiusStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D010729E5B3E800FE464D /* CornerRadiusStyle.swift */; };
 		921692C729E71F6000728AD5 /* UpcomingEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921692C629E71F6000728AD5 /* UpcomingEventCell.swift */; };
+		9225788F2BBD822A00BF9B74 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225788E2BBD822900BF9B74 /* FilterView.swift */; };
+		922578912BBD8A2E00BF9B74 /* SegmentedPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922578902BBD8A2E00BF9B74 /* SegmentedPicker.swift */; };
 		923473CF2BB1CBC300BC0C95 /* SwiftfulRouting in Frameworks */ = {isa = PBXBuildFile; productRef = 923473CE2BB1CBC300BC0C95 /* SwiftfulRouting */; };
 		923473D22BB1CC1E00BC0C95 /* NavigatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923473D12BB1CC1E00BC0C95 /* NavigatorView.swift */; };
 		924297F829DF3AD700D8FD21 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924297F729DF3AD700D8FD21 /* SignUpView.swift */; };
@@ -23,6 +25,7 @@
 		9242980B29DF471100D8FD21 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242980A29DF471100D8FD21 /* ProfileView.swift */; };
 		9242981029DF4ECD00D8FD21 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242980F29DF4ECD00D8FD21 /* OnboardingView.swift */; };
 		9242981229DF52BB00D8FD21 /* SegmentProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242981129DF52BB00D8FD21 /* SegmentProgressView.swift */; };
+		9248C0F52BBDA14400D2CA17 /* EventClassificationsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9248C0F42BBDA14400D2CA17 /* EventClassificationsPicker.swift */; };
 		926AC95D29DEEFB6004FE288 /* EventHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AC95C29DEEFB6004FE288 /* EventHubApp.swift */; };
 		926AC96129DEEFB8004FE288 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926AC96029DEEFB8004FE288 /* Assets.xcassets */; };
 		926AC96429DEEFB8004FE288 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926AC96329DEEFB8004FE288 /* Preview Assets.xcassets */; };
@@ -43,6 +46,8 @@
 		920D010429E5AD9A00FE464D /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		920D010729E5B3E800FE464D /* CornerRadiusStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusStyle.swift; sourceTree = "<group>"; };
 		921692C629E71F6000728AD5 /* UpcomingEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingEventCell.swift; sourceTree = "<group>"; };
+		9225788E2BBD822900BF9B74 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		922578902BBD8A2E00BF9B74 /* SegmentedPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPicker.swift; sourceTree = "<group>"; };
 		923473D12BB1CC1E00BC0C95 /* NavigatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorView.swift; sourceTree = "<group>"; };
 		924297F729DF3AD700D8FD21 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		924297F929DF3D7E00D8FD21 /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
@@ -54,6 +59,7 @@
 		9242980A29DF471100D8FD21 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		9242980F29DF4ECD00D8FD21 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		9242981129DF52BB00D8FD21 /* SegmentProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentProgressView.swift; sourceTree = "<group>"; };
+		9248C0F42BBDA14400D2CA17 /* EventClassificationsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventClassificationsPicker.swift; sourceTree = "<group>"; };
 		926AC95929DEEFB6004FE288 /* EventHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		926AC95C29DEEFB6004FE288 /* EventHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHubApp.swift; sourceTree = "<group>"; };
 		926AC96029DEEFB8004FE288 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 				9242980129DF46AA00D8FD21 /* HomeView.swift */,
 				920D010429E5AD9A00FE464D /* SearchBarView.swift */,
 				921692C629E71F6000728AD5 /* UpcomingEventCell.swift */,
+				9225788E2BBD822900BF9B74 /* FilterView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -158,6 +165,8 @@
 			children = (
 				926AC96F29DEFEBD004FE288 /* Colors.swift */,
 				9242981129DF52BB00D8FD21 /* SegmentProgressView.swift */,
+				922578902BBD8A2E00BF9B74 /* SegmentedPicker.swift */,
+				9248C0F42BBDA14400D2CA17 /* EventClassificationsPicker.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -339,11 +348,14 @@
 				920D010829E5B3E800FE464D /* CornerRadiusStyle.swift in Sources */,
 				9242980829DF46F000D8FD21 /* MapView.swift in Sources */,
 				9242980B29DF471100D8FD21 /* ProfileView.swift in Sources */,
+				9225788F2BBD822A00BF9B74 /* FilterView.swift in Sources */,
 				924297FE29DF463C00D8FD21 /* MainView.swift in Sources */,
 				92CAC6D929E8348C00CEE29E /* EventsViewModel.swift in Sources */,
 				92F76F112BB4518A00CC1B74 /* ButtonsModifiers.swift in Sources */,
+				9248C0F52BBDA14400D2CA17 /* EventClassificationsPicker.swift in Sources */,
 				924297F829DF3AD700D8FD21 /* SignUpView.swift in Sources */,
 				924297FC29DF43E400D8FD21 /* ResetPasswordView.swift in Sources */,
+				922578912BBD8A2E00BF9B74 /* SegmentedPicker.swift in Sources */,
 				926AC97029DEFEBD004FE288 /* Colors.swift in Sources */,
 				920D010529E5AD9A00FE464D /* SearchBarView.swift in Sources */,
 				924297FA29DF3D7E00D8FD21 /* VerificationView.swift in Sources */,
