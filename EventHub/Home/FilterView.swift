@@ -8,20 +8,23 @@
 import SwiftUI
 
 struct FilterView: View {
+    
     var body: some View {
         
-            VStack(alignment: .leading, spacing: 25) {
-                EventClassificationsPicker()
-                
-                Text("Time & Date")
-                    .font(.system(size: 16, weight: .medium))
-                
+        VStack(alignment: .leading, spacing: 25) {
+            EventClassificationsPicker()
+            
+            Section("Time & Date") {
                 SegmentedPicker()
-                
-                Text("Location")
-                    .font(.system(size: 16, weight: .medium))
             }
-            .padding(.horizontal, 20)
+            .font(.system(size: 16, weight: .medium))
+            
+            Section("Location") {
+                
+            }
+            .font(.system(size: 16, weight: .medium))
+        }
+        .padding(.horizontal, 20)
         
         .navigationTitle("Filter")
     }
