@@ -20,7 +20,6 @@ struct SearchBarView: View {
       TextField("Search...", text: $searchText)
         .padding()
     }
-    .padding(.horizontal, 24)
   }
 }
 

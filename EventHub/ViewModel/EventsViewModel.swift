@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Combine
+import MapKit
 
 final class EventsViewModel: ObservableObject {
     @Published var events: [Event] = []
