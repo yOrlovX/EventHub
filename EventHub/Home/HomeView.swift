@@ -13,13 +13,28 @@ struct HomeView: View {
     @Environment(\.router) var router
     
     var body: some View {
-        VStack {
-            topBarContainer
-            segmentsContainer
-            upcomingEventsContainer
+        ZStack {
+            Colors.lightBg
+                .ignoresSafeArea(.all)
+            VStack {
+                topBarContainer
+                segmentsContainer
+                    .offset(y: -80)
+                VStack(alignment: .leading, spacing: 30) {
+                    Section("Upcoming Events") {
+                        upcomingEventsContainer
+                    }
+                    .font(.system(size: 18, weight: .medium))
+                    
+                    Section("Nearby You") {
+                        upcomingEventsContainer
+                    }
+                    .font(.system(size: 18, weight: .medium))
+                    
+                }
+            }
+            .navigationBarHidden(true)
         }
-        .background(Colors.lightBg)
-        .navigationBarHidden(true)
     }
 }
 
@@ -84,24 +99,24 @@ extension HomeView {
                     FilterView()
                 }}) {
                     Rectangle()
-                      .foregroundColor(Colors.primaryPurple)
-                      .frame(width: 75, height: 32)
-                      .cornerRadius(15)
-                      .overlay {
-                        HStack(spacing: 3) {
-                            SwiftUI.Image(systemName: "list.bullet.circle")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 23, height: 23)
-                            .foregroundColor(.white)
-                            .padding(.leading, 4)
-                            .padding(.vertical, 4)
-                          Text("Filters")
-                            .font(.system(size: 12))
-                            .foregroundColor(.white)
-                            .padding(.trailing, 4)
+                        .foregroundColor(Colors.primaryPurple)
+                        .frame(width: 75, height: 32)
+                        .cornerRadius(15)
+                        .overlay {
+                            HStack(spacing: 3) {
+                                SwiftUI.Image(systemName: "list.bullet.circle")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 23, height: 23)
+                                    .foregroundColor(.white)
+                                    .padding(.leading, 4)
+                                    .padding(.vertical, 4)
+                                Text("Filters")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.white)
+                                    .padding(.trailing, 4)
+                            }
                         }
-                      }
                 }
             }
             .padding(.bottom, 44)
@@ -146,15 +161,15 @@ extension HomeView {
     }
     
     private var upcomingEventsContainer: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            VStack {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 16) {
                 ForEach(eventsViewModel.events, id: \.self) { event in
                     NavigationLink(destination: EventDetailView(event: event)) {
                         UpcomingEventCell(event: event)
                     }
                 }
-                .padding(.horizontal)
             }
+            .padding(.horizontal, 24)
         }
     }
     

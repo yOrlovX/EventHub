@@ -19,7 +19,7 @@ struct UpcomingEventCell: View {
                     image
                         .resizable()
                         .scaledToFill()
-                        .frame(maxWidth: UIScreen.main.bounds.width - 20, maxHeight: 200)
+                        .frame(maxWidth: UIScreen.main.bounds.width - 20, maxHeight: 131)
                         .cornerRadius(12)
                         .padding(10)
                 } placeholder: {
