@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import MapItemPicker
 
 struct HomeView: View {
     @StateObject var eventsViewModel = EventsViewModel()
+    @State private var showingPicker = false
+    @State private var currentLocation = "New Yourk, USA"
     
     @Environment(\.router) var router
     
@@ -75,10 +78,19 @@ extension HomeView {
                             .frame(width: 10, height: 5)
                             .foregroundColor(.white)
                     }
-                    Text("New Yourk, USA")
+                    Text(currentLocation)
                         .font(.system(size: 13, weight: .medium))
                         .foregroundColor(.white)
                 }
+                .onTapGesture {
+                    showingPicker = true
+                }
+                .mapItemPicker(isPresented: $showingPicker) { item in
+                            if let name = item?.name {
+                                print("Selected \(name)")
+                                currentLocation = name
+                            }
+                        }
                 Spacer()
                 Circle()
                     .frame(width: 36, height: 36)

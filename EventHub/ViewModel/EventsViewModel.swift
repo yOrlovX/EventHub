@@ -12,7 +12,6 @@ import MapKit
 
 final class EventsViewModel: ObservableObject {
     @Published var events: [Event] = []
-    
     private var cancellables = Set<AnyCancellable>()
     
     //MARK: TicketMaster API

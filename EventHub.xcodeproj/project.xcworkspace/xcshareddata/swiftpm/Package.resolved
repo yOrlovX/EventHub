@@ -17,6 +17,15 @@
         "revision" : "467a3d17479887943ab917a379e62bbaff60ac8a",
         "version" : "2.1.1"
       }
+    },
+    {
+      "identity" : "swiftui-map-item-picker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/lorenzofiamingo/swiftui-map-item-picker",
+      "state" : {
+        "revision" : "48e0bdbcecc901b0cfd6962f0b42225136789c07",
+        "version" : "2.0.0"
+      }
     }
   ],
   "version" : 2

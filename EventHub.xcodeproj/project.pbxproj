@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		92015BD729E87939006BAA90 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92015BD629E87939006BAA90 /* EventDetailView.swift */; };
+		92030CBE2BC07041009B9FD6 /* MapItemPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 92030CBD2BC07041009B9FD6 /* MapItemPicker */; };
 		920D010529E5AD9A00FE464D /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D010429E5AD9A00FE464D /* SearchBarView.swift */; };
 		920D010829E5B3E800FE464D /* CornerRadiusStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D010729E5B3E800FE464D /* CornerRadiusStyle.swift */; };
 		921692C729E71F6000728AD5 /* UpcomingEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921692C629E71F6000728AD5 /* UpcomingEventCell.swift */; };
@@ -84,6 +85,7 @@
 			files = (
 				927338E629E98E4200A1072A /* CachedAsyncImage in Frameworks */,
 				923473CF2BB1CBC300BC0C95 /* SwiftfulRouting in Frameworks */,
+				92030CBE2BC07041009B9FD6 /* MapItemPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +285,7 @@
 			packageProductDependencies = (
 				927338E529E98E4200A1072A /* CachedAsyncImage */,
 				923473CE2BB1CBC300BC0C95 /* SwiftfulRouting */,
+				92030CBD2BC07041009B9FD6 /* MapItemPicker */,
 			);
 			productName = EventHub;
 			productReference = 926AC95929DEEFB6004FE288 /* EventHub.app */;
@@ -315,6 +318,7 @@
 			packageReferences = (
 				927338E429E98E4200A1072A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 				923473CD2BB1CBC300BC0C95 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */,
+				92030CBC2BC07041009B9FD6 /* XCRemoteSwiftPackageReference "swiftui-map-item-picker" */,
 			);
 			productRefGroup = 926AC95A29DEEFB6004FE288 /* Products */;
 			projectDirPath = "";
@@ -502,6 +506,7 @@
 				DEVELOPMENT_TEAM = 72NQPP668A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -531,6 +536,7 @@
 				DEVELOPMENT_TEAM = 72NQPP668A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -573,6 +579,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		92030CBC2BC07041009B9FD6 /* XCRemoteSwiftPackageReference "swiftui-map-item-picker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-map-item-picker";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		923473CD2BB1CBC300BC0C95 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulRouting.git";
@@ -592,6 +606,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		92030CBD2BC07041009B9FD6 /* MapItemPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92030CBC2BC07041009B9FD6 /* XCRemoteSwiftPackageReference "swiftui-map-item-picker" */;
+			productName = MapItemPicker;
+		};
 		923473CE2BB1CBC300BC0C95 /* SwiftfulRouting */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 923473CD2BB1CBC300BC0C95 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */;
