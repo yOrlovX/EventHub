@@ -10,6 +10,7 @@ import CachedAsyncImage
 
 struct EventDetailView: View {
     
+    @Environment(\.router) var router
     let event: Event
     
     var body: some View {
@@ -69,6 +70,11 @@ struct EventDetailView: View {
             .padding()
             Spacer()
             Spacer()
+            
+            Button(action: {router.showScreen(.push) { _ in WebViewPresenter(url: event.url)}}) {
+                Text("Buy Ticket")
+                    .modifier(PrimaryButtonModifier())
+            }
         }
         .navigationTitle("Event Details")
         .navigationBarTitleDisplayMode(.large)

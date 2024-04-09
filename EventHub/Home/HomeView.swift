@@ -27,7 +27,7 @@ struct HomeView: View {
                     Section("Upcoming Events") {
                         upcomingEventsContainer
                     }
-                    .font(.system(size: 18, weight: .medium))                    
+                    .font(.system(size: 18, weight: .medium))
                 }
                 Spacer()
             }
@@ -171,9 +171,12 @@ extension HomeView {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 16) {
                 ForEach(eventsViewModel.events, id: \.self) { event in
-                    NavigationLink(destination: EventDetailView(event: event)) {
-                        EventCell(event: event)
-                    }
+                    EventCell(event: event)
+                        .onTapGesture {
+                            router.showScreen(.push) { _ in
+                                EventDetailView(event: event)
+                            }
+                        }
                 }
             }
             .padding(.horizontal, 24)

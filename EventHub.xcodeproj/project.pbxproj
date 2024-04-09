@@ -28,6 +28,7 @@
 		9242981029DF4ECD00D8FD21 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242980F29DF4ECD00D8FD21 /* OnboardingView.swift */; };
 		9242981229DF52BB00D8FD21 /* SegmentProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242981129DF52BB00D8FD21 /* SegmentProgressView.swift */; };
 		9248C0F52BBDA14400D2CA17 /* EventClassificationsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9248C0F42BBDA14400D2CA17 /* EventClassificationsPicker.swift */; };
+		925DA8142BC54FDE00EFC1CB /* WebViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925DA8132BC54FDE00EFC1CB /* WebViewPresenter.swift */; };
 		926AC95D29DEEFB6004FE288 /* EventHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AC95C29DEEFB6004FE288 /* EventHubApp.swift */; };
 		926AC96129DEEFB8004FE288 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926AC96029DEEFB8004FE288 /* Assets.xcassets */; };
 		926AC96429DEEFB8004FE288 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926AC96329DEEFB8004FE288 /* Preview Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		9242980F29DF4ECD00D8FD21 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		9242981129DF52BB00D8FD21 /* SegmentProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentProgressView.swift; sourceTree = "<group>"; };
 		9248C0F42BBDA14400D2CA17 /* EventClassificationsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventClassificationsPicker.swift; sourceTree = "<group>"; };
+		925DA8132BC54FDE00EFC1CB /* WebViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewPresenter.swift; sourceTree = "<group>"; };
 		926AC95929DEEFB6004FE288 /* EventHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		926AC95C29DEEFB6004FE288 /* EventHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHubApp.swift; sourceTree = "<group>"; };
 		926AC96029DEEFB8004FE288 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			children = (
 				9242980429DF46D200D8FD21 /* EventsView.swift */,
 				92015BD629E87939006BAA90 /* EventDetailView.swift */,
+				925DA8132BC54FDE00EFC1CB /* WebViewPresenter.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				924297FA29DF3D7E00D8FD21 /* VerificationView.swift in Sources */,
 				9241D56A2BC0131800CD5231 /* Place.swift in Sources */,
 				926AC95D29DEEFB6004FE288 /* EventHubApp.swift in Sources */,
+				925DA8142BC54FDE00EFC1CB /* WebViewPresenter.swift in Sources */,
 				9242981029DF4ECD00D8FD21 /* OnboardingView.swift in Sources */,
 				921692C729E71F6000728AD5 /* UpcomingEventCell.swift in Sources */,
 				929A17482BC3F53E00EB8567 /* EventCell.swift in Sources */,
