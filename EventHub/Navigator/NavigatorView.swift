@@ -13,13 +13,13 @@ struct NavigatorView: View {
         RouterView { _ in
             SplashView()
         }
-        .tint(.white)
     }
 }
 
 extension UINavigationController {
-  open override func viewWillLayoutSubviews() {
-    super.viewWillLayoutSubviews()
-    navigationBar.topItem?.backButtonDisplayMode = .minimal
-  }
+    open override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        navigationBar.topItem?.backButtonDisplayMode = .minimal
+        navigationBar.tintColor = .white
+    }
 }

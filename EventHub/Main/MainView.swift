@@ -8,28 +8,33 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    init() {
+        UITabBar.appearance().tintColor = UIColor(Colors.primaryBlue)
+    }
+    
     var body: some View {
-      TabView {
-        HomeView()
-          .tabItem {
-            Label("Explore", systemImage: "house.fill")
-          }
-        EventsView()
-          .tabItem {
-            Label("Events", systemImage: "calendar")
-          }
-        
-        MapView()
-          .tabItem {
-            Label("Events", systemImage: "map")
-          }
-        
-        ProfileView()
-          .tabItem {
-            Label("Profile", systemImage: "person")
-          }
-      }
-      .accentColor(Colors.primaryBlue)
+        TabView {
+            HomeView()
+                .tabItem {
+                    Label("Explore", systemImage: "safari.fill")
+                        .accentColor(Colors.primaryBlue)
+                }
+            EventsView()
+                .tabItem {
+                    Label("Events", systemImage: "calendar")
+                }
+            
+            MapView()
+                .tabItem {
+                    Label("Map", systemImage: "map")
+                }
+            
+            ProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person")
+                }
+        }
     }
 }
 
