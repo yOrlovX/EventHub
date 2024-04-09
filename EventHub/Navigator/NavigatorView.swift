@@ -13,11 +13,13 @@ struct NavigatorView: View {
         RouterView { _ in
             SplashView()
         }
+        .tint(.white)
     }
 }
 
-struct NavigatorView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigatorView()
-    }
+extension UINavigationController {
+  open override func viewWillLayoutSubviews() {
+    super.viewWillLayoutSubviews()
+    navigationBar.topItem?.backButtonDisplayMode = .minimal
+  }
 }
