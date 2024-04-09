@@ -27,14 +27,9 @@ struct HomeView: View {
                     Section("Upcoming Events") {
                         upcomingEventsContainer
                     }
-                    .font(.system(size: 18, weight: .medium))
-                    
-                    Section("Nearby You") {
-                        upcomingEventsContainer
-                    }
-                    .font(.system(size: 18, weight: .medium))
-                    
+                    .font(.system(size: 18, weight: .medium))                    
                 }
+                Spacer()
             }
             .navigationBarHidden(true)
         }
@@ -86,11 +81,11 @@ extension HomeView {
                     showingPicker = true
                 }
                 .mapItemPicker(isPresented: $showingPicker) { item in
-                            if let name = item?.name {
-                                print("Selected \(name)")
-                                currentLocation = name
-                            }
-                        }
+                    if let name = item?.name {
+                        print("Selected \(name)")
+                        currentLocation = name
+                    }
+                }
                 Spacer()
                 Circle()
                     .frame(width: 36, height: 36)
@@ -177,7 +172,7 @@ extension HomeView {
             HStack(spacing: 16) {
                 ForEach(eventsViewModel.events, id: \.self) { event in
                     NavigationLink(destination: EventDetailView(event: event)) {
-                        UpcomingEventCell(event: event)
+                        EventCell(event: event)
                     }
                 }
             }

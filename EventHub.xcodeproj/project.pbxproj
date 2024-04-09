@@ -37,6 +37,7 @@
 		926E8CAC2BB2D476000A4E76 /* TicketMasterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926E8CAB2BB2D476000A4E76 /* TicketMasterModel.swift */; };
 		927338E629E98E4200A1072A /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 927338E529E98E4200A1072A /* CachedAsyncImage */; };
 		927338E929E98EC100A1072A /* URLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927338E829E98EC100A1072A /* URLCache.swift */; };
+		929A17482BC3F53E00EB8567 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929A17472BC3F53E00EB8567 /* EventCell.swift */; };
 		92CAC6D929E8348C00CEE29E /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CAC6D829E8348C00CEE29E /* EventsViewModel.swift */; };
 		92CAC6DC29E835C600CEE29E /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CAC6DB29E835C600CEE29E /* ResponseModel.swift */; };
 		92CAC6E029E8372300CEE29E /* EventsJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 92CAC6DF29E8372300CEE29E /* EventsJSON.json */; };
@@ -72,6 +73,7 @@
 		926AC96F29DEFEBD004FE288 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		926E8CAB2BB2D476000A4E76 /* TicketMasterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketMasterModel.swift; sourceTree = "<group>"; };
 		927338E829E98EC100A1072A /* URLCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCache.swift; sourceTree = "<group>"; };
+		929A17472BC3F53E00EB8567 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		92CAC6D829E8348C00CEE29E /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		92CAC6DB29E835C600CEE29E /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		92CAC6DF29E8372300CEE29E /* EventsJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EventsJSON.json; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				920D010429E5AD9A00FE464D /* SearchBarView.swift */,
 				921692C629E71F6000728AD5 /* UpcomingEventCell.swift */,
 				9225788E2BBD822900BF9B74 /* FilterView.swift */,
+				929A17472BC3F53E00EB8567 /* EventCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				926AC95D29DEEFB6004FE288 /* EventHubApp.swift in Sources */,
 				9242981029DF4ECD00D8FD21 /* OnboardingView.swift in Sources */,
 				921692C729E71F6000728AD5 /* UpcomingEventCell.swift in Sources */,
+				929A17482BC3F53E00EB8567 /* EventCell.swift in Sources */,
 				926E8CAC2BB2D476000A4E76 /* TicketMasterModel.swift in Sources */,
 				92CAC6DC29E835C600CEE29E /* ResponseModel.swift in Sources */,
 				926AC96C29DEF0CF004FE288 /* SplashView.swift in Sources */,

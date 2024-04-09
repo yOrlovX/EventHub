@@ -9,30 +9,37 @@ import SwiftUI
 import CachedAsyncImage
 
 struct UpcomingEventCell: View {
-    let event: Event
+//    let event: Event
+    let image =  SwiftUI.Image("hands")
+    let name = " event name"
     
     var body: some View {
         VStack {
             VStack(spacing: 14) {
-                let image = event.images[2].url 
-                CachedAsyncImage(url: URL(string: image), urlCache: .imageCache) { image in
-                    image
-                        .resizable()
-                        .scaledToFill()
-                        .frame(maxWidth: UIScreen.main.bounds.width - 20, maxHeight: 131)
-                        .cornerRadius(12)
-                        .padding(10)
-                } placeholder: {
-                    ProgressView()
-                }
-                Text(event.name)
+//                                let image = event.images[2].url
+//                                CachedAsyncImage(url: URL(string: image), urlCache: .imageCache) { image in
+//                                    image
+//                                        .resizable()
+//                                        .scaledToFill()
+//                                        .frame(maxWidth: UIScreen.main.bounds.width - 20, maxHeight: 131)
+//                                        .cornerRadius(12)
+//                                        .padding(10)
+//                                } placeholder: {
+//                                    ProgressView()
+//                                }
+                image
+                    .resizable()
+                    .scaledToFill()
+                    .frame(maxWidth: UIScreen.main.bounds.width - 20, maxHeight: 131)
+                    .cornerRadius(12)
+                Text("event.name")
                     .font(.system(size: 18, weight: .medium))
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
                     .frame(width: 218)
-//                Text(event.venue.city)
-//                    .font(.system(size: 13))
-//                    .foregroundColor(.gray)
+                //                Text(event.venue.city)
+                //                    .font(.system(size: 13))
+                //                    .foregroundColor(.gray)
             }
             .padding(10)
         }
@@ -41,10 +48,10 @@ struct UpcomingEventCell: View {
     }
 }
 
-//struct UpcomingEventCell_Previews: PreviewProvider {
-//  static var previews: some View {
-//    UpcomingEventCell(image: "hands", name: "International Band", location: "Loca")
-//  }
-//}
+struct UpcomingEventCell_Previews: PreviewProvider {
+  static var previews: some View {
+      UpcomingEventCell()
+  }
+}
 
 
