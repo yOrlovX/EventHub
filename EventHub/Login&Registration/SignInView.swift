@@ -95,11 +95,14 @@ extension SignInView {
             Spacer()
             Spacer()
             Spacer()
-            NavigationLink(destination: ResetPasswordView()) {
-                Text("Forgot Password?")
-                    .font(.system(size: 14, weight: .regular))
-                    .padding(.trailing, 30)
-            }
+            Text("Forgot Password?")
+                .font(.system(size: 14, weight: .regular))
+                .padding(.trailing, 30)
+                .onTapGesture {
+                    router.showScreen(.push) { _ in
+                        ResetPasswordView()
+                    }
+                }
         }
     }
     
