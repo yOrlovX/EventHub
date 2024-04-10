@@ -14,9 +14,7 @@ struct SignUpView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var confirmPassword: String = ""
-    
-//    @Environment(\.presentationMode) var presentationMode
-    
+        
     var body: some View {
         ZStack {
             Colors.lightBlue.opacity(0.2)
@@ -35,9 +33,6 @@ extension SignUpView {
     
     private var textFieldsContainer: some View {
         VStack(alignment: .leading, spacing: 20) {
-            Text("Sign up")
-                .font(.system(size: 24, weight: .medium))
-            
             TextField("Full name", text: $fullName)
                 .padding(.vertical, 20)
                 .padding(.leading, 50)
@@ -161,7 +156,6 @@ extension SignUpView {
                     .font(.system(size: 15, weight: .regular))
                     .foregroundColor(.blue)
                     .onTapGesture {
-//                        presentationMode.wrappedValue.dismiss()
                         router.dismissScreen()
                     }
             }

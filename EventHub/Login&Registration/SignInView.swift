@@ -25,8 +25,9 @@ struct SignInView: View {
                 buttonsContainer
             }
         }
-        .navigationTitle("Sign in")
+        .navigationBarTitle("")
         .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 

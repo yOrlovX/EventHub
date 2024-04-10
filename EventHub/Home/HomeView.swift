@@ -30,9 +30,11 @@ struct HomeView: View {
                     .font(.system(size: 18, weight: .medium))
                 }
                 Spacer()
-            }
-            .navigationBarHidden(true)
+            }  
         }
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
