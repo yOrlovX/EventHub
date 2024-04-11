@@ -45,4 +45,25 @@ extension EventsViewModel {
             }
             .store(in: &cancellables)
     }
+    
+    func getEventsByCityName(cityName: String) {
+        guard let url = URL(string: "https://app.ticketmaster.com/discovery/v2/events.json?city=\(cityName)&apikey=\(apiKey)") else { return }
+        URLSession
+            .shared
+            .dataTaskPublisher(for: url)
+            .map { $0.data }
+            .receive(on: DispatchQueue.main)
+            .decode(type: Events.self, decoder: JSONDecoder())
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    print("loaded request data")
+                case .failure(let error):
+                    print(error)
+                }
+            } receiveValue: { [weak self] returnedEvents in
+                self?.events = returnedEvents.embedded.events
+            }
+            .store(in: &cancellables)
+    }
 }

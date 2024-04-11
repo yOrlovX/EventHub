@@ -11,7 +11,7 @@ import MapItemPicker
 struct HomeView: View {
     @StateObject var eventsViewModel = EventsViewModel()
     @State private var showingPicker = false
-    @State private var currentLocation = "New Yourk, USA"
+    @State private var currentLocation = "New York"
     
     @Environment(\.router) var router
     
@@ -21,8 +21,8 @@ struct HomeView: View {
                 .ignoresSafeArea(.all)
             VStack {
                 topBarContainer
-                segmentsContainer
-                    .offset(y: -80)
+                //                segmentsContainer
+                //                    .offset(y: -80)
                 VStack(alignment: .leading, spacing: 30) {
                     Section("Upcoming Events") {
                         upcomingEventsContainer
@@ -30,11 +30,17 @@ struct HomeView: View {
                     .font(.system(size: 18, weight: .medium))
                 }
                 Spacer()
-            }  
+            }
+            
         }
-        .navigationBarTitle("")
         .navigationBarHidden(true)
-        .navigationBarBackButtonHidden(true)
+        .mapItemPicker(isPresented: $showingPicker) { item in
+            if let name = item?.name {
+                print("Selected \(name)")
+                currentLocation = name
+                eventsViewModel.getEventsByCityName(cityName: currentLocation)
+            }
+        }
     }
 }
 
@@ -65,27 +71,20 @@ extension HomeView {
                     .frame(width: 24, height: 24)
                     .foregroundColor(.white)
                 Spacer()
-                VStack(spacing: 2) {
-                    HStack {
-                        Text("Current Location")
-                            .font(.system(size: 12, weight: .regular))
+                Button(action: { showingPicker.toggle()}) {
+                    VStack(spacing: 2) {
+                        HStack {
+                            Text("Current Location")
+                                .font(.system(size: 12, weight: .regular))
+                                .foregroundColor(.white)
+                            SwiftUI.Image(systemName: "arrowtriangle.down.fill")
+                                .resizable()
+                                .frame(width: 10, height: 5)
+                                .foregroundColor(.white)
+                        }
+                        Text(currentLocation)
+                            .font(.system(size: 13, weight: .medium))
                             .foregroundColor(.white)
-                        SwiftUI.Image(systemName: "arrowtriangle.down.fill")
-                            .resizable()
-                            .frame(width: 10, height: 5)
-                            .foregroundColor(.white)
-                    }
-                    Text(currentLocation)
-                        .font(.system(size: 13, weight: .medium))
-                        .foregroundColor(.white)
-                }
-                .onTapGesture {
-                    showingPicker = true
-                }
-                .mapItemPicker(isPresented: $showingPicker) { item in
-                    if let name = item?.name {
-                        print("Selected \(name)")
-                        currentLocation = name
                     }
                 }
                 Spacer()

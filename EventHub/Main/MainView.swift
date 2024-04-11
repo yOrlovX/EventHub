@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     
     init() {
-        UITabBar.appearance().tintColor = UIColor(Colors.primaryBlue)
+        UITabBar.appearance().tintColor = UIColor(Colors.bookmarkRed)
     }
     
     var body: some View {
@@ -18,7 +18,6 @@ struct MainView: View {
             HomeView()
                 .tabItem {
                     Label("Explore", systemImage: "safari.fill")
-                        .accentColor(Colors.primaryBlue)
                 }
             EventsView()
                 .tabItem {
