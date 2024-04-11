@@ -21,8 +21,8 @@ struct HomeView: View {
                 .ignoresSafeArea(.all)
             VStack {
                 topBarContainer
-                //                segmentsContainer
-                //                    .offset(y: -80)
+                                segmentsContainer
+                                    .offset(y: -80)
                 VStack(alignment: .leading, spacing: 30) {
                     Section("Upcoming Events") {
                         upcomingEventsContainer
