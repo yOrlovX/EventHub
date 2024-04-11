@@ -24,49 +24,55 @@ struct EventCell: View {
                     .padding(.horizontal, 10)
                     .padding(.top, 10)
                     .overlay(alignment: .top) {
-                        HStack(alignment: .top, spacing: 0) {
-                                VStack(spacing:0) {
-                                    Text("10")
-                                        .font(.system(size: 16, weight: .semibold))
-                                        .foregroundColor(Colors.bookmarkRed)
-                                        .padding(.top, 5)
-                                        .padding(.horizontal, 10)
-                                    Text("Jun")
-                                        .font(.system(size: 14, weight: .regular))
-                                        .foregroundColor(Colors.bookmarkRed)
-                                        .padding(.bottom, 5)
-                                }
-                                .background(.white)
+                        HStack(alignment: .top) {
+                            Rectangle()
+                                .frame(width: 45, height: 47)
+                                .foregroundColor(.white)
                                 .opacity(0.7)
                                 .cornerRadius(10)
-                               Spacer()
-                                SwiftUI.Image(systemName: "bookmark")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 14, height: 14)
-                                    .foregroundColor(Colors.bookmarkRed)
-                                    .padding(8)
-                                    .background(.white)
-                                    .opacity(0.7)
-                                    .cornerRadius(10)
-                            }
-                            .frame(maxWidth: imageWidth)
+                                .overlay(alignment: .center) {
+                                    VStack(spacing:0) {
+                                        Text("12")
+                                            .font(.system(size: 16, weight: .semibold))
+                                            .foregroundColor(Colors.bookmarkRed)
+                                        Text("Jun")
+                                            .font(.system(size: 14, weight: .regular))
+                                            .foregroundColor(Colors.bookmarkRed)
+                                    }
+                                }
+                            Spacer()
+                            Rectangle()
+                                .frame(width: 30, height: 30)
+                                .foregroundColor(.white)
+                                .opacity(0.7)
+                                .cornerRadius(10)
+                                .overlay(alignment: .center) {
+                                    SwiftUI.Image(systemName: "bookmark")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 14, height: 14)
+                                        .foregroundColor(Colors.bookmarkRed)
+                                }
+                        }
+                        .padding(.top, 16)
+                        .padding(.horizontal, 8)
+                        .frame(maxWidth: imageWidth)
                     }
             } placeholder: {
                 ProgressView()
             }
-//            VStack(alignment: .leading, spacing: 10) {
-//                Text(event.name)
-//                    .font(.system(size: 18, weight: .medium))
-//                    .fixedSize(horizontal: false, vertical: true)
-//                    .frame(width: 218)
-//                Text("36 Guild Street London, UK ")
-//                    .font(.system(size: 13))
-//                    .foregroundColor(.gray)
-//                    .fixedSize(horizontal: false, vertical: true)
-//            }
-//            .padding(.leading, 9)
-//            .padding(.bottom, 17)
+            //            VStack(alignment: .leading, spacing: 10) {
+            //                Text(event.name)
+            //                    .font(.system(size: 18, weight: .medium))
+            //                    .fixedSize(horizontal: false, vertical: true)
+            //                    .frame(width: 218)
+            //                Text("36 Guild Street London, UK ")
+            //                    .font(.system(size: 13))
+            //                    .foregroundColor(.gray)
+            //                    .fixedSize(horizontal: false, vertical: true)
+            //            }
+            //            .padding(.leading, 9)
+            //            .padding(.bottom, 17)
         }
         .background(.white)
         .cornerRadius(18)
