@@ -30,54 +30,57 @@ struct OnboardingView: View {
 extension OnboardingView {
     
     private var firstOnboardingState: some View {
-        VStack {
-            SwiftUI.Image("onboarding1")
-                .resizable()
-                .scaledToFit()
-            Spacer()
-            Rectangle()
-                .foregroundColor(Colors.primaryBlue)
-                .frame(height: 375)
-                .cornerRadius(40)
-                .overlay {
-                    VStack {
-                        Spacer()
-                        Text("Explore Upcoming and \nNearby Events")
-                            .multilineTextAlignment(.center)
-                            .font(.system(size: 22, weight: .medium))
-                            .foregroundColor(.white)
-                            .padding(.top, 30)
-                        
-                        Text("In publishing and graphic design, Lorem is \na placeholder text commonly ")
-                            .font(.system(size: 15, weight: .regular))
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(.white)
-                            .padding(.top, 16)
-                        
-                        HStack {
+        GeometryReader { geo in
+            VStack {
+                SwiftUI.Image("onboarding1")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: geo.size.height * 0.7)
+                Spacer()
+                Rectangle()
+                    .foregroundColor(Colors.primaryBlue)
+                   
+                    .cornerRadius(40, corners: [.topLeft, .topRight])
+                    .overlay {
+                        VStack {
                             Spacer()
-                            Text("Skip")
-                                .font(.system(size: 18, weight: .medium))
+                            Text("Explore Upcoming and \nNearby Events")
+                                .multilineTextAlignment(.center)
+                                .font(.system(size: 22, weight: .medium))
                                 .foregroundColor(.white)
-                            Spacer()
-                            Spacer()
-                            SegmentProgressView(segmentValue: $onboardingState)
-                            Spacer()
-                            Spacer()
-                            Text("Next")
-                                .font(.system(size: 18, weight: .medium))
+                                .padding(.top, 30)
+                            
+                            Text("In publishing and graphic design, Lorem is \na placeholder text commonly ")
+                                .font(.system(size: 15, weight: .regular))
+                                .multilineTextAlignment(.center)
                                 .foregroundColor(.white)
-                                .onTapGesture {
-                                    self.onboardingState += 1
-                                }
+                                .padding(.top, 16)
+                            
+                            HStack {
+                                Spacer()
+                                Text("Skip")
+                                    .font(.system(size: 18, weight: .medium))
+                                    .foregroundColor(.white)
+                                Spacer()
+                                Spacer()
+                                SegmentProgressView(segmentValue: $onboardingState)
+                                Spacer()
+                                Spacer()
+                                Text("Next")
+                                    .font(.system(size: 18, weight: .medium))
+                                    .foregroundColor(.white)
+                                    .onTapGesture {
+                                        self.onboardingState += 1
+                                    }
+                                Spacer()
+                            }
+                            .padding(.top, 40)
                             Spacer()
                         }
-                        .padding(.top, 40)
-                        Spacer()
                     }
-                }
+            }
+            .ignoresSafeArea()
         }
-        .ignoresSafeArea()
     }
     
     private var secondOnboardingState: some View {
@@ -110,6 +113,9 @@ extension OnboardingView {
                             Text("Skip")
                                 .font(.system(size: 18, weight: .medium))
                                 .foregroundColor(.white)
+                                .onTapGesture {
+                                    onboardingState = 1
+                                }
                             Spacer()
                             Spacer()
                             SegmentProgressView(segmentValue: $onboardingState)

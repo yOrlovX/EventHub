@@ -54,13 +54,13 @@ struct Event: Codable, Hashable {
     //    let ageRestrictions: AgeRestrictions?
     //    let ticketing: Ticketing
     //    let links: EventLinks
-//        let embedded: EventEmbedded
+        let embedded: EventEmbedded
     //    let outlets: [Outlet]?
     //    let doorsTimes: DoorsTimes?
     
     enum CodingKeys: String, CodingKey {
         case name, type, id, test, url, locale, images, info, pleaseNote, classifications
-//        case embedded = "_embedded"
+        case embedded = "_embedded"
         
     }
 }
@@ -171,14 +171,14 @@ struct ExternalLinks: Codable {
     let twitter, wiki: [Facebook]?
     let facebook: [Facebook]
     let instagram: [Facebook]?
-    let homepage: [Facebook]
+    let homepage: [Facebook]?
     let youtube, itunes, lastfm, spotify: [Facebook]?
     let musicbrainz: [Musicbrainz]?
 }
 
 // MARK: - Facebook
 struct Facebook: Codable {
-    let url: String
+    let url: String?
 }
 
 // MARK: - Musicbrainz

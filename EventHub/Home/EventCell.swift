@@ -61,6 +61,7 @@ struct EventCell: View {
                         }
                 } placeholder: {
                     ProgressView()
+                        .frame(width: imageWidth, height: 131)
                 }
                 VStack(alignment: .leading, spacing: 10) {
                     Text(event.name)
@@ -69,7 +70,7 @@ struct EventCell: View {
                         .minimumScaleFactor(0.1)
                         .multilineTextAlignment(.leading)
                         .frame(width: imageWidth)
-                    Text("36 Guild Street London, UK ")
+                    Text("\(event.embedded.venues.map { $0.address.line1 }.joined(separator: ", ")), \(event.embedded.venues.map { $0.city.name }.joined(separator: ", "))")
                         .font(.system(size: 13))
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.leading)
