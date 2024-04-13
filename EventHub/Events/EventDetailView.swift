@@ -17,7 +17,7 @@ struct EventDetailView: View {
         VStack {
             ZStack {
                 let image = event.images[2].url
-                CachedAsyncImage(url: URL(string: image), urlCache: .imageCache) { image in
+                AsyncImage(url: URL(string: image)) { image in
                     image
                         .resizable()
                         .scaledToFill()

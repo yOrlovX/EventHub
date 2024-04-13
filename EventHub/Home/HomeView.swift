@@ -170,7 +170,7 @@ extension HomeView {
     
     private var upcomingEventsContainer: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 16) {
+            LazyHStack(alignment: .top, spacing: 16) {
                 ForEach(eventsViewModel.events, id: \.self) { event in
                     EventCell(event: event)
                         .onTapGesture {
@@ -188,7 +188,7 @@ extension HomeView {
         var uniqueSegments: Set<Genre> = []
         
         for classification in classifications {
-            uniqueSegments.insert(classification.segment)
+            uniqueSegments.insert(classification.segment ?? Genre(id: "", name: "default"))
         }
         
         return Array(uniqueSegments)

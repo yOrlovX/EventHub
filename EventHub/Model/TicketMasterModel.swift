@@ -81,7 +81,7 @@ struct AgeRestrictions: Codable {
 // MARK: - Classification
 struct Classification: Codable {
     let primary: Bool
-    let segment, genre, subGenre: Genre
+    let segment, genre, subGenre: Genre?
     let type, subType: Genre?
     let family: Bool
 }
@@ -188,7 +188,7 @@ struct Musicbrainz: Codable {
 
 // MARK: - Image
 struct Image: Codable {
-    let ratio: Ratio?
+//    let ratio: Ratio?
     let url: String
     let width, height: Int
     let fallback: Bool
