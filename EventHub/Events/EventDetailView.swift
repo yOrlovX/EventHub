@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import CachedAsyncImage
+import Foundation
 
 struct EventDetailView: View {
     
@@ -35,14 +35,14 @@ struct EventDetailView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 48, height: 48)
-                    //            VStack(alignment: .leading, spacing: 1) {
-                    //                Text(event.dates.start.localDate)
-                    //                .font(.system(size: 16, weight: .medium))
-                    //
-                    //                Text(event.dates.start.localTime ?? "")
-                    //                .font(.system(size: 12))
-                    //                .foregroundColor(.gray)
-                    //            }
+                                VStack(alignment: .leading, spacing: 1) {
+                                    Text("\(dateFormatter(date: event.dates.start.localDate))")
+                                    .font(.system(size: 16, weight: .medium))
+                    
+                                    Text(event.dates.start.localTime ?? "")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.gray)
+                                }
                 }
                 HStack(spacing: 14) {
                     SwiftUI.Image("eventLocation")
@@ -98,6 +98,19 @@ struct EventDetailView: View {
         }
     }
 }
+extension EventDetailView {
+    private func dateFormatter(date: String) -> String {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            if let date = formatter.date(from: date) {
+                formatter.dateFormat = "d MMMM, yyyy"
+                return formatter.string(from: date)
+            } else {
+                return "Date Unknown"
+            }
+        }
+    }
+
 
 
 //struct EventDetailView_Previews: PreviewProvider {
