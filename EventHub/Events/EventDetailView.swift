@@ -49,21 +49,21 @@ struct EventDetailView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 48, height: 48)
-                    //            VStack(alignment: .leading, spacing: 1) {
-                    //                Text(event.embedded.venues.map {$0.name}.joined(separator: ""))
-                    //                .font(.system(size: 16, weight: .medium))
-                    //
-                    //              Text("36 Guild Street London, UK ")
-                    //                .font(.system(size: 12))
-                    //                .foregroundColor(.gray)
-                    //            }
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text(event.embedded.venues.map {$0.name ?? ""}.joined(separator: ""))
+                            .font(.system(size: 16, weight: .medium))
+                        
+                        Text(event.embedded.venues.map {$0.address.line1}.joined(separator: ""))
+                            .font(.system(size: 12))
+                            .foregroundColor(.gray)
+                    }
                 }
                 
                 VStack(alignment: .leading, spacing: 8) {
                     Text("About Event")
                         .font(.system(size: 18, weight: .medium))
                     
-                    Text(event.pleaseNote ?? "")
+                    Text(event.info ?? "")
                         .font(.system(size: 16))
                 }
             }
