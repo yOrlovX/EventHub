@@ -66,26 +66,23 @@ struct EventCell: View {
                 VStack(alignment: .leading, spacing: 10) {
                     Text(event.name)
                         .font(.system(size: 18, weight: .medium))
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.1)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.5)
                         .multilineTextAlignment(.leading)
-                        .frame(width: imageWidth)
+                        .frame(maxWidth: imageWidth, alignment: .leading)
                     Text("\(event.embedded.venues.map { $0.address.line1 }.joined(separator: ", ")), \(event.embedded.venues.map { $0.city.name }.joined(separator: ", "))")
                         .font(.system(size: 13))
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.leading)
+                        .frame(maxWidth: imageWidth, alignment: .leading)
                 }
-                .padding(.bottom, 17)
+                .padding(.horizontal, 10)
+                .padding(.bottom, 34)
             }
         }
         .background(.white)
         .cornerRadius(18)
     }
 }
-
-//struct EventCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//        EventCell()
-//            .previewLayout(.sizeThatFits)
-//    }
-//}
