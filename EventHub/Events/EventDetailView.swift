@@ -14,70 +14,72 @@ struct EventDetailView: View {
     let event: Event
     
     var body: some View {
+        ZStack {
+            GeometryReader { geo in
+                ZStack(alignment: .top) {
+                    let image = event.images[2].url
+                    AsyncImage(url: URL(string: image)) { image in
+                        image
+                            .resizable()
+                            .scaledToFill()
+                            .frame(maxWidth: .infinity, maxHeight: geo.size.height * 0.33)
+                    } placeholder: {
+                        ProgressView()
+                    }
+                }
+                .ignoresSafeArea(edges: .top)
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 20) {
+                        Text(event.name)
+                            .font(.system(size: 35))
+                        HStack(spacing: 14) {
+                            SwiftUI.Image("eventDate")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 48, height: 48)
+                            VStack(alignment: .leading, spacing: 1) {
+                                Text("\(dateFormatter(date: event.dates.start.localDate))")
+                                    .font(.system(size: 16, weight: .medium))
+                                
+                                Text("\(timeFormatter(date:event.dates.start.localTime ?? ""))")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.gray)
+                            }
+                        }
+                        HStack(spacing: 14) {
+                            SwiftUI.Image("eventLocation")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 48, height: 48)
+                            VStack(alignment: .leading, spacing: 1) {
+                                Text(event.embedded.venues.map {$0.name ?? ""}.joined(separator: ""))
+                                    .font(.system(size: 16, weight: .medium))
+                                
+                                Text(event.embedded.venues.map {$0.address.line1}.joined(separator: ""))
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.gray)
+                            }
+                        }
+                        
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("About Event")
+                                .font(.system(size: 18, weight: .medium))
+                            
+                            Text(event.info ?? "Information not found")
+                                .font(.system(size: 16))
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                }
+                .padding(.top, geo.size.height * 0.25)
+            }
+        }
         VStack {
-            ZStack {
-                let image = event.images[2].url
-                AsyncImage(url: URL(string: image)) { image in
-                    image
-                        .resizable()
-                        .scaledToFill()
-                        .frame(maxWidth: .infinity, maxHeight: 244)
-                } placeholder: {
-                    ProgressView()
-                }
-            }
-            .ignoresSafeArea(edges: .top)
-            VStack(alignment: .leading, spacing: 20) {
-                Text(event.name)
-                    .font(.system(size: 35))
-                HStack(spacing: 14) {
-                    SwiftUI.Image("eventDate")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 48, height: 48)
-                    VStack(alignment: .leading, spacing: 1) {
-                        Text("\(dateFormatter(date: event.dates.start.localDate))")
-                            .font(.system(size: 16, weight: .medium))
-                        
-                        Text("\(timeFormatter(date:event.dates.start.localTime ?? ""))")
-                            .font(.system(size: 12))
-                            .foregroundColor(.gray)
-                    }
-                }
-                HStack(spacing: 14) {
-                    SwiftUI.Image("eventLocation")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 48, height: 48)
-                    VStack(alignment: .leading, spacing: 1) {
-                        Text(event.embedded.venues.map {$0.name ?? ""}.joined(separator: ""))
-                            .font(.system(size: 16, weight: .medium))
-                        
-                        Text(event.embedded.venues.map {$0.address.line1}.joined(separator: ""))
-                            .font(.system(size: 12))
-                            .foregroundColor(.gray)
-                    }
-                }
-                
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("About Event")
-                        .font(.system(size: 18, weight: .medium))
-                    
-                    Text(event.info ?? "")
-                        .font(.system(size: 16))
-                }
-            }
-            .padding()
-            Spacer()
-            Spacer()
-            
             Button(action: {router.showScreen(.push) { _ in WebViewPresenter(url: event.url)}}) {
                 Text("Buy Ticket")
                     .modifier(PrimaryButtonModifier())
             }
         }
-        .navigationTitle("Event Details")
-        .navigationBarTitleDisplayMode(.large)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {}) {

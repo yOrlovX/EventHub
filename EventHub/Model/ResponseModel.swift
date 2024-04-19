@@ -438,3 +438,13 @@ extension Genre: Hashable {
         return hasher.combine(id)
     }
 }
+
+extension Image: Hashable {
+    static func == (lhs: Image, rhs: Image) -> Bool {
+        lhs.url == rhs.url
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        return hasher.combine(url)
+    }
+}

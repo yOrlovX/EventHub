@@ -12,7 +12,7 @@ struct PrimaryButtonModifier: ViewModifier {
         content
             .font(.system(size: 16, weight: .medium))
             .foregroundColor(.white)
-            .frame(width: 281, height: 58)
+            .frame(width: UIScreen.main.bounds.width - 104, height: 58)
             .background(Colors.primaryBlue)
             .cornerRadius(15)
     }
