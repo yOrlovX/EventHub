@@ -17,6 +17,8 @@ struct FilterView: View {
             
             Section("Time & Date") {
                 SegmentedPicker()
+                
+               datePickerButton
             }
             .font(.system(size: 16, weight: .medium))
             
@@ -75,7 +77,7 @@ extension FilterView {
                 Spacer()
                 Text("\(priceRange, specifier: "%.0f") $")
                     .font(.system(size: 16, weight: .medium))
-                    .foregroundColor(.blue)
+                    .foregroundColor(Colors.primaryBlue)
             }
             Slider(value: $priceRange, in: 1...100) {
                 Text("slider")
@@ -84,6 +86,7 @@ extension FilterView {
             } maximumValueLabel: {
                 Text("100")
             }
+            .tint(Colors.primaryBlue)
         }
     }
     
@@ -118,6 +121,28 @@ extension FilterView {
             }
             
             
+        }
+    }
+    
+    private var datePickerButton: some View {
+        HStack {
+            SwiftUI.Image("eventDate")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 21, height: 23)
+                .padding(.vertical, 10)
+                .padding(.leading, 10)
+            Text("Choose from calender")
+                .font(.system(size: 15, weight: .regular))
+                .foregroundColor(.gray)
+            Spacer()
+            SwiftUI.Image(systemName: "chevron.right")
+                .foregroundColor(Colors.primaryBlue)
+                .padding(.trailing, 10)
+        }
+        .overlay {
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.gray, lineWidth: 1)
         }
     }
 }
