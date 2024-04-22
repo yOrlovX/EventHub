@@ -61,6 +61,21 @@ struct EventDetailView: View {
                             }
                         }
                         
+                        HStack(spacing: 14) {
+                            SwiftUI.Image("eventLocation")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 48, height: 48)
+                            VStack(alignment: .leading, spacing: 1) {
+                                Text(event.promoter?.name ?? "")
+                                    .font(.system(size: 16, weight: .medium))
+                                
+                                Text("Organizer")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.gray)
+                            }
+                        }
+                        
                         VStack(alignment: .leading, spacing: 8) {
                             Text("About Event")
                                 .font(.system(size: 18, weight: .medium))
