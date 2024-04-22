@@ -39,6 +39,7 @@
 		927338E629E98E4200A1072A /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 927338E529E98E4200A1072A /* CachedAsyncImage */; };
 		927338E929E98EC100A1072A /* URLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927338E829E98EC100A1072A /* URLCache.swift */; };
 		929A17482BC3F53E00EB8567 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929A17472BC3F53E00EB8567 /* EventCell.swift */; };
+		92AB23F12BD65F1C00A8E51F /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB23F02BD65F1C00A8E51F /* EventListCell.swift */; };
 		92CAC6D929E8348C00CEE29E /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CAC6D829E8348C00CEE29E /* EventsViewModel.swift */; };
 		92CAC6DC29E835C600CEE29E /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CAC6DB29E835C600CEE29E /* ResponseModel.swift */; };
 		92CAC6E029E8372300CEE29E /* EventsJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 92CAC6DF29E8372300CEE29E /* EventsJSON.json */; };
@@ -77,6 +78,7 @@
 		927338E829E98EC100A1072A /* URLCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCache.swift; sourceTree = "<group>"; };
 		927AF0E32BCA9E6700A0A316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		929A17472BC3F53E00EB8567 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		92AB23F02BD65F1C00A8E51F /* EventListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListCell.swift; sourceTree = "<group>"; };
 		92CAC6D829E8348C00CEE29E /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		92CAC6DB29E835C600CEE29E /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		92CAC6DF29E8372300CEE29E /* EventsJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EventsJSON.json; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 		926AC95B29DEEFB6004FE288 /* EventHub */ = {
 			isa = PBXGroup;
 			children = (
+				92AB23EF2BD65EFC00A8E51F /* EventsList */,
 				927AF0E32BCA9E6700A0A316 /* Info.plist */,
 				926AC95C29DEEFB6004FE288 /* EventHubApp.swift */,
 				923473D02BB1CC0800BC0C95 /* Navigator */,
@@ -253,6 +256,14 @@
 				927338E829E98EC100A1072A /* URLCache.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		92AB23EF2BD65EFC00A8E51F /* EventsList */ = {
+			isa = PBXGroup;
+			children = (
+				92AB23F02BD65F1C00A8E51F /* EventListCell.swift */,
+			);
+			path = EventsList;
 			sourceTree = "<group>";
 		};
 		92CAC6D729E8347800CEE29E /* ViewModel */ = {
@@ -384,6 +395,7 @@
 				92CAC6DC29E835C600CEE29E /* ResponseModel.swift in Sources */,
 				926AC96C29DEF0CF004FE288 /* SplashView.swift in Sources */,
 				927338E929E98EC100A1072A /* URLCache.swift in Sources */,
+				92AB23F12BD65F1C00A8E51F /* EventListCell.swift in Sources */,
 				92015BD729E87939006BAA90 /* EventDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
