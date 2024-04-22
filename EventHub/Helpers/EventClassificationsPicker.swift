@@ -29,8 +29,7 @@ struct EventClassificationsPicker: View {
                                 .clipShape(Circle())
                                 .overlay(
                                     Circle()
-                                        .stroke(index != self.selectedSegmentIndex ? Color.gray : Color.clear, lineWidth: 1)
-                                )
+                                        .stroke(index != self.selectedSegmentIndex ? Color.gray : Color.clear, lineWidth: 2))
                             Text(self.segments[index])
                                 .foregroundColor(.black)
                                 .font(.system(size: 15))
@@ -38,6 +37,8 @@ struct EventClassificationsPicker: View {
                     }
                 }
             }
+            .padding(.horizontal, 20)
+            .padding(.top, 20)
         }
     }
     
