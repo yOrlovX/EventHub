@@ -19,7 +19,7 @@ struct MainView: View {
                 .tabItem {
                     Label("Explore", systemImage: "safari.fill")
                 }
-            EventsView()
+            EventListView()
                 .tabItem {
                     Label("Events", systemImage: "calendar")
                 }

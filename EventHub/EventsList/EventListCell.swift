@@ -12,20 +12,23 @@ struct EventListCell: View {
     
     var body: some View {
         HStack(spacing: 18) {
-            let image = event.images[2].url
-            
-            AsyncImage(url: URL(string: image)) { image in
-                image
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 79, height: 92)
-                    .cornerRadius(10)
-                    .padding(.leading, 8)
-                    .padding(.vertical, 10)
-            } placeholder: {
-                ProgressView()
+            if let image = event.images.first {
+                AsyncImage(url: URL(string: image.url)) { image in
+                    image
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 79, height: 92)
+                        .cornerRadius(10)
+                        .padding(.leading, 8)
+                        .padding(.vertical, 10)
+                } placeholder: {
+                    ProgressView()
+                        .frame(width: 79, height: 92)
+                        .cornerRadius(10)
+                        .padding(.leading, 8)
+                        .padding(.vertical, 10)
+                }
             }
-            
             VStack(alignment: .leading, spacing: 5) {
                 Text("\(dateFormatter(date: event.dates.start.localDate))")
                     .font(.system(size: 13, weight: .regular))

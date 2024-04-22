@@ -13,9 +13,11 @@ struct EventListView: View {
     var body: some View {
         VStack {
             ScrollView {
-                LazyVStack {
-                    ForEach(eventViewModel.events, id: \.self) { event in
-                        EventListCell(event: event)
+                VStack {
+                    LazyVStack {
+                        ForEach(eventViewModel.events, id: \.self) { event in
+                            EventListCell(event: event)
+                        }
                     }
                 }
             }
