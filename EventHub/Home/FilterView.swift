@@ -26,6 +26,9 @@ struct FilterView: View {
             .font(.system(size: 16, weight: .medium))
             
             priceSlider
+            
+            buttonsContainer
+            
         }
         .padding(.horizontal, 20)
         
@@ -81,6 +84,40 @@ extension FilterView {
             } maximumValueLabel: {
                 Text("100")
             }
+        }
+    }
+    
+    private var buttonsContainer: some View {
+        HStack(spacing: 20) {
+            Button(action: {}) {
+                Text("RESET")
+                    .font(.system(size: 16, weight: .medium))
+                    .foregroundColor(.black)
+                    .padding()
+                    .frame(width: UIScreen.main.bounds.width / 2 - 40)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 14)
+                            .stroke(Color.gray, lineWidth: 1)
+                    }
+                    
+            }
+            
+            Button(action: {}) {
+                Text("APPLY")
+                    .font(.system(size: 16, weight: .medium))
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(width: UIScreen.main.bounds.width / 2 - 40)
+                    .background(Colors.primaryBlue)
+                    .cornerRadius(14)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 14)
+                            .stroke(Color.gray, lineWidth: 1)
+                    }
+                    
+            }
+            
+            
         }
     }
 }

@@ -37,7 +37,6 @@ struct EventClassificationsPicker: View {
                     }
                 }
             }
-            .padding(.horizontal, 20)
             .padding(.top, 20)
         }
     }
