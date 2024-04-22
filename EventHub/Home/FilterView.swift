@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FilterView: View {
+    @State var priceRange: Double = 50
     
     var body: some View {
         
@@ -23,6 +24,8 @@ struct FilterView: View {
                 changeLocationButton
             }
             .font(.system(size: 16, weight: .medium))
+            
+            priceSlider
         }
         .padding(.horizontal, 20)
         
@@ -58,6 +61,26 @@ extension FilterView {
         .overlay {
             RoundedRectangle(cornerRadius: 15)
                 .stroke(Color.gray, lineWidth: 1)
+        }
+    }
+    
+    private var priceSlider: some View {
+        VStack(spacing: 15) {
+            HStack {
+                Text("Select price")
+                    .font(.system(size: 16, weight: .medium))
+                Spacer()
+                Text("\(priceRange, specifier: "%.0f") $")
+                    .font(.system(size: 16, weight: .medium))
+                    .foregroundColor(.blue)
+            }
+            Slider(value: $priceRange, in: 1...100) {
+                Text("slider")
+            } minimumValueLabel: {
+                Text("1")
+            } maximumValueLabel: {
+                Text("100")
+            }
         }
     }
 }
