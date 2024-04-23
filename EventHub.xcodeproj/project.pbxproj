@@ -27,6 +27,7 @@
 		9242980B29DF471100D8FD21 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242980A29DF471100D8FD21 /* ProfileView.swift */; };
 		9242981029DF4ECD00D8FD21 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242980F29DF4ECD00D8FD21 /* OnboardingView.swift */; };
 		9242981229DF52BB00D8FD21 /* SegmentProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242981129DF52BB00D8FD21 /* SegmentProgressView.swift */; };
+		9245B9EF2BD7F70600819C80 /* DisplayAdaptiveSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9245B9EE2BD7F70600819C80 /* DisplayAdaptiveSpacing.swift */; };
 		9248C0F52BBDA14400D2CA17 /* EventClassificationsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9248C0F42BBDA14400D2CA17 /* EventClassificationsPicker.swift */; };
 		925DA8142BC54FDE00EFC1CB /* WebViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925DA8132BC54FDE00EFC1CB /* WebViewPresenter.swift */; };
 		926AC95D29DEEFB6004FE288 /* EventHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AC95C29DEEFB6004FE288 /* EventHubApp.swift */; };
@@ -66,6 +67,7 @@
 		9242980A29DF471100D8FD21 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		9242980F29DF4ECD00D8FD21 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		9242981129DF52BB00D8FD21 /* SegmentProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentProgressView.swift; sourceTree = "<group>"; };
+		9245B9EE2BD7F70600819C80 /* DisplayAdaptiveSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayAdaptiveSpacing.swift; sourceTree = "<group>"; };
 		9248C0F42BBDA14400D2CA17 /* EventClassificationsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventClassificationsPicker.swift; sourceTree = "<group>"; };
 		925DA8132BC54FDE00EFC1CB /* WebViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewPresenter.swift; sourceTree = "<group>"; };
 		926AC95929DEEFB6004FE288 /* EventHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +173,7 @@
 				924297F729DF3AD700D8FD21 /* SignUpView.swift */,
 				924297F929DF3D7E00D8FD21 /* VerificationView.swift */,
 				924297FB29DF43E400D8FD21 /* ResetPasswordView.swift */,
+				9245B9EE2BD7F70600819C80 /* DisplayAdaptiveSpacing.swift */,
 			);
 			path = "Login&Registration";
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				924297F829DF3AD700D8FD21 /* SignUpView.swift in Sources */,
 				924297FC29DF43E400D8FD21 /* ResetPasswordView.swift in Sources */,
 				922578912BBD8A2E00BF9B74 /* SegmentedPicker.swift in Sources */,
+				9245B9EF2BD7F70600819C80 /* DisplayAdaptiveSpacing.swift in Sources */,
 				926AC97029DEFEBD004FE288 /* Colors.swift in Sources */,
 				920D010529E5AD9A00FE464D /* SearchBarView.swift in Sources */,
 				924297FA29DF3D7E00D8FD21 /* VerificationView.swift in Sources */,

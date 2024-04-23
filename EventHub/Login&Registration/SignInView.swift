@@ -18,7 +18,7 @@ struct SignInView: View {
         ZStack {
             Colors.lightBlue.opacity(0.2)
                 .ignoresSafeArea()
-            VStack(spacing: 30) {
+            VStack(spacing: DisplayAdaptiveSpacing.adaptiveSpacing()) {
                 logoContainer
                 textFieldsContainer
                 toggleContainer
@@ -106,7 +106,7 @@ extension SignInView {
     }
     
     private var buttonsContainer: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 15) {
             Button(action: { router.showScreen(.push) { _ in MainView()}}) {
                 Text("Sign In")
                     .modifier(PrimaryButtonModifier())
@@ -163,5 +163,7 @@ extension SignInView {
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
         SignInView()
+//            .previewDevice("iPhone 11")
+            .previewDevice("iPhone 8")
     }
 }

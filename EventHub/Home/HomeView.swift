@@ -21,8 +21,8 @@ struct HomeView: View {
                 .ignoresSafeArea(.all)
             VStack {
                 topBarContainer
-                                segmentsContainer
-                                    .offset(y: -80)
+                segmentsContainer
+                    .offset(y: -80)
                 VStack(alignment: .leading, spacing: 30) {
                     Section("Upcoming Events") {
                         upcomingEventsContainer
@@ -188,7 +188,7 @@ extension HomeView {
         var uniqueSegments: Set<Genre> = []
         
         for classification in classifications {
-            uniqueSegments.insert(classification.segment ?? Genre(id: "", name: "default"))
+            uniqueSegments.insert(classification.segment)
         }
         
         return Array(uniqueSegments)
