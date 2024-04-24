@@ -12,6 +12,7 @@ import MapKit
 
 final class EventsViewModel: ObservableObject {
     @Published var events: [Event] = []
+    @Published var places: [Place] = []
     private var cancellables = Set<AnyCancellable>()
     
     //MARK: TicketMaster API
@@ -19,6 +20,7 @@ final class EventsViewModel: ObservableObject {
     
     init() {
         getEventsFromTicketMaster()
+        loadAnnotations()
     }
 }
 
@@ -37,6 +39,7 @@ extension EventsViewModel {
                 switch completion {
                 case .finished:
                     print("loaded request data")
+                    self.loadAnnotations()
                 case .failure(let error):
                     print(error)
                 }
@@ -65,5 +68,22 @@ extension EventsViewModel {
                 self?.events = returnedEvents.embedded.events
             }
             .store(in: &cancellables)
+    }
+    
+    func loadAnnotations() {
+        for event in events {
+
+            guard let venue = event.embedded.venues.first,
+                  let latitude = Double(venue.location.latitude),
+                  let longitude = Double(venue.location.longitude)
+            else {
+                print("Invalid coordinates for event: \(event.name)")
+                                continue
+            }
+            let eventCoordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            
+            let place = Place(name: event.name, coordinate: eventCoordinate)
+            places.append(place)
+        }
     }
 }

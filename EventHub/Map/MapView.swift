@@ -9,10 +9,14 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
-  @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.331516, longitude: -121.891054), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+    @StateObject var viewModel = EventsViewModel()
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.0902, longitude: 95.7129), span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10))
+    
     var body: some View {
-        Map(coordinateRegion: $region)
-        .ignoresSafeArea()
+        Map(coordinateRegion: $region, annotationItems: viewModel.places) {
+            MapPin(coordinate: $0.coordinate)
+        }
+        .ignoresSafeArea(.all)
     }
 }
 
