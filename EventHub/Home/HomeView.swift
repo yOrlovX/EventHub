@@ -51,17 +51,36 @@ extension HomeView {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 11) {
                 ForEach(uniqueSegments(from: eventsViewModel.events.flatMap { $0.classifications }), id: \.name) { segment in
-                    Text(segment.name)
-                        .padding(10)
-                        .background(Color.green)
-                        .cornerRadius(20)
-                        .foregroundColor(.white)
+                    HStack(spacing: 8) {
+                        SwiftUI.Image(segment.name)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 17, height: 17)
+                            .padding(.vertical, 10)
+                            .padding(.leading, 15)
+                        Text(segment.name)
+                            .padding(.vertical, 10)
+                            .padding(.trailing, 15)
+                        
+                            .foregroundColor(.white)
+                    }
+                    .background(segmentColor(segment))
+                    .cornerRadius(20)
                 }
             }
             .padding(.horizontal, 24)
         }
     }
     
+    func segmentColor(_ genre: Genre) -> Color {
+        switch genre.name {
+        case "Sports": return Color.red
+        case "Music": return Color.orange
+        case "Arts & Theatre":  return Color.blue
+        default: break
+        }
+        return Color.green
+    }
     private var topBarContainer: some View {
         VStack {
             HStack {
