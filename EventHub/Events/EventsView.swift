@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct EventsView: View {
+    @StateObject var eventViewModel = EventsViewModel()
+    
     var body: some View {
-        Text("Events View")
+        VStack {
+            ScrollView {
+                VStack {
+                    LazyVStack(spacing: 10) {
+                        ForEach(eventViewModel.events, id: \.self) { event in
+                            EventMainCell(event: event)
+                        }
+                    }
+                } 
+            }
+        }
+        .background(Colors.lightBg)
     }
 }
 

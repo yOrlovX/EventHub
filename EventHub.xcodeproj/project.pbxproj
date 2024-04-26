@@ -11,7 +11,6 @@
 		92030CBE2BC07041009B9FD6 /* MapItemPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 92030CBD2BC07041009B9FD6 /* MapItemPicker */; };
 		920D010529E5AD9A00FE464D /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D010429E5AD9A00FE464D /* SearchBarView.swift */; };
 		920D010829E5B3E800FE464D /* CornerRadiusStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D010729E5B3E800FE464D /* CornerRadiusStyle.swift */; };
-		921692C729E71F6000728AD5 /* UpcomingEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921692C629E71F6000728AD5 /* UpcomingEventCell.swift */; };
 		9225788F2BBD822A00BF9B74 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225788E2BBD822900BF9B74 /* FilterView.swift */; };
 		922578912BBD8A2E00BF9B74 /* SegmentedPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922578902BBD8A2E00BF9B74 /* SegmentedPicker.swift */; };
 		923473CF2BB1CBC300BC0C95 /* SwiftfulRouting in Frameworks */ = {isa = PBXBuildFile; productRef = 923473CE2BB1CBC300BC0C95 /* SwiftfulRouting */; };
@@ -29,6 +28,7 @@
 		9242981229DF52BB00D8FD21 /* SegmentProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242981129DF52BB00D8FD21 /* SegmentProgressView.swift */; };
 		9245B9EF2BD7F70600819C80 /* DisplayAdaptiveSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9245B9EE2BD7F70600819C80 /* DisplayAdaptiveSpacing.swift */; };
 		9248C0F52BBDA14400D2CA17 /* EventClassificationsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9248C0F42BBDA14400D2CA17 /* EventClassificationsPicker.swift */; };
+		9255D21F2BDBB1B300FEC0B4 /* EventMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9255D21E2BDBB1B300FEC0B4 /* EventMainCell.swift */; };
 		925DA8142BC54FDE00EFC1CB /* WebViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925DA8132BC54FDE00EFC1CB /* WebViewPresenter.swift */; };
 		926AC95D29DEEFB6004FE288 /* EventHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AC95C29DEEFB6004FE288 /* EventHubApp.swift */; };
 		926AC96129DEEFB8004FE288 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926AC96029DEEFB8004FE288 /* Assets.xcassets */; };
@@ -52,7 +52,6 @@
 		92015BD629E87939006BAA90 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		920D010429E5AD9A00FE464D /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		920D010729E5B3E800FE464D /* CornerRadiusStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusStyle.swift; sourceTree = "<group>"; };
-		921692C629E71F6000728AD5 /* UpcomingEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingEventCell.swift; sourceTree = "<group>"; };
 		9225788E2BBD822900BF9B74 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		922578902BBD8A2E00BF9B74 /* SegmentedPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPicker.swift; sourceTree = "<group>"; };
 		923473D12BB1CC1E00BC0C95 /* NavigatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorView.swift; sourceTree = "<group>"; };
@@ -69,6 +68,7 @@
 		9242981129DF52BB00D8FD21 /* SegmentProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentProgressView.swift; sourceTree = "<group>"; };
 		9245B9EE2BD7F70600819C80 /* DisplayAdaptiveSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayAdaptiveSpacing.swift; sourceTree = "<group>"; };
 		9248C0F42BBDA14400D2CA17 /* EventClassificationsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventClassificationsPicker.swift; sourceTree = "<group>"; };
+		9255D21E2BDBB1B300FEC0B4 /* EventMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMainCell.swift; sourceTree = "<group>"; };
 		925DA8132BC54FDE00EFC1CB /* WebViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewPresenter.swift; sourceTree = "<group>"; };
 		926AC95929DEEFB6004FE288 /* EventHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		926AC95C29DEEFB6004FE288 /* EventHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHubApp.swift; sourceTree = "<group>"; };
@@ -133,7 +133,6 @@
 			children = (
 				9242980129DF46AA00D8FD21 /* HomeView.swift */,
 				920D010429E5AD9A00FE464D /* SearchBarView.swift */,
-				921692C629E71F6000728AD5 /* UpcomingEventCell.swift */,
 				9225788E2BBD822900BF9B74 /* FilterView.swift */,
 				929A17472BC3F53E00EB8567 /* EventCell.swift */,
 			);
@@ -146,6 +145,7 @@
 				9242980429DF46D200D8FD21 /* EventsView.swift */,
 				92015BD629E87939006BAA90 /* EventDetailView.swift */,
 				925DA8132BC54FDE00EFC1CB /* WebViewPresenter.swift */,
+				9255D21E2BDBB1B300FEC0B4 /* EventMainCell.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -397,12 +397,12 @@
 				926AC95D29DEEFB6004FE288 /* EventHubApp.swift in Sources */,
 				925DA8142BC54FDE00EFC1CB /* WebViewPresenter.swift in Sources */,
 				9242981029DF4ECD00D8FD21 /* OnboardingView.swift in Sources */,
-				921692C729E71F6000728AD5 /* UpcomingEventCell.swift in Sources */,
 				929A17482BC3F53E00EB8567 /* EventCell.swift in Sources */,
 				926E8CAC2BB2D476000A4E76 /* TicketMasterModel.swift in Sources */,
 				92CAC6DC29E835C600CEE29E /* ResponseModel.swift in Sources */,
 				926AC96C29DEF0CF004FE288 /* SplashView.swift in Sources */,
 				927338E929E98EC100A1072A /* URLCache.swift in Sources */,
+				9255D21F2BDBB1B300FEC0B4 /* EventMainCell.swift in Sources */,
 				92AB23F12BD65F1C00A8E51F /* EventListCell.swift in Sources */,
 				92015BD729E87939006BAA90 /* EventDetailView.swift in Sources */,
 			);
