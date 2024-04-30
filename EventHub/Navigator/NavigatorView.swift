@@ -20,6 +20,6 @@ extension UINavigationController {
     open override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         navigationBar.topItem?.backButtonDisplayMode = .minimal
-        navigationBar.tintColor = .black
+//        navigationBar.tintColor = .black
     }
 }

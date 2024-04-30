@@ -50,7 +50,8 @@ extension HomeView {
     private var segmentsContainer: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 11) {
-                ForEach(uniqueSegments(from: eventsViewModel.events.flatMap { $0.classifications }), id: \.name) { segment in
+                let uniqueSegments = uniqueSegments(from: eventsViewModel.events.flatMap { $0.classifications })
+                ForEach(uniqueSegments.sorted { $0.name > $1.name}, id: \.name) { segment in
                     HStack(spacing: 8) {
                         SwiftUI.Image(segment.name)
                             .resizable()
