@@ -61,10 +61,13 @@ extension EventsViewModel {
                 switch completion {
                 case .finished:
                     print("loaded request data")
+                    self.places.removeAll()
+                    self.loadAnnotations()
                 case .failure(let error):
                     print(error)
                 }
             } receiveValue: { [weak self] returnedEvents in
+                self?.events.removeAll()
                 self?.events = returnedEvents.embedded.events
             }
             .store(in: &cancellables)

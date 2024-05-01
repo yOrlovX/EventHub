@@ -9,7 +9,8 @@ import SwiftUI
 import MapItemPicker
 
 struct HomeView: View {
-    @StateObject var eventsViewModel = EventsViewModel()
+    @EnvironmentObject var eventsViewModel: EventsViewModel
+    
     @State private var showingPicker = false
     @State private var currentLocation = "New York"
     @State private var selectedSegment: Genre?

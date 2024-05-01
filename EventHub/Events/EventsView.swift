@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct EventsView: View {
-    @StateObject var eventViewModel = EventsViewModel()
+    @EnvironmentObject var eventsViewModel: EventsViewModel
     
     var body: some View {
         VStack {
             ScrollView {
                 VStack {
                     LazyVStack(spacing: 10) {
-                        ForEach(eventViewModel.events, id: \.self) { event in
+                        ForEach(eventsViewModel.events, id: \.self) { event in
                             EventMainCell(event: event)
                         }
                     }

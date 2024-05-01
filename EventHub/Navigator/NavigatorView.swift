@@ -9,10 +9,14 @@ import SwiftUI
 import SwiftfulRouting
 
 struct NavigatorView: View {
+    
+    @StateObject var eventsViewModel = EventsViewModel()
+    
     var body: some View {
         RouterView { _ in
             SplashView()
         }
+        .environmentObject(eventsViewModel)
     }
 }
 
