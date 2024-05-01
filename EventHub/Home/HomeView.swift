@@ -12,6 +12,7 @@ struct HomeView: View {
     @StateObject var eventsViewModel = EventsViewModel()
     @State private var showingPicker = false
     @State private var currentLocation = "New York"
+    @State private var selectedSegment: Genre?
     
     @Environment(\.router) var router
     
@@ -48,21 +49,29 @@ extension HomeView {
             HStack(spacing: 11) {
                 let uniqueSegments = uniqueSegments(from: eventsViewModel.events.flatMap { $0.classifications })
                 ForEach(uniqueSegments.sorted { $0.name > $1.name}, id: \.name) { segment in
-                    HStack(spacing: 8) {
-                        SwiftUI.Image(segment.name)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 17, height: 17)
-                            .padding(.vertical, 10)
-                            .padding(.leading, 15)
-                        Text(segment.name)
-                            .padding(.vertical, 10)
-                            .padding(.trailing, 15)
-                        
-                            .foregroundColor(.white)
+                    
+                    Button(action: { selectedSegment = segment }) {
+                        HStack(spacing: 8) {
+                            SwiftUI.Image(segment.name)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 17, height: 17)
+                                .padding(.vertical, 10)
+                                .padding(.leading, 15)
+                            Text(segment.name)
+                                .padding(.vertical, 10)
+                                .padding(.trailing, 15)
+                            
+                                .foregroundColor(.white)
+                        }
+                        .background(segmentColor(segment))
+                        .cornerRadius(20)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(selectedSegment == segment ? Color.white : Color.clear, lineWidth: 2)
+                        )
                     }
-                    .background(segmentColor(segment))
-                    .cornerRadius(20)
+                    
                 }
             }
             .padding(.horizontal, 24)
@@ -199,7 +208,7 @@ extension HomeView {
             .padding(.horizontal, 24)
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(alignment: .top, spacing: 16) {
-                    ForEach(eventsViewModel.events, id: \.self) { event in
+                    ForEach(filterEventsByGenre(for: selectedSegment), id: \.self) { event in
                         EventCell(event: event)
                             .onTapGesture {
                                 router.showScreen(.push) { _ in
@@ -221,6 +230,16 @@ extension HomeView {
         }
         
         return Array(uniqueSegments)
+    }
+    
+    private func filterEventsByGenre(for segment: Genre?) -> [Event] {
+        if let selectedSegment = segment {
+            return eventsViewModel.events.filter { event in
+                return event.classifications.contains { $0.segment == selectedSegment }
+            }
+        } else {
+            return eventsViewModel.events
+        }
     }
 }
 
