@@ -23,12 +23,8 @@ struct HomeView: View {
                 topBarContainer
                 segmentsContainer
                     .offset(y: -80)
-                VStack(alignment: .leading, spacing: 30) {
-                    Section("Upcoming Events") {
-                        upcomingEventsContainer
-                    }
-                    .font(.system(size: 18, weight: .medium))
-                }
+                
+                upcomingEventsContainer
                 Spacer()
             }
             
@@ -189,18 +185,31 @@ extension HomeView {
     }
     
     private var upcomingEventsContainer: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            LazyHStack(alignment: .top, spacing: 16) {
-                ForEach(eventsViewModel.events, id: \.self) { event in
-                    EventCell(event: event)
-                        .onTapGesture {
-                            router.showScreen(.push) { _ in
-                                EventDetailView(event: event)
-                            }
-                        }
+        VStack(spacing: 10) {
+            HStack {
+                Text("Upcoming Events")
+                    .font(.system(size: 18, weight: .medium))
+                Spacer()
+                Button(action: { router.showScreen(.push) { _ in  EventListView()}}) {
+                    Text("See All")
+                        .font(.system(size: 14, weight: .regular))
+                        .foregroundColor(.gray)
                 }
             }
             .padding(.horizontal, 24)
+            ScrollView(.horizontal, showsIndicators: false) {
+                LazyHStack(alignment: .top, spacing: 16) {
+                    ForEach(eventsViewModel.events, id: \.self) { event in
+                        EventCell(event: event)
+                            .onTapGesture {
+                                router.showScreen(.push) { _ in
+                                    EventDetailView(event: event)
+                                }
+                            }
+                    }
+                }
+                .padding(.horizontal, 24)
+            }
         }
     }
     
