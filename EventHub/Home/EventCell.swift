@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct EventCell: View {
+    
+    @EnvironmentObject var dateService: DateService
+    
     let event: Event
     let imageWidth: CGFloat = 218
     
@@ -33,10 +36,10 @@ struct EventCell: View {
                                     .cornerRadius(10)
                                     .overlay(alignment: .center) {
                                         VStack(spacing:0) {
-                                            Text(dayFormatter(date:event.dates.start.localDate))
+                                            Text(dateService.dayFormatter(date:event.dates.start.localDate))
                                                 .font(.system(size: 16, weight: .semibold))
                                                 .foregroundColor(Colors.bookmarkRed)
-                                            Text(monthFormatter(date: event.dates.start.localDate))
+                                            Text(dateService.monthFormatter(date: event.dates.start.localDate))
                                                 .font(.system(size: 14, weight: .regular))
                                                 .foregroundColor(Colors.bookmarkRed)
                                         }
@@ -84,31 +87,5 @@ struct EventCell: View {
         }
         .background(.white)
         .cornerRadius(18)
-    }
-}
-
-extension EventCell {
-    private func monthFormatter(date: String) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        
-        if let date = formatter.date(from: date) {
-            formatter.dateFormat = "MMM"
-            return formatter.string(from: date)
-        } else {
-            return "Date Unknown"
-        }
-    }
-    
-    private func dayFormatter(date: String) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        
-        if let date = formatter.date(from: date) {
-            formatter.dateFormat = "dd"
-            return formatter.string(from: date)
-        } else {
-            return "Date Unknown"
-        }
     }
 }

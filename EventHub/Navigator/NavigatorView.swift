@@ -11,12 +11,15 @@ import SwiftfulRouting
 struct NavigatorView: View {
     
     @StateObject var eventsViewModel = EventsViewModel()
+    @StateObject var dateService = DateService()
+    
     
     var body: some View {
         RouterView { _ in
             SplashView()
         }
         .environmentObject(eventsViewModel)
+        .environmentObject(dateService)
     }
 }
 

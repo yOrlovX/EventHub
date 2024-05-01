@@ -10,7 +10,10 @@ import Foundation
 
 struct EventDetailView: View {
     
+    @EnvironmentObject var dateService: DateService
+    
     @Environment(\.router) var router
+    
     let event: Event
     
     var body: some View {
@@ -38,10 +41,10 @@ struct EventDetailView: View {
                                 .scaledToFit()
                                 .frame(width: 48, height: 48)
                             VStack(alignment: .leading, spacing: 1) {
-                                Text("\(dateFormatter(date: event.dates.start.localDate))")
+                                Text("\(dateService.dateFormatter(date: event.dates.start.localDate))")
                                     .font(.system(size: 16, weight: .medium))
                                 
-                                Text("\(timeFormatter(date:event.dates.start.localTime ?? ""))")
+                                Text("\(dateService.timeFormatter(date:event.dates.start.localTime ?? ""))")
                                     .font(.system(size: 12))
                                     .foregroundColor(.gray)
                             }
@@ -60,7 +63,6 @@ struct EventDetailView: View {
                                     .foregroundColor(.gray)
                             }
                         }
-                        
                         HStack(spacing: 14) {
                             SwiftUI.Image("eventLocation")
                                 .resizable()
@@ -112,31 +114,6 @@ struct EventDetailView: View {
                         }
                 }
             }
-        }
-    }
-}
-extension EventDetailView {
-    private func dateFormatter(date: String) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        if let date = formatter.date(from: date) {
-            formatter.dateFormat = "d MMMM, yyyy"
-            return formatter.string(from: date)
-        } else {
-            return "Date Unknown"
-        }
-    }
-    
-    private func timeFormatter(date: String) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm:ss"
-        formatter.timeZone = TimeZone.current
-        
-        if let fullDate = formatter.date(from: date) {
-            formatter.dateFormat = "HH:mm"
-            return formatter.string(from: fullDate)
-        } else {
-            return "Time Unknown"
         }
     }
 }

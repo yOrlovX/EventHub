@@ -45,6 +45,7 @@
 		92CAC6D929E8348C00CEE29E /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CAC6D829E8348C00CEE29E /* EventsViewModel.swift */; };
 		92CAC6DC29E835C600CEE29E /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CAC6DB29E835C600CEE29E /* ResponseModel.swift */; };
 		92CAC6E029E8372300CEE29E /* EventsJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 92CAC6DF29E8372300CEE29E /* EventsJSON.json */; };
+		92E989352BE2ABC10056D4CD /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E989342BE2ABC10056D4CD /* DateService.swift */; };
 		92F76F112BB4518A00CC1B74 /* ButtonsModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F76F102BB4518A00CC1B74 /* ButtonsModifiers.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		92CAC6D829E8348C00CEE29E /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		92CAC6DB29E835C600CEE29E /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		92CAC6DF29E8372300CEE29E /* EventsJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EventsJSON.json; sourceTree = "<group>"; };
+		92E989342BE2ABC10056D4CD /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
 		92F76F102BB4518A00CC1B74 /* ButtonsModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,6 +218,7 @@
 		926AC95B29DEEFB6004FE288 /* EventHub */ = {
 			isa = PBXGroup;
 			children = (
+				92E989332BE2AB840056D4CD /* Services */,
 				92AB23EF2BD65EFC00A8E51F /* EventsList */,
 				927AF0E32BCA9E6700A0A316 /* Info.plist */,
 				926AC95C29DEEFB6004FE288 /* EventHubApp.swift */,
@@ -289,6 +292,14 @@
 				9241D5692BC0131800CD5231 /* Place.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		92E989332BE2AB840056D4CD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				92E989342BE2ABC10056D4CD /* DateService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +398,7 @@
 				92F76F112BB4518A00CC1B74 /* ButtonsModifiers.swift in Sources */,
 				9248C0F52BBDA14400D2CA17 /* EventClassificationsPicker.swift in Sources */,
 				924297F829DF3AD700D8FD21 /* SignUpView.swift in Sources */,
+				92E989352BE2ABC10056D4CD /* DateService.swift in Sources */,
 				924297FC29DF43E400D8FD21 /* ResetPasswordView.swift in Sources */,
 				922578912BBD8A2E00BF9B74 /* SegmentedPicker.swift in Sources */,
 				9245B9EF2BD7F70600819C80 /* DisplayAdaptiveSpacing.swift in Sources */,
