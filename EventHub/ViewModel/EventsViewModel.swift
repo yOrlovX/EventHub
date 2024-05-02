@@ -24,7 +24,7 @@ final class EventsViewModel: ObservableObject {
     }
 }
 
-//MARK: TicketMaster API
+//MARK: TicketMaster API calls
 extension EventsViewModel {
     
     private func getEventsFromTicketMaster() {
@@ -75,18 +75,40 @@ extension EventsViewModel {
     
     func loadAnnotations() {
         for event in events {
-
+            
             guard let venue = event.embedded.venues.first,
                   let latitude = Double(venue.location.latitude),
                   let longitude = Double(venue.location.longitude)
             else {
                 print("Invalid coordinates for event: \(event.name)")
-                                continue
+                continue
             }
             let eventCoordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             
             let place = Place(name: event.name, coordinate: eventCoordinate)
             places.append(place)
+        }
+    }
+}
+
+//MARK:  Events Genres and Segments filter
+extension EventsViewModel {
+    
+    func uniqueSegments(from classifications: [Classification]) -> [Genre] {
+        var uniqueSegments: Set<Genre> = []
+        for classification in classifications {
+            uniqueSegments.insert(classification.segment)
+        }
+        return Array(uniqueSegments)
+    }
+    
+    func filterEventsByGenre(for segment: Genre?) -> [Event] {
+        if let selectedSegment = segment {
+            return events.filter { event in
+                return event.classifications.contains { $0.segment == selectedSegment }
+            }
+        } else {
+            return events
         }
     }
 }

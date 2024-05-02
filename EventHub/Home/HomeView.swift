@@ -48,7 +48,7 @@ extension HomeView {
     private var segmentsContainer: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 11) {
-                let uniqueSegments = uniqueSegments(from: eventsViewModel.events.flatMap { $0.classifications })
+                let uniqueSegments = eventsViewModel.uniqueSegments(from: eventsViewModel.events.flatMap { $0.classifications })
                 ForEach(uniqueSegments.sorted { $0.name > $1.name}, id: \.name) { segment in
                     
                     Button(action: { selectedSegment = segment }) {
@@ -209,7 +209,7 @@ extension HomeView {
             .padding(.horizontal, 24)
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(alignment: .top, spacing: 16) {
-                    ForEach(filterEventsByGenre(for: selectedSegment), id: \.self) { event in
+                    ForEach(eventsViewModel.filterEventsByGenre(for: selectedSegment), id: \.self) { event in
                         EventCell(event: event)
                             .onTapGesture {
                                 router.showScreen(.push) { _ in
@@ -220,26 +220,6 @@ extension HomeView {
                 }
                 .padding(.horizontal, 24)
             }
-        }
-    }
-    
-    private func uniqueSegments(from classifications: [Classification]) -> [Genre] {
-        var uniqueSegments: Set<Genre> = []
-        
-        for classification in classifications {
-            uniqueSegments.insert(classification.segment)
-        }
-        
-        return Array(uniqueSegments)
-    }
-    
-    private func filterEventsByGenre(for segment: Genre?) -> [Event] {
-        if let selectedSegment = segment {
-            return eventsViewModel.events.filter { event in
-                return event.classifications.contains { $0.segment == selectedSegment }
-            }
-        } else {
-            return eventsViewModel.events
         }
     }
 }
