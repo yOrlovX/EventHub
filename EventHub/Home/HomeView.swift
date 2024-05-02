@@ -51,7 +51,13 @@ extension HomeView {
                 let uniqueSegments = eventsViewModel.uniqueSegments(from: eventsViewModel.events.flatMap { $0.classifications })
                 ForEach(uniqueSegments.sorted { $0.name > $1.name}, id: \.name) { segment in
                     
-                    Button(action: { selectedSegment = segment }) {
+                    Button(action: {
+                        if selectedSegment == segment {
+                                selectedSegment = nil
+                            } else {
+                                selectedSegment = segment
+                            }
+                    }) {
                         HStack(spacing: 8) {
                             SwiftUI.Image(segment.name)
                                 .resizable()
@@ -207,18 +213,23 @@ extension HomeView {
                 }
             }
             .padding(.horizontal, 24)
-            ScrollView(.horizontal, showsIndicators: false) {
-                LazyHStack(alignment: .top, spacing: 16) {
-                    ForEach(eventsViewModel.filterEventsByGenre(for: selectedSegment), id: \.self) { event in
-                        EventCell(event: event)
-                            .onTapGesture {
-                                router.showScreen(.push) { _ in
-                                    EventDetailView(event: event)
+            
+            if eventsViewModel.events.isEmpty {
+                Text("Events not found")
+            } else {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    LazyHStack(alignment: .top, spacing: 16) {
+                        ForEach(eventsViewModel.filterEventsByGenre(for: selectedSegment), id: \.self) { event in
+                            EventCell(event: event)
+                                .onTapGesture {
+                                    router.showScreen(.push) { _ in
+                                        EventDetailView(event: event)
+                                    }
                                 }
-                            }
+                        }
                     }
+                    .padding(.horizontal, 24)
                 }
-                .padding(.horizontal, 24)
             }
         }
     }

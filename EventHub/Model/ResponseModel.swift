@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Events
 struct Events: Codable {
-    let embedded: EventsEmbedded
+    let embedded: EventsEmbedded?
     let links: Links
     let page: Page
     

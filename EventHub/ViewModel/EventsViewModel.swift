@@ -44,12 +44,15 @@ extension EventsViewModel {
                     print(error)
                 }
             } receiveValue: { [weak self] returnedEvents in
-                self?.events = returnedEvents.embedded.events
+                guard let events = returnedEvents.embedded?.events else {  return }
+                self?.events = events
             }
             .store(in: &cancellables)
     }
     
     func getEventsByCityName(cityName: String) {
+        self.events.removeAll()
+        
         guard let url = URL(string: "https://app.ticketmaster.com/discovery/v2/events.json?city=\(cityName)&apikey=\(apiKey)") else { return }
         URLSession
             .shared
@@ -67,8 +70,8 @@ extension EventsViewModel {
                     print(error)
                 }
             } receiveValue: { [weak self] returnedEvents in
-                self?.events.removeAll()
-                self?.events = returnedEvents.embedded.events
+                guard let events = returnedEvents.embedded?.events else { return }
+                self?.events = events
             }
             .store(in: &cancellables)
     }
