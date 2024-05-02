@@ -14,22 +14,19 @@ struct HomeView: View {
     @State private var showingPicker = false
     @State private var currentLocation = "New York"
     @State private var selectedSegment: Genre?
+    @State private var topBarHeight: CGFloat = UIScreen.main.bounds.height / 4.53
     
     @Environment(\.router) var router
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .top) {
             Colors.lightBg
-                .ignoresSafeArea(.all)
-            VStack {
+            VStack(spacing: 0) {
                 topBarContainer
                 segmentsContainer
-                    .offset(y: -80)
-                
                 upcomingEventsContainer
-                Spacer()
             }
-            
+            .ignoresSafeArea(.container, edges: .top)
         }
         .navigationBarHidden(true)
         .mapItemPicker(isPresented: $showingPicker) { item in
@@ -53,10 +50,10 @@ extension HomeView {
                     
                     Button(action: {
                         if selectedSegment == segment {
-                                selectedSegment = nil
-                            } else {
-                                selectedSegment = segment
-                            }
+                            selectedSegment = nil
+                        } else {
+                            selectedSegment = segment
+                        }
                     }) {
                         HStack(spacing: 8) {
                             SwiftUI.Image(segment.name)
@@ -94,77 +91,48 @@ extension HomeView {
         }
         return Color.green
     }
+    
     private var topBarContainer: some View {
-        VStack {
-            HStack {
-                SwiftUI.Image(systemName: "list.bullet")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 24, height: 24)
-                    .foregroundColor(.white)
-                Spacer()
-                Button(action: { showingPicker.toggle()}) {
-                    VStack(spacing: 2) {
-                        HStack {
-                            Text("Current Location")
-                                .font(.system(size: 12, weight: .regular))
-                                .foregroundColor(.white)
-                            SwiftUI.Image(systemName: "arrowtriangle.down.fill")
-                                .resizable()
-                                .frame(width: 10, height: 5)
-                                .foregroundColor(.white)
-                        }
-                        Text(currentLocation)
-                            .font(.system(size: 13, weight: .medium))
-                            .foregroundColor(.white)
-                    }
+        Rectangle()
+            .foregroundColor(Colors.homeTopbarBg)
+            .frame(maxHeight: topBarHeight)
+            .cornerRadius(33, corners: [.bottomLeft, .bottomRight])
+            .overlay(alignment: .top) {
+                VStack(spacing: 20) {
+                    locationContainer
+                    searchAndFilterContainer
                 }
-                Spacer()
-                Circle()
-                    .frame(width: 36, height: 36)
+            }
+    }
+    
+    private var searchAndFilterContainer: some View {
+        HStack {
+            SearchBarView()
+            Button(action: { router.showScreen(.sheet) { _ in
+                FilterView()
+            }}) {
+                Rectangle()
                     .foregroundColor(Colors.primaryPurple)
+                    .frame(width: 75, height: 32)
+                    .cornerRadius(15)
                     .overlay {
-                        SwiftUI.Image(systemName: "bell.badge")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 15, height: 15)
-                            .foregroundColor(.white)
+                        HStack(spacing: 3) {
+                            SwiftUI.Image(systemName: "list.bullet.circle")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 23, height: 23)
+                                .foregroundColor(.white)
+                                .padding(.leading, 4)
+                                .padding(.vertical, 4)
+                            Text("Filters")
+                                .font(.system(size: 12))
+                                .foregroundColor(.white)
+                                .padding(.trailing, 4)
+                        }
                     }
             }
-            .padding(.top, 44)
-            .padding(.horizontal, 24)
-            HStack {
-                SearchBarView()
-                Button(action: { router.showScreen(.sheet) { _ in
-                    FilterView()
-                }}) {
-                    Rectangle()
-                        .foregroundColor(Colors.primaryPurple)
-                        .frame(width: 75, height: 32)
-                        .cornerRadius(15)
-                        .overlay {
-                            HStack(spacing: 3) {
-                                SwiftUI.Image(systemName: "list.bullet.circle")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 23, height: 23)
-                                    .foregroundColor(.white)
-                                    .padding(.leading, 4)
-                                    .padding(.vertical, 4)
-                                Text("Filters")
-                                    .font(.system(size: 12))
-                                    .foregroundColor(.white)
-                                    .padding(.trailing, 4)
-                            }
-                        }
-                }
-            }
-            .padding(.bottom, 44)
-            .padding(.horizontal, 24)
         }
-        .background(Colors.homeTopbarBg)
-        .cornerRadius(33, corners: [.bottomLeft, .bottomRight])
-        .edgesIgnoringSafeArea(.top)
+        .padding(.horizontal, 24)
     }
     
     private var locationContainer: some View {
@@ -175,26 +143,33 @@ extension HomeView {
                 .frame(width: 24, height: 24)
                 .foregroundColor(.white)
             Spacer()
-            VStack(spacing: 2) {
-                HStack {
-                    Text("Current Location")
-                        .font(.system(size: 12, weight: .regular))
-                        .foregroundColor(.white)
-                    SwiftUI.Image(systemName: "arrowtriangle.down.fill")
-                        .resizable()
-                        .frame(width: 10, height: 5)
+            Button(action: { showingPicker.toggle()}) {
+                VStack(spacing: 2) {
+                    HStack {
+                        Text("Current Location")
+                            .font(.system(size: 12, weight: .regular))
+                            .foregroundColor(.white)
+                        SwiftUI.Image(systemName: "arrowtriangle.down.fill")
+                            .resizable()
+                            .frame(width: 10, height: 5)
+                            .foregroundColor(.white)
+                    }
+                    Text(currentLocation)
+                        .font(.system(size: 13, weight: .medium))
                         .foregroundColor(.white)
                 }
-                Text("New Yourk, USA")
-                    .font(.system(size: 13, weight: .medium))
-                    .foregroundColor(.white)
             }
             Spacer()
-            SwiftUI.Image(systemName: "bell.badge.circle.fill")
-                .resizable()
-                .scaledToFit()
+            Circle()
                 .frame(width: 36, height: 36)
-                .foregroundColor(.white)
+                .foregroundColor(Colors.primaryPurple)
+                .overlay {
+                    SwiftUI.Image(systemName: "bell.badge")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 15, height: 15)
+                        .foregroundColor(.white)
+                }
         }
         .padding(.top, 44)
         .padding(.horizontal, 24)
@@ -230,13 +205,14 @@ extension HomeView {
                     }
                     .padding(.horizontal, 24)
                 }
+                .frame(maxHeight: 250)
             }
         }
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
-}
+//struct HomeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeView()
+//    }
+//}
