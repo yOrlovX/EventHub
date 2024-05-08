@@ -45,6 +45,9 @@
 		92CAC6D929E8348C00CEE29E /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CAC6D829E8348C00CEE29E /* EventsViewModel.swift */; };
 		92CAC6DC29E835C600CEE29E /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CAC6DB29E835C600CEE29E /* ResponseModel.swift */; };
 		92CAC6E029E8372300CEE29E /* EventsJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 92CAC6DF29E8372300CEE29E /* EventsJSON.json */; };
+		92D4EF092BEB859A00515DA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92D4EF082BEB859A00515DA3 /* GoogleService-Info.plist */; };
+		92D4EF0C2BEB874A00515DA3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 92D4EF0B2BEB874A00515DA3 /* FirebaseAnalytics */; };
+		92D4EF0E2BEB874A00515DA3 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 92D4EF0D2BEB874A00515DA3 /* FirebaseAnalyticsSwift */; };
 		92E989352BE2ABC10056D4CD /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E989342BE2ABC10056D4CD /* DateService.swift */; };
 		92F76F112BB4518A00CC1B74 /* ButtonsModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F76F102BB4518A00CC1B74 /* ButtonsModifiers.swift */; };
 /* End PBXBuildFile section */
@@ -80,13 +83,14 @@
 		926AC96F29DEFEBD004FE288 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		926E8CAB2BB2D476000A4E76 /* TicketMasterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketMasterModel.swift; sourceTree = "<group>"; };
 		927338E829E98EC100A1072A /* URLCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCache.swift; sourceTree = "<group>"; };
-		927AF0E32BCA9E6700A0A316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		927AF0E32BCA9E6700A0A316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		929A17472BC3F53E00EB8567 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		92AB23F02BD65F1C00A8E51F /* EventListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListCell.swift; sourceTree = "<group>"; };
 		92AB23F22BD6656000A8E51F /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		92CAC6D829E8348C00CEE29E /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		92CAC6DB29E835C600CEE29E /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		92CAC6DF29E8372300CEE29E /* EventsJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EventsJSON.json; sourceTree = "<group>"; };
+		92D4EF082BEB859A00515DA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		92E989342BE2ABC10056D4CD /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
 		92F76F102BB4518A00CC1B74 /* ButtonsModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,7 +102,9 @@
 			files = (
 				927338E629E98E4200A1072A /* CachedAsyncImage in Frameworks */,
 				923473CF2BB1CBC300BC0C95 /* SwiftfulRouting in Frameworks */,
+				92D4EF0C2BEB874A00515DA3 /* FirebaseAnalytics in Frameworks */,
 				92030CBE2BC07041009B9FD6 /* MapItemPicker in Frameworks */,
+				92D4EF0E2BEB874A00515DA3 /* FirebaseAnalyticsSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +208,9 @@
 		926AC95029DEEFB6004FE288 = {
 			isa = PBXGroup;
 			children = (
+				926AC95C29DEEFB6004FE288 /* EventHubApp.swift */,
+				92D4EF082BEB859A00515DA3 /* GoogleService-Info.plist */,
+				927AF0E32BCA9E6700A0A316 /* Info.plist */,
 				926AC95B29DEEFB6004FE288 /* EventHub */,
 				926AC95A29DEEFB6004FE288 /* Products */,
 			);
@@ -220,8 +229,6 @@
 			children = (
 				92E989332BE2AB840056D4CD /* Services */,
 				92AB23EF2BD65EFC00A8E51F /* EventsList */,
-				927AF0E32BCA9E6700A0A316 /* Info.plist */,
-				926AC95C29DEEFB6004FE288 /* EventHubApp.swift */,
 				923473D02BB1CC0800BC0C95 /* Navigator */,
 				926AC96A29DEF08A004FE288 /* Splash */,
 				9242980E29DF4EB200D8FD21 /* Onboarding */,
@@ -322,6 +329,8 @@
 				927338E529E98E4200A1072A /* CachedAsyncImage */,
 				923473CE2BB1CBC300BC0C95 /* SwiftfulRouting */,
 				92030CBD2BC07041009B9FD6 /* MapItemPicker */,
+				92D4EF0B2BEB874A00515DA3 /* FirebaseAnalytics */,
+				92D4EF0D2BEB874A00515DA3 /* FirebaseAnalyticsSwift */,
 			);
 			productName = EventHub;
 			productReference = 926AC95929DEEFB6004FE288 /* EventHub.app */;
@@ -355,6 +364,7 @@
 				927338E429E98E4200A1072A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 				923473CD2BB1CBC300BC0C95 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */,
 				92030CBC2BC07041009B9FD6 /* XCRemoteSwiftPackageReference "swiftui-map-item-picker" */,
+				92D4EF0A2BEB874A00515DA3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 926AC95A29DEEFB6004FE288 /* Products */;
 			projectDirPath = "";
@@ -371,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92CAC6E029E8372300CEE29E /* EventsJSON.json in Resources */,
+				92D4EF092BEB859A00515DA3 /* GoogleService-Info.plist in Resources */,
 				926AC96429DEEFB8004FE288 /* Preview Assets.xcassets in Resources */,
 				926AC96129DEEFB8004FE288 /* Assets.xcassets in Resources */,
 			);
@@ -548,7 +559,7 @@
 				DEVELOPMENT_TEAM = 72NQPP668A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EventHub/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -578,7 +589,7 @@
 				DEVELOPMENT_TEAM = 72NQPP668A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EventHub/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -645,6 +656,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		92D4EF0A2BEB874A00515DA3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -662,6 +681,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 927338E429E98E4200A1072A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
 			productName = CachedAsyncImage;
+		};
+		92D4EF0B2BEB874A00515DA3 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92D4EF0A2BEB874A00515DA3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		92D4EF0D2BEB874A00515DA3 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92D4EF0A2BEB874A00515DA3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
