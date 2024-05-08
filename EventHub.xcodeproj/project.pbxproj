@@ -42,6 +42,7 @@
 		926E8CAC2BB2D476000A4E76 /* TicketMasterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926E8CAB2BB2D476000A4E76 /* TicketMasterModel.swift */; };
 		927338E629E98E4200A1072A /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 927338E529E98E4200A1072A /* CachedAsyncImage */; };
 		927338E929E98EC100A1072A /* URLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927338E829E98EC100A1072A /* URLCache.swift */; };
+		92822A8D2BEBCF4000B6B138 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92822A8C2BEBCF4000B6B138 /* AuthenticationView.swift */; };
 		929A17482BC3F53E00EB8567 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929A17472BC3F53E00EB8567 /* EventCell.swift */; };
 		92AB23F12BD65F1C00A8E51F /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB23F02BD65F1C00A8E51F /* EventListCell.swift */; };
 		92AB23F32BD6656000A8E51F /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB23F22BD6656000A8E51F /* EventListView.swift */; };
@@ -89,6 +90,7 @@
 		926E8CAB2BB2D476000A4E76 /* TicketMasterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketMasterModel.swift; sourceTree = "<group>"; };
 		927338E829E98EC100A1072A /* URLCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCache.swift; sourceTree = "<group>"; };
 		927AF0E32BCA9E6700A0A316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92822A8C2BEBCF4000B6B138 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		929A17472BC3F53E00EB8567 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		92AB23F02BD65F1C00A8E51F /* EventListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListCell.swift; sourceTree = "<group>"; };
 		92AB23F22BD6656000A8E51F /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				924297F929DF3D7E00D8FD21 /* VerificationView.swift */,
 				924297FB29DF43E400D8FD21 /* ResetPasswordView.swift */,
 				9245B9EE2BD7F70600819C80 /* DisplayAdaptiveSpacing.swift */,
+				92822A8C2BEBCF4000B6B138 /* AuthenticationView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				9225788F2BBD822A00BF9B74 /* FilterView.swift in Sources */,
 				924297FE29DF463C00D8FD21 /* MainView.swift in Sources */,
 				92CAC6D929E8348C00CEE29E /* EventsViewModel.swift in Sources */,
+				92822A8D2BEBCF4000B6B138 /* AuthenticationView.swift in Sources */,
 				92F76F112BB4518A00CC1B74 /* ButtonsModifiers.swift in Sources */,
 				9248C0F52BBDA14400D2CA17 /* EventClassificationsPicker.swift in Sources */,
 				924297F829DF3AD700D8FD21 /* SignUpView.swift in Sources */,
@@ -583,7 +587,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -613,7 +617,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

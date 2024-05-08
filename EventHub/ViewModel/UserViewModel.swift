@@ -41,6 +41,10 @@ class UserViewModel: ObservableObject {
         }
     }
     
+    func logOut() throws {
+        try AuthenticationService.shared.signOut()
+    }
+    
 }
 
 extension UserViewModel {

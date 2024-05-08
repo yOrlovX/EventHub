@@ -179,7 +179,7 @@ extension OnboardingView {
                                     .foregroundColor(.white)
                                     .onTapGesture {
                                         router.showScreen(.push) { _ in
-                                            SignInView()
+                                            AuthenticationView()
                                         }
                                     }
                                 Spacer()

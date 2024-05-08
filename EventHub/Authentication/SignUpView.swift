@@ -106,7 +106,7 @@ extension SignUpView {
     private var buttonsContainer: some View {
         VStack(spacing: 20) {
             Button(action: {}) {
-                Text("Sign In")
+                Text("Sign Up")
                     .font(.system(size: 16, weight: .medium))
                     .foregroundColor(.white)
             }
