@@ -109,9 +109,11 @@ extension SignInView {
         VStack(spacing: 15) {
             Button(action: { userViewModel.sighIn()
                 router.showScreen(.push) { _ in MainView()}}) {
-                Text("Sign In")
-                    .modifier(PrimaryButtonModifier())
-            }
+                    Text("Sign In")
+                        .modifier(PrimaryButtonModifier())
+                }
+                .opacity(userViewModel.credentialsIsValid ? 1 : 0.5)
+                .disabled(!userViewModel.credentialsIsValid)
             
             Text("OR")
                 .font(.system(size: 16, weight: .medium))
@@ -164,7 +166,7 @@ extension SignInView {
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
         SignInView()
-//            .previewDevice("iPhone 11")
+        //            .previewDevice("iPhone 11")
             .previewDevice("iPhone 8")
     }
 }
