@@ -13,6 +13,7 @@ class UserViewModel: ObservableObject {
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var credentialsIsValid = false
+    @Published var isUserLogOut: Bool = false
     
     private var cancellable = Set<AnyCancellable>()
     
@@ -41,8 +42,15 @@ class UserViewModel: ObservableObject {
         }
     }
     
-    func logOut() throws {
-        try AuthenticationService.shared.signOut()
+    func logOut() {
+        Task {
+            do {
+                try AuthenticationService.shared.signOut()
+                isUserLogOut = true
+            } catch {
+                print("LogOutError")
+            }
+        }
     }
     
 }

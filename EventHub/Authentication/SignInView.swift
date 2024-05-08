@@ -10,7 +10,7 @@ import SwiftUI
 struct SignInView: View {
     @Environment(\.router) var router
     
-    @StateObject var userViewModel = UserViewModel()
+    @EnvironmentObject var userViewModel: UserViewModel
     
     @State private var isRemember: Bool = false
     
@@ -108,7 +108,8 @@ extension SignInView {
     private var buttonsContainer: some View {
         VStack(spacing: 15) {
             Button(action: { userViewModel.sighIn()
-                router.showScreen(.push) { _ in MainView()}}) {
+                userViewModel.isUserLogOut = false
+            }) {
                     Text("Sign In")
                         .modifier(PrimaryButtonModifier())
                 }
@@ -163,10 +164,10 @@ extension SignInView {
     }
 }
 
-struct SignInView_Previews: PreviewProvider {
-    static var previews: some View {
-        SignInView()
-        //            .previewDevice("iPhone 11")
-            .previewDevice("iPhone 8")
-    }
-}
+//struct SignInView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SignInView()
+//        //            .previewDevice("iPhone 11")
+//            .previewDevice("iPhone 8")
+//    }
+//}

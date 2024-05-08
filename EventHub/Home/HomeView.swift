@@ -10,6 +10,7 @@ import MapItemPicker
 
 struct HomeView: View {
     @EnvironmentObject var eventsViewModel: EventsViewModel
+    @EnvironmentObject var userViewModel: UserViewModel
     
     @State private var showingPicker = false
     @State private var currentLocation = "New York"
@@ -137,11 +138,16 @@ extension HomeView {
     
     private var locationContainer: some View {
         HStack {
-            SwiftUI.Image(systemName: "list.bullet")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 24, height: 24)
-                .foregroundColor(.white)
+            Button(action: {  userViewModel.logOut()
+                userViewModel.isUserLogOut = true
+                print("USER LOGOUT")
+            }) {
+                SwiftUI.Image(systemName: "list.bullet")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 24, height: 24)
+                    .foregroundColor(.white)
+            }
             Spacer()
             Button(action: { showingPicker.toggle()}) {
                 VStack(spacing: 2) {

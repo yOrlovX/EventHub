@@ -12,7 +12,7 @@ struct NavigatorView: View {
     
     @StateObject var eventsViewModel = EventsViewModel()
     @StateObject var dateService = DateService()
-    
+    @StateObject var userViewModel = UserViewModel()
     
     var body: some View {
         RouterView { _ in
@@ -20,6 +20,7 @@ struct NavigatorView: View {
         }
         .environmentObject(eventsViewModel)
         .environmentObject(dateService)
+        .environmentObject(userViewModel)
     }
 }
 

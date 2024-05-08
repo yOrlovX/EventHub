@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct AuthenticationView: View {
-    @State private var showSignInView: Bool = false
+    @EnvironmentObject var userViewModel: UserViewModel
     
     var body: some View {
         ZStack {
-            if showSignInView {
+            if userViewModel.isUserLogOut {
                 SignInView()
             } else {
                 MainView()
@@ -20,7 +20,7 @@ struct AuthenticationView: View {
         }
         .onAppear {
             let authUser = try? AuthenticationService.shared.getAuthenticatedUser()
-            self.showSignInView = authUser == nil
+            self.userViewModel.isUserLogOut = authUser == nil
         }
     }
 }
