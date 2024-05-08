@@ -10,8 +10,8 @@ import SwiftUI
 struct SignInView: View {
     @Environment(\.router) var router
     
-    @State private var email: String = ""
-    @State private var password: String = ""
+    @StateObject var userViewModel = UserViewModel()
+    
     @State private var isRemember: Bool = false
     
     var body: some View {
@@ -47,7 +47,7 @@ extension SignInView {
             Text("Sign in")
                 .font(.system(size: 24, weight: .medium))
             
-            TextField("abc@email.com", text: $email)
+            TextField("abc@email.com", text: $userViewModel.email)
                 .padding(.vertical, 20)
                 .padding(.leading, 50)
                 .frame(width: UIScreen.main.bounds.width - 60, height: 56)
@@ -63,7 +63,7 @@ extension SignInView {
                     }
                 }
             
-            TextField("Your password", text: $password)
+            TextField("Your password", text: $userViewModel.password)
                 .padding(.vertical, 20)
                 .padding(.leading, 50)
                 .frame(width: UIScreen.main.bounds.width - 60, height: 56)
@@ -107,7 +107,8 @@ extension SignInView {
     
     private var buttonsContainer: some View {
         VStack(spacing: 15) {
-            Button(action: { router.showScreen(.push) { _ in MainView()}}) {
+            Button(action: { userViewModel.sighIn()
+                router.showScreen(.push) { _ in MainView()}}) {
                 Text("Sign In")
                     .modifier(PrimaryButtonModifier())
             }
