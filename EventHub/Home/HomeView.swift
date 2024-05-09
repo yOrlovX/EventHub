@@ -40,7 +40,6 @@ struct HomeView: View {
     }
 }
 
-
 extension HomeView {
     
     private var segmentsContainer: some View {
@@ -138,9 +137,9 @@ extension HomeView {
     
     private var locationContainer: some View {
         HStack {
-            Button(action: {  userViewModel.logOut()
-                userViewModel.isUserLogOut = true
-                print("USER LOGOUT")
+            Button(action: {  userViewModel.signOut()
+                userViewModel.isUserSignIn = false
+                print("USER Sign Out")
             }) {
                 SwiftUI.Image(systemName: "list.bullet")
                     .resizable()
@@ -217,8 +216,3 @@ extension HomeView {
     }
 }
 
-//struct HomeView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HomeView()
-//    }
-//}

@@ -107,7 +107,9 @@ extension SignInView {
     
     private var buttonsContainer: some View {
         VStack(spacing: 15) {
-            Button(action: { userViewModel.sighIn()}) {
+            Button(action: { userViewModel.sighIn()
+                userViewModel.isUserSignIn = true
+            }) {
                     Text("Sign In")
                         .modifier(PrimaryButtonModifier())
                 }

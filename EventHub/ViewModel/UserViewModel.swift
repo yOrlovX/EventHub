@@ -13,7 +13,7 @@ class UserViewModel: ObservableObject {
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var credentialsIsValid = false
-    @Published var isUserLogOut: Bool = false
+    @Published var isUserSignIn: Bool = false
     
     private var cancellable = Set<AnyCancellable>()
     
@@ -22,6 +22,23 @@ class UserViewModel: ObservableObject {
             .receive(on: RunLoop.main)
             .assign(to: \.credentialsIsValid, on: self)
             .store(in: &cancellable)
+        
+        self.isUserSignIn = AuthenticationService.shared.isUserSignedIn()
+    }
+    
+    func sighUp() {
+        guard !email.isEmpty, !password.isEmpty else {
+            print("No email or password")
+            return
+        }
+        Task {
+            do {
+                _ = try await AuthenticationService.shared.createUser(email: email, password: password)
+                print("User Sign UP")
+            } catch {
+                print("ERROR: \(error)")
+            }
+        }
     }
     
     func sighIn() {
@@ -29,30 +46,25 @@ class UserViewModel: ObservableObject {
             print("No email or password")
             return
         }
-        //        let returnedUserData = try await AuthenticationService.shared.createUser(email: email, password: password)
-        
-        //MARK: TASK for using func without async
         Task {
             do {
-                let returnedUserData = try await AuthenticationService.shared.createUser(email: email, password: password)
-                print("success")
+                _ = try await AuthenticationService.shared.userSignIn(email: email, password: password)
+                print("User sign IN")
             } catch {
                 print("ERROR: \(error)")
             }
         }
     }
     
-    func logOut() {
+    func signOut() {
         Task {
             do {
                 try AuthenticationService.shared.signOut()
-                isUserLogOut = true
             } catch {
                 print("LogOutError")
             }
         }
     }
-    
 }
 
 extension UserViewModel {

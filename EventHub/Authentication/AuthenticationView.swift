@@ -12,15 +12,11 @@ struct AuthenticationView: View {
     
     var body: some View {
         ZStack {
-            if userViewModel.isUserLogOut {
+            if !userViewModel.isUserSignIn {
                 SignInView()
             } else {
                 MainView()
             }
-        }
-        .onAppear {
-            let authUser = try? AuthenticationService.shared.getAuthenticatedUser()
-            self.userViewModel.isUserLogOut = authUser == nil
         }
     }
 }
