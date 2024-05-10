@@ -54,6 +54,7 @@
 		92D4EF0C2BEB874A00515DA3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 92D4EF0B2BEB874A00515DA3 /* FirebaseAnalytics */; };
 		92D4EF0E2BEB874A00515DA3 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 92D4EF0D2BEB874A00515DA3 /* FirebaseAnalyticsSwift */; };
 		92E989352BE2ABC10056D4CD /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E989342BE2ABC10056D4CD /* DateService.swift */; };
+		92EE0C722BEE692C00E3C176 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE0C712BEE692C00E3C176 /* TextFieldModifier.swift */; };
 		92F76F112BB4518A00CC1B74 /* ButtonsModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F76F102BB4518A00CC1B74 /* ButtonsModifiers.swift */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		92CAC6DF29E8372300CEE29E /* EventsJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EventsJSON.json; sourceTree = "<group>"; };
 		92D4EF082BEB859A00515DA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		92E989342BE2ABC10056D4CD /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
+		92EE0C712BEE692C00E3C176 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
 		92F76F102BB4518A00CC1B74 /* ButtonsModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 			children = (
 				920D010729E5B3E800FE464D /* CornerRadiusStyle.swift */,
 				92F76F102BB4518A00CC1B74 /* ButtonsModifiers.swift */,
+				92EE0C712BEE692C00E3C176 /* TextFieldModifier.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				92CAC6DC29E835C600CEE29E /* ResponseModel.swift in Sources */,
 				9243EC152BEE14680013C9EC /* EventHubErrors.swift in Sources */,
 				926AC96C29DEF0CF004FE288 /* SplashView.swift in Sources */,
+				92EE0C722BEE692C00E3C176 /* TextFieldModifier.swift in Sources */,
 				927338E929E98EC100A1072A /* URLCache.swift in Sources */,
 				9255D21F2BDBB1B300FEC0B4 /* EventMainCell.swift in Sources */,
 				92AB23F12BD65F1C00A8E51F /* EventListCell.swift in Sources */,

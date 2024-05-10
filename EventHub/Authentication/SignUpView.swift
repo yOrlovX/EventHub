@@ -12,6 +12,8 @@ struct SignUpView: View {
     
     @EnvironmentObject var userViewModel: UserViewModel
     
+    @State private var isSecured: Bool = true
+    
     var body: some View {
         ZStack {
             Colors.lightBlue.opacity(0.2)
@@ -31,13 +33,7 @@ extension SignUpView {
     private var textFieldsContainer: some View {
         VStack(alignment: .leading, spacing: 20) {
             TextField("Full name", text: $userViewModel.userName)
-                .padding(.vertical, 20)
-                .padding(.leading, 50)
-                .frame(width: UIScreen.main.bounds.width - 60, height: 56)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(.gray, lineWidth: 2)
-                )
+                .modifier(TextFieldModifier())
                 .overlay {
                     HStack {
                         SwiftUI.Image("profile")
@@ -47,14 +43,8 @@ extension SignUpView {
                 }
             
             TextField("abc@email.com", text: $userViewModel.email)
-                .padding(.vertical, 20)
-                .padding(.leading, 50)
-                .frame(width: UIScreen.main.bounds.width - 60, height: 56)
                 .keyboardType(.emailAddress)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(.gray, lineWidth: 2)
-                )
+                .modifier(TextFieldModifier())
                 .overlay {
                     HStack {
                         SwiftUI.Image("mail")
@@ -62,42 +52,70 @@ extension SignUpView {
                         Spacer()
                     }
                 }
-            //securefield rework
-            TextField("Your password", text: $userViewModel.password)
-                .padding(.vertical, 20)
-                .padding(.leading, 50)
-                .frame(width: UIScreen.main.bounds.width - 60, height: 56)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(.gray, lineWidth: 2)
-                )
-                .overlay {
-                    HStack {
-                        SwiftUI.Image("lock")
-                            .padding(.leading, 15)
-                        Spacer()
-                        SwiftUI.Image(systemName: "eye.slash")
-                            .padding(.trailing, 15)
+            
+            if isSecured {
+                SecureField("Your password", text: $userViewModel.password)
+                    .modifier(TextFieldModifier())
+                    .overlay {
+                        HStack {
+                            SwiftUI.Image("lock")
+                                .padding(.leading, 15)
+                            Spacer()
+                            SwiftUI.Image(systemName: "eye.slash")
+                                .padding(.trailing, 15)
+                                .onTapGesture {
+                                    isSecured.toggle()
+                                }
+                        }
                     }
-                }
-            //securefield rework
-            TextField("Confirm password", text: $userViewModel.userRepeatedPassword)
-                .padding(.vertical, 20)
-                .padding(.leading, 50)
-                .frame(width: UIScreen.main.bounds.width - 60, height: 56)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(.gray, lineWidth: 2)
-                )
-                .overlay {
-                    HStack {
-                        SwiftUI.Image("lock")
-                            .padding(.leading, 15)
-                        Spacer()
-                        SwiftUI.Image(systemName: "eye.slash")
-                            .padding(.trailing, 15)
+            } else {
+                TextField("Your password", text: $userViewModel.password)
+                    .modifier(TextFieldModifier())
+                    .overlay {
+                        HStack {
+                            SwiftUI.Image("lock")
+                                .padding(.leading, 15)
+                            Spacer()
+                            SwiftUI.Image(systemName: "eye")
+                                .padding(.trailing, 15)
+                                .onTapGesture {
+                                    isSecured.toggle()
+                                }
+                        }
                     }
-                }
+            }
+            
+            if isSecured {
+                SecureField("Confirm password", text: $userViewModel.userRepeatedPassword)
+                    .modifier(TextFieldModifier())
+                    .overlay {
+                        HStack {
+                            SwiftUI.Image("lock")
+                                .padding(.leading, 15)
+                            Spacer()
+                            SwiftUI.Image(systemName: "eye.slash")
+                                .padding(.trailing, 15)
+                                .onTapGesture {
+                                    isSecured.toggle()
+                                }
+                        }
+                    }
+            } else {
+                TextField("Confirm password", text: $userViewModel.userRepeatedPassword)
+                    .modifier(TextFieldModifier())
+                    .overlay {
+                        HStack {
+                            SwiftUI.Image("lock")
+                                .padding(.leading, 15)
+                            Spacer()
+                            SwiftUI.Image(systemName: "eye")
+                                .padding(.trailing, 15)
+                                .onTapGesture {
+                                    isSecured.toggle()
+                                }
+                        }
+                    }
+            }
         }
     }
     
@@ -124,21 +142,6 @@ extension SignUpView {
                         .scaledToFit()
                         .frame(width: 26, height: 26)
                     Text("Login with Google")
-                        .font(.system(size: 16, weight: .regular))
-                        .foregroundColor(.black)
-                }
-            }
-            .frame(width: 281, height: 58)
-            .background(.white)
-            .cornerRadius(15)
-            
-            Button(action: {}) {
-                HStack {
-                    SwiftUI.Image("fb")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 26, height: 26)
-                    Text("Login with Facebook")
                         .font(.system(size: 16, weight: .regular))
                         .foregroundColor(.black)
                 }
