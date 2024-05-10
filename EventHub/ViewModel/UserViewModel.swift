@@ -10,19 +10,19 @@ import Combine
 
 @MainActor
 class UserViewModel: ObservableObject {
+    @Published var userName: String = ""
     @Published var email: String = ""
     @Published var password: String = ""
-    @Published var credentialsIsValid = false
+    @Published var userRepeatedPassword: String = ""
+    @Published var isSingInCredentialsValid = false
+    @Published var isSingUpCredentialsValid = false
     @Published var isUserSignIn: Bool = false
     
     private var cancellable = Set<AnyCancellable>()
     
     init () {
-        isUserCredintialsValid
-            .receive(on: RunLoop.main)
-            .assign(to: \.credentialsIsValid, on: self)
-            .store(in: &cancellable)
-        
+        checkSignInCredentials()
+        checkSignUpCredentials()
         self.isUserSignIn = AuthenticationService.shared.isUserSignedIn()
     }
     
@@ -68,6 +68,29 @@ class UserViewModel: ObservableObject {
 }
 
 extension UserViewModel {
+    
+    private func checkSignInCredentials() {
+        isUserSingInCredintialsValid
+            .receive(on: RunLoop.main)
+            .assign(to: \.isSingInCredentialsValid, on: self)
+            .store(in: &cancellable)
+    }
+    
+    private func checkSignUpCredentials() {
+        isUserSingUpCredintialsValid
+            .receive(on: RunLoop.main)
+            .assign(to: \.isSingUpCredentialsValid, on: self)
+            .store(in: &cancellable)
+    }
+    
+    var isUserNameValidPublisher: AnyPublisher<Bool, Never> {
+        $userName
+            .map { name in
+                return name.count >= 3
+            }
+            .eraseToAnyPublisher()
+    }
+    
     var isUserEmailValidPublisher: AnyPublisher<Bool, Never> {
         $email
             .map { email in
@@ -85,11 +108,30 @@ extension UserViewModel {
             .eraseToAnyPublisher()
     }
     
-    var isUserCredintialsValid: AnyPublisher<Bool, Never> {
+    var passwordMatchesPublisher: AnyPublisher<Bool, Never> {
+        Publishers.CombineLatest($password, $userRepeatedPassword)
+            .map { password, repeated in
+                return password == repeated
+            }
+            .eraseToAnyPublisher()
+    }
+    
+    var isUserSingInCredintialsValid: AnyPublisher<Bool, Never> {
         Publishers.CombineLatest(isUserEmailValidPublisher,
                                  isUserPasswordValidPublisher)
         .map { isEmailValid, isPasswordValid in
             return isEmailValid && isPasswordValid
+        }
+        .eraseToAnyPublisher()
+    }
+    
+    var isUserSingUpCredintialsValid: AnyPublisher<Bool, Never> {
+        Publishers.CombineLatest4(isUserNameValidPublisher,
+                                  isUserEmailValidPublisher,
+                                  isUserPasswordValidPublisher,
+                                  passwordMatchesPublisher)
+        .map { isUserNameValid, isEmailValid, isPasswordValid, isUserRepeatedPasswordValid in
+            return isUserNameValid && isEmailValid && isPasswordValid && isUserRepeatedPasswordValid
         }
         .eraseToAnyPublisher()
     }

@@ -10,11 +10,8 @@ import SwiftUI
 struct SignUpView: View {
     @Environment(\.router) var router
     
-    @State private var fullName: String = ""
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var confirmPassword: String = ""
-        
+    @EnvironmentObject var userViewModel: UserViewModel
+    
     var body: some View {
         ZStack {
             Colors.lightBlue.opacity(0.2)
@@ -33,7 +30,7 @@ extension SignUpView {
     
     private var textFieldsContainer: some View {
         VStack(alignment: .leading, spacing: 20) {
-            TextField("Full name", text: $fullName)
+            TextField("Full name", text: $userViewModel.userName)
                 .padding(.vertical, 20)
                 .padding(.leading, 50)
                 .frame(width: UIScreen.main.bounds.width - 60, height: 56)
@@ -49,10 +46,11 @@ extension SignUpView {
                     }
                 }
             
-            TextField("abc@email.com", text: $email)
+            TextField("abc@email.com", text: $userViewModel.email)
                 .padding(.vertical, 20)
                 .padding(.leading, 50)
                 .frame(width: UIScreen.main.bounds.width - 60, height: 56)
+                .keyboardType(.emailAddress)
                 .overlay(
                     RoundedRectangle(cornerRadius: 8)
                         .stroke(.gray, lineWidth: 2)
@@ -64,8 +62,8 @@ extension SignUpView {
                         Spacer()
                     }
                 }
-            
-            TextField("Your password", text: $password)
+            //securefield rework
+            TextField("Your password", text: $userViewModel.password)
                 .padding(.vertical, 20)
                 .padding(.leading, 50)
                 .frame(width: UIScreen.main.bounds.width - 60, height: 56)
@@ -82,8 +80,8 @@ extension SignUpView {
                             .padding(.trailing, 15)
                     }
                 }
-            
-            TextField("Confirm password", text: $confirmPassword)
+            //securefield rework
+            TextField("Confirm password", text: $userViewModel.userRepeatedPassword)
                 .padding(.vertical, 20)
                 .padding(.leading, 50)
                 .frame(width: UIScreen.main.bounds.width - 60, height: 56)
@@ -105,14 +103,15 @@ extension SignUpView {
     
     private var buttonsContainer: some View {
         VStack(spacing: 20) {
-            Button(action: {}) {
+            Button(action: { userViewModel.sighUp()
+                userViewModel.isUserSignIn = true
+                router.dismissScreen()
+            }) {
                 Text("Sign Up")
-                    .font(.system(size: 16, weight: .medium))
-                    .foregroundColor(.white)
+                    .modifier(PrimaryButtonModifier())
             }
-            .frame(width: 281, height: 58)
-            .background(Colors.primaryBlue)
-            .cornerRadius(15)
+            .opacity(userViewModel.isSingUpCredentialsValid ? 1 : 0.5)
+            .disabled(!userViewModel.isSingUpCredentialsValid)
             
             Text("OR")
                 .font(.system(size: 16, weight: .medium))
@@ -160,11 +159,5 @@ extension SignUpView {
                     }
             }
         }
-    }
-}
-
-struct SignUpView_Previews: PreviewProvider {
-    static var previews: some View {
-        SignUpView()
     }
 }

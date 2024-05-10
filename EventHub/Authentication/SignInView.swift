@@ -113,8 +113,8 @@ extension SignInView {
                     Text("Sign In")
                         .modifier(PrimaryButtonModifier())
                 }
-                .opacity(userViewModel.credentialsIsValid ? 1 : 0.5)
-                .disabled(!userViewModel.credentialsIsValid)
+                .opacity(userViewModel.isSingInCredentialsValid ? 1 : 0.5)
+                .disabled(!userViewModel.isSingInCredentialsValid)
             
             Text("OR")
                 .font(.system(size: 16, weight: .medium))
