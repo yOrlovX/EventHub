@@ -34,7 +34,9 @@ struct HomeView: View {
             if let name = item?.name {
                 print("Selected \(name)")
                 currentLocation = name
-                eventsViewModel.getEventsByCityName(cityName: currentLocation)
+                Task {
+                     try await eventsViewModel.getEventsByCityName(cityName: currentLocation)
+                }
             }
         }
     }

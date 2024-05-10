@@ -10,6 +10,7 @@ import SwiftUI
 import Combine
 import MapKit
 
+@MainActor
 final class EventsViewModel: ObservableObject {
     @Published var events: [Event] = []
     @Published var places: [Place] = []
@@ -19,73 +20,54 @@ final class EventsViewModel: ObservableObject {
     private let apiKey = "qLltnUhN80jaSPhVddkvvyRu3d9F1fZT"
     
     init() {
-        getEventsFromTicketMaster()
-        loadAnnotations()
+        Task {
+            try await getEventsFromTicketMaster()
+        }
+        try? loadAnnotations()
     }
 }
 
 //MARK: TicketMaster API calls
 extension EventsViewModel {
     
-    private func getEventsFromTicketMaster() {
-        guard let url = URL(string: "https://app.ticketmaster.com/discovery/v2/events.json?&apikey=\(apiKey)") else { return }
-        URLSession
-            .shared
-            .dataTaskPublisher(for: url)
-            .map { $0.data }
-            .receive(on: DispatchQueue.main)
-            .decode(type: Events.self, decoder: JSONDecoder())
-            .sink { completion in
-                switch completion {
-                case .finished:
-                    print("loaded request data")
-                    self.loadAnnotations()
-                case .failure(let error):
-                    print(error)
-                }
-            } receiveValue: { [weak self] returnedEvents in
-                guard let events = returnedEvents.embedded?.events else {  return }
-                self?.events = events
-            }
-            .store(in: &cancellables)
+    private func getEventsFromTicketMaster() async throws {
+        guard let url = URL(string: "https://app.ticketmaster.com/discovery/v2/events.json?&apikey=\(apiKey)") else { throw EventHubError.invalidURL }
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let returnedEvents = try JSONDecoder().decode(Events.self, from: data)
+            guard let events = returnedEvents.embedded?.events else { return }
+            self.events = events
+            try self.loadAnnotations()
+        } catch let error {
+            throw EventHubError.apiError(error)
+        }
     }
     
-    func getEventsByCityName(cityName: String) {
+    func getEventsByCityName(cityName: String) async throws {
         self.events.removeAll()
         
-        guard let url = URL(string: "https://app.ticketmaster.com/discovery/v2/events.json?city=\(cityName)&apikey=\(apiKey)") else { return }
-        URLSession
-            .shared
-            .dataTaskPublisher(for: url)
-            .map { $0.data }
-            .receive(on: DispatchQueue.main)
-            .decode(type: Events.self, decoder: JSONDecoder())
-            .sink { completion in
-                switch completion {
-                case .finished:
-                    print("loaded request data")
-                    self.places.removeAll()
-                    self.loadAnnotations()
-                case .failure(let error):
-                    print(error)
-                }
-            } receiveValue: { [weak self] returnedEvents in
-                guard let events = returnedEvents.embedded?.events else { return }
-                self?.events = events
-            }
-            .store(in: &cancellables)
+        guard let url = URL(string: "https://app.ticketmaster.com/discovery/v2/events.json?city=\(cityName)&apikey=\(apiKey)") else { throw EventHubError.invalidURL }
+        
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let returnedEvents = try JSONDecoder().decode(Events.self, from: data)
+            guard let events = returnedEvents.embedded?.events else { return }
+            self.events = events
+            self.places.removeAll()
+            try self.loadAnnotations()
+        } catch let error {
+            throw EventHubError.apiError(error)
+        }
     }
     
-    func loadAnnotations() {
+    func loadAnnotations() throws {
         for event in events {
             
             guard let venue = event.embedded.venues.first,
                   let latitude = Double(venue.location.latitude),
                   let longitude = Double(venue.location.longitude)
-            else {
-                print("Invalid coordinates for event: \(event.name)")
-                continue
-            }
+            else { throw EventHubError.invalidCoordinates }
+            
             let eventCoordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             
             let place = Place(name: event.name, coordinate: eventCoordinate)
