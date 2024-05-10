@@ -13,6 +13,7 @@ struct SignInView: View {
     @EnvironmentObject var userViewModel: UserViewModel
     
     @State private var isRemember: Bool = false
+    @State private var isSecured: Bool = true
     
     var body: some View {
         ZStack {
@@ -48,13 +49,8 @@ extension SignInView {
                 .font(.system(size: 24, weight: .medium))
             
             TextField("abc@email.com", text: $userViewModel.email)
-                .padding(.vertical, 20)
-                .padding(.leading, 50)
-                .frame(width: UIScreen.main.bounds.width - 60, height: 56)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(.gray, lineWidth: 2)
-                )
+                .keyboardType(.emailAddress)
+                .modifier(TextFieldModifier())
                 .overlay {
                     HStack {
                         SwiftUI.Image("mail")
@@ -63,23 +59,37 @@ extension SignInView {
                     }
                 }
             
-            TextField("Your password", text: $userViewModel.password)
-                .padding(.vertical, 20)
-                .padding(.leading, 50)
-                .frame(width: UIScreen.main.bounds.width - 60, height: 56)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(.gray, lineWidth: 2)
-                )
-                .overlay {
-                    HStack {
-                        SwiftUI.Image("lock")
-                            .padding(.leading, 15)
-                        Spacer()
-                        SwiftUI.Image(systemName: "eye.slash")
-                            .padding(.trailing, 15)
+            if isSecured {
+                SecureField("Your password", text: $userViewModel.password)
+                    .modifier(TextFieldModifier())
+                    .overlay {
+                        HStack {
+                            SwiftUI.Image("lock")
+                                .padding(.leading, 15)
+                            Spacer()
+                            SwiftUI.Image(systemName: "eye.slash")
+                                .padding(.trailing, 15)
+                                .onTapGesture {
+                                    isSecured.toggle()
+                                }
+                        }
                     }
-                }
+            } else {
+                TextField("Your password", text: $userViewModel.password)
+                    .modifier(TextFieldModifier())
+                    .overlay {
+                        HStack {
+                            SwiftUI.Image("lock")
+                                .padding(.leading, 15)
+                            Spacer()
+                            SwiftUI.Image(systemName: "eye")
+                                .padding(.trailing, 15)
+                                .onTapGesture {
+                                    isSecured.toggle()
+                                }
+                        }
+                    }
+            }
         }
     }
     
@@ -110,11 +120,11 @@ extension SignInView {
             Button(action: { userViewModel.sighIn()
                 userViewModel.isUserSignIn = true
             }) {
-                    Text("Sign In")
-                        .modifier(PrimaryButtonModifier())
-                }
-                .opacity(userViewModel.isSingInCredentialsValid ? 1 : 0.5)
-                .disabled(!userViewModel.isSingInCredentialsValid)
+                Text("Sign In")
+                    .modifier(PrimaryButtonModifier())
+            }
+            .opacity(userViewModel.isSingInCredentialsValid ? 1 : 0.5)
+            .disabled(!userViewModel.isSingInCredentialsValid)
             
             Text("OR")
                 .font(.system(size: 16, weight: .medium))
@@ -127,21 +137,6 @@ extension SignInView {
                         .scaledToFit()
                         .frame(width: 26, height: 26)
                     Text("Login with Google")
-                        .font(.system(size: 16, weight: .regular))
-                        .foregroundColor(.black)
-                }
-            }
-            .frame(width: 281, height: 58)
-            .background(.white)
-            .cornerRadius(15)
-            
-            Button(action: {}) {
-                HStack {
-                    SwiftUI.Image("fb")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 26, height: 26)
-                    Text("Login with Facebook")
                         .font(.system(size: 16, weight: .regular))
                         .foregroundColor(.black)
                 }
@@ -163,11 +158,3 @@ extension SignInView {
         }
     }
 }
-
-//struct SignInView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SignInView()
-//        //            .previewDevice("iPhone 11")
-//            .previewDevice("iPhone 8")
-//    }
-//}
