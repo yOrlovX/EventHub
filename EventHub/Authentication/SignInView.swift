@@ -158,3 +158,18 @@ extension SignInView {
         }
     }
 }
+
+struct SignInView_Previews: PreviewProvider {
+    static let userViewModel = UserViewModel()
+    static var previews: some View {
+        Group {
+            SignUpView()
+                .environmentObject(userViewModel)
+                .previewDevice(PreviewDevice(rawValue: "iPhone 11"))
+            
+            SignUpView()
+                .environmentObject(userViewModel)
+                .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
+        }
+    }
+}

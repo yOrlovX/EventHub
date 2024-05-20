@@ -22,12 +22,13 @@ struct HomeView: View {
     var body: some View {
         ZStack(alignment: .top) {
             Colors.lightBg
-            VStack(spacing: 0) {
-                topBarContainer
-                segmentsContainer
-                upcomingEventsContainer
-            }
-            .ignoresSafeArea(.container, edges: .top)
+                VStack(spacing: 0) {
+                    topBarContainer
+                    segmentsContainer
+                        .offset(y: -20)
+                    upcomingEventsContainer
+                }
+                .ignoresSafeArea(.container, edges: .top)
         }
         .navigationBarHidden(true)
         .mapItemPicker(isPresented: $showingPicker) { item in
@@ -97,7 +98,7 @@ extension HomeView {
     private var topBarContainer: some View {
         Rectangle()
             .foregroundColor(Colors.homeTopbarBg)
-            .frame(maxHeight: topBarHeight)
+            .frame(maxHeight: 179)
             .cornerRadius(33, corners: [.bottomLeft, .bottomRight])
             .overlay(alignment: .top) {
                 VStack(spacing: 20) {
