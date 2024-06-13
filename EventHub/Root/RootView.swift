@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftfulRouting
 
-struct NavigatorView: View {
+struct RootView: View {
     
     @StateObject var eventsViewModel = EventsViewModel()
     @StateObject var dateService = DateService()

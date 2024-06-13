@@ -15,7 +15,7 @@ struct EventHubApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigatorView()
+            RootView()
         }
     }
 }
